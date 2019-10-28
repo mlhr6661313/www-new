@@ -1,0 +1,35 @@
+<section class="receptions-section">
+    <h2 class="receptions-section__title">{{ page.post_title }}</h2>
+    {% if receptionsMain is not empty %}
+        <ul class="receptions-section__list">
+            {% for reception in receptionsMain %}
+                <li class="reception-item">
+                    <a href="{{ reception.link }}">
+                        <div class="reception-item__img-box">
+                            <img src="{{ reception.image.url }}" alt="{{ reception.image.alt }}" title="{{ reception.image.title }}"/>
+                        </div>
+                        <div data-title="h3" class="reception-item__title">{{ reception.shown_name }}</div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if receptionsAdvanced is not empty %}
+        <div data-title="h2" class="receptions-section__subtitle">{{ lang.also_give_credits_for_pledge_text|upper }}</div>
+        <ul class="receptions-section__list is-additional">
+            {% for reception in receptionsAdvanced %}
+                <li class="reception-item">
+                    <a href="{{ reception.link }}">
+                        <div class="reception-item__img-box">
+                            <img src="{{ reception.image.url }}" alt="{{ reception.image.alt }}" title="{{ reception.image.title }}"/>
+                        </div>
+                        <div data-title="h3" class="reception-item__title">{{ reception.shown_name }}</div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if config_page.credit_rule_file.value %}
+        <a href="{{ config_page.credit_rule_file.value }}" target="_blank">{{ config_page.credit_rule_file_name.value }}</a>
+    {% endif %}
+</section>

@@ -1,0 +1,262 @@
+.departments-popup {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	overflow: hidden;
+	color: #424242;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: none !important;
+	pointer-events: none;
+
+	.decor {
+		display: flex;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+
+		> * {
+			width: 100%;
+			height: 10px;
+			background-color: #d63938;
+			
+			&:nth-child(2) {
+				background-color: #2591cd;
+			}
+			
+			&:nth-child(3) {
+				background-color: #f8e71c;
+			}
+			
+			&:nth-child(4) {
+				background-color: #228b4e;
+			}
+			
+			&:nth-child(5) {
+				background-color: #a085bd;
+			}
+
+		}
+	}
+
+	.departments-popup__wrapper {
+		padding: 20px;
+		position: relative;
+		max-width: 400px;
+		width: 100%;
+		height: auto;
+		max-height: calc(100% - 50px);
+
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+		pointer-events: auto;
+
+		@media screen and (max-width: 640px) {
+			max-width: none;
+			height: 100%;
+			max-height: none;
+		}
+	}
+
+	.departments-popup__close-btn {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		width: 30px;
+		height: 30px;
+		border-radius: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		background-color: #fff;
+		z-index: 1;
+
+		&::before, &::after {
+			content: '';
+			width: 25px;
+			height: 2px;
+			transform-origin: 50% 50%;
+			background-color: currentColor;
+		}
+
+		&::before {
+			transform: translate(0, 50%) rotate(45deg);
+		}
+		
+		&::after {
+			transform: translate(0, -50%) rotate(-45deg);
+		}
+	}
+
+	.departments-popup__gallery {
+		height: 202px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		span {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			text-decoration: none;
+			font-family: 'Exo-Black';
+			color: #000;
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			background-color: rgba(#fff,0.5);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			i {
+				font-size: 25px;
+				b {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	// &__img {
+	// 	width: auto;
+	// 	max-width: 100%;
+	// 	height: auto;
+	// 	display: block;
+
+	// 	@media screen and (max-width: 640px) {
+	// 		max-height: 230px;
+	// 		margin: 0 auto;
+	// 	}
+	// }
+
+	.departments-popup__data {
+		// padding: 2.5em;
+		height: 100%;
+		overflow: auto;
+		display: flex;
+		width: 100%;
+		font-size: 18px;
+		line-height: 28px;
+		color: #000;
+
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #ccc;
+			border-radius: 10px;
+		}
+	}
+
+	.receptionNames {
+		width: 195px;
+		margin:0 auto;
+
+		&.lang-ua {
+			width: 175px;
+		}
+
+		.heading {
+			font-family: 'Exo-Black';
+			color: #606467;
+		}
+
+		ul {
+			padding-left: 20px;
+		}
+
+		li {
+			list-style-type: none;
+			position: relative;
+
+			&:before {
+				content: '•';
+				position: absolute;
+				font-size: 2em;
+				line-height: 1em;
+				color: #378D60;
+				margin-top: -5px;
+				margin-left: -23px;
+			}
+		}
+	}
+
+	.departments-popup__info {
+		flex-grow: 1;
+	}
+
+	.departments-popup__address {
+		font-family: 'Exo-Black';
+		margin-top: 5px;
+		text-align: center;
+	}
+
+	.departments-popup__phones {
+		text-align: center;
+
+		a {
+			color: currentColor;
+		}
+	}
+
+	.departments-popup__distance {
+		text-align: center;
+	}
+
+	.departments-popup__address,
+	.departments-popup__distance,
+	.departments-popup__id,
+	.departments-popup__more-info,
+	.departments-popup__phones {
+		color: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		margin-bottom: 16px;
+	}
+
+	.departments-popup__more-info {
+		// text-decoration: none;
+		// color: #000;
+		// display: flex;
+		// width: 100%;
+		// align-items: center;
+		// justify-content: center;
+		// font-family: $family2;
+		// height: 60px;
+		// border-radius: 30px;
+		// // background-color: #fff;
+		// border: 3px solid $yellow;
+		// margin-bottom: 0;
+		// margin-top: 30px;
+	}
+
+	// @media screen and (max-width: 1024px) {
+	// 	width: 40%;
+	// }
+	// @media screen and (max-width: 640px) {
+	// 	width: 100%;
+	// }
+
+
+
+}
+

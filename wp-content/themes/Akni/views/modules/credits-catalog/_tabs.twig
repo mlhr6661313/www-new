@@ -1,0 +1,75 @@
+<section class="credit-tabs">
+    <div class="credit-tabs-title">
+        <span data-title="h2">{{ page.acf.tabs_title.value }}</span>
+    </div>
+
+    {% if credit_tabs is not empty %}
+    <div class="smarty-tabs credit-tabs">
+        <div class="smarty-controller__wrapper">
+            <div class="smarty-controller">
+                <ul class="smarty-controller__list">
+                    {% for tab in credit_tabs %}
+                        <li id="{{ tab.term_id }}" class="smarty-controller__item">{{ tab.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="smarty-content">
+            {% for index, term  in credit_tabs %}
+                <div class="smarty-content__item">
+                    <div class="credit-tariffs">
+                        {% for tariff in term.tariffs %}
+                            <div class="credit-tariff">
+                                <div class="tariff-img">
+                                    {% if tariff.image is not empty and tariff.mobile_image is not empty %}
+                                    <picture>
+                                        <source media="(max-width:640px)"
+                                                srcset="{{ tariff.mobile_image }} 349w"
+                                                sizes="100vw">
+                                        <img src="{{ tariff.image }}"
+                                             title="{{ tariff.post_title }}"
+                                             alt="picture test">
+                                    </picture>
+                                    {% endif %}
+                                </div>
+                                <div class="tariff-text">
+                                    <div class="tariff-title"><span>{{ tariff.post_title }}</span></div>
+                                    <div class="tariff-desc">
+                                        <div>
+                                            <span class="limit-price">{{ tariff.text_1 }}</span>
+                                            <span>{{ tariff.text_2 }}</span>
+                                        </div>
+                                        <div>
+                                            <span class="limit-time">{{ tariff.text_3 }}</span>
+                                            <span>{{ tariff.text_4 }}</span>
+                                        </div>
+                                        <div>
+                                            <span>{{ tariff.text_5 }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="tariff-button">
+                                        <a href="#main-calculator-popup"
+                                           data-tab-id="{{ term.tab_id }}"
+                                           class="fancybox-credit-calc button button45"
+                                           data-js="open-calc-btn"
+                                        >
+                                            {{ term.button_text }}
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="tab-bottom-text">
+                        <img src="/wp-content/themes/Akni/public/images/svg/info.svg" alt=""><div>{{ term.bottom_text }}</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+

@@ -1,0 +1,68 @@
+{% extends '_layout.twig' %}
+
+{% block base_stylesheets %}
+	{#<link rel="stylesheet" href="{{ theme.path }}/public/css/vendors/swiper.min.css">#}
+	{{ parent() }}
+{% endblock %}
+{% block body_class%}home{% endblock%}
+
+{% block breadcrumbs %}{% endblock %}
+{% block main_calculator %}
+{% endblock %}
+{% block content %}
+
+	{% include 'modules/_promo-gallery.twig' %}
+	{% include 'modules/_advantages_home.twig' %}
+	{% include 'modules/_best-conditions.twig' %}
+
+	{% if page.acf.home_video_video.value %}
+	<section id="video" class="home-video-section content-width">
+		<div class="home-video-section__play-btn js-video-play"></div>
+		<div class="home-video-section__title">
+			<span>{{ page.acf.home_video_title.value }}</span>
+		</div>
+		<video poster="{{ page.acf.home_video_image.value }}" preload="none">
+			<source src="{{ page.acf.home_video_video.value }}">
+		</video>
+	</section>
+	{% endif %}
+	
+	<section id="map" class="home-map-section content-width">
+		{% if home_map !='' %}
+			{% if page.acf.page_map_title.value !=''  %}
+				<div data-title="h2" class="home-map-section__title">{{ page.acf.page_map_title.value  }}</div>
+			{% endif %}
+			<div class="home-map-wrap">
+				<div id='hidden-map' class="home-map-section__map" style="display: none;">
+					{{ home_map }}
+				</div>
+			</div>
+			
+			{% if page.acf.page_map_link.value !='' and page.acf.page_map_link_text.value !='' %}
+				<div class="home-map-section__action">
+					<a class="home-map-section__btn button60" href="{{ page.acf.page_map_link.value }}">
+						<span>{{ page.acf.page_map_link_text.value }}</span>
+					</a>
+				</div>
+			{% endif %}
+		{% endif %}
+	</section>
+
+	
+
+	{% include 'modules/_blog-block.twig' %}
+	<section id="seo" class="seo-section">
+			<div class="seo-section__holder content-width">
+				{% if page.post_content %}
+					<div class="seo-section__descr" data-link-more="{{ lang.more_text }}" data-link-hide="{{ lang.less_text }}">
+						{{ page.post_content }}
+					</div>
+					<div class="read-more">
+						<span class="btn-text" data-hide="{{ lang.less_text }}">{{ lang.more_text }}</span><span class="ic-arrow-down"></span>
+					</div>
+				{% endif %}
+			</div>
+	</section>
+
+
+{% endblock %}

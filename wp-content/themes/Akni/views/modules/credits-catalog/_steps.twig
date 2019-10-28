@@ -1,0 +1,27 @@
+{% if page.acf.credit_steps.value is not empty %}
+    <section class="credit-steps-section">
+        <span>{{ page.acf.steps_title.value }}</span>
+        <div class="credit-steps">
+            {% for step in page.acf.credit_steps.value %}
+                <div class="credit-step-outer">
+                    <div class="credit-step-inner">
+                        <div class="image-container">
+                            <img src="{{ step.image.url }}">
+                        </div>
+                        <div class="text">
+                            <div class="time">
+                                <span>{{ step.text_1 }}</span>
+                            </div>
+                            <div class="title">
+                                <span>{{ step.text_2 }}</span>
+                            </div>
+                            <div class="description">
+                                <span>{{ step.text_3 }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

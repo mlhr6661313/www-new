@@ -1,0 +1,34 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+    <meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="blog__top-block">
+        <div class="content-width" data-css-container>
+            <h1 id="title" class="blog__title">{{ page.post_title }}</h1>
+            {% include 'modules/_filters.twig' %}
+        </div>
+    </div>
+    {% if articles is not empty %}
+        <section class="blog__content" data-js-blogContent data-spinner-state>
+            <div class="content-width" data-css-container="offset">
+                {% include 'articles_block.twig' %}
+                <div class="blog__show-more"
+                     data-css="hasSize"
+                     data-js-showMoreArticles data-category="{{ filter_data }}" data-page="1"
+                        {% if not next %} hidden {% endif %}>
+                    <a href="javascript:;" class="btn has-border">
+                        <div class="button__layer" data-css="black"></div>
+                        <div class="button__layer" data-css="orange"></div>
+                        <div class="button__layer" data-css="text">{{ lang.load_more_text }}
+                            <span data-js-more-text-data >{{ more_text_data }}</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {% include 'modules/_page_blocks.twig' %}
+{% endblock %}

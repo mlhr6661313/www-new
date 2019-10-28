@@ -1,0 +1,15 @@
+<div
+        id="brander-advanced-map-{{ serial }}"
+        class="brander-map"
+        {#data-department="{{ departmentData }}"#}
+>
+    <advanced-new-map
+            map-id="{{ serial }}"
+            :options="defaultMapOptions"
+            json-departments="{{ departmentData }}"
+            json-labels="{{ labels }}"
+            json-filters="{{ filters }}"
+            json-filters-data="{{ filtersData }}"
+            json-lang="{{ lang }}"
+    ></advanced-new-map>
+</div>

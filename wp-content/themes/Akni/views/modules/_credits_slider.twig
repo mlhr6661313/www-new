@@ -1,0 +1,33 @@
+{% if page.acf.credits_slider.value  is not empty %}
+    <section id ="best-credit-conditions" class="best-conditions-section" data-js-bannerSlider>
+        <div data-title="h2" class="best-conditions__title">{{ lang.best_credits_text }}</div>
+        <div class="best-conditions__list" >
+            {% for slider in page.acf.credits_slider.value %}
+            {% if slider.image !='' %}
+            <div class="best-condition-item">
+                    {% if slider.link !='' %}
+                    <a href="{{ slider.link }}">
+                        {% endif %}
+                        <div class="best-condition-item__content" data-base-container>
+                            {% if slider.link_title !='' %}
+                                <div data-title="h3" class="best-condition-item__title">{{ slider.link_title }}</div>
+                            {% endif %}
+                            {% if slider.text !='' %}
+                                <div class="best-condition-item__text">{{ slider.text }}</div>
+                            {% endif %}
+                            <div class="best-condition-item__image-box">
+                                <img src="{{ slider.image.url }}"
+                                     alt="{{ slider.image.alt }}"
+                                     title="{{ slider.image.title }}">
+                            </div>
+                        </div>
+                        {% if slider.link !='' %}
+                    </a>
+                    {% endif %}
+                {% endif %}
+                {% endfor %}
+                {% include 'modules/_advanced_credit_blocks.twig' %}
+            </div>
+        </div>
+    </section>
+{% endif %}

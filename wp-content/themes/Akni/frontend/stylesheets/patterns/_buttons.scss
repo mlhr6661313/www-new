@@ -1,0 +1,50 @@
+.btn {
+  display: inline-block;
+  border: 0;
+  min-height: 54px;
+  padding: 18px 35px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $clr-text;
+  background: $clr-link;
+  border-radius: 30px;
+  @include anim;
+  &[disabled] {
+    pointer-events: none;
+    background: $clr-input-border;
+  }
+  &.has-border {
+    border: 2px solid $clr-link;
+    background: transparent;
+    padding: 16px 33px;
+  }
+  &.is-bg-transparent {
+    background: rgba(255, 255, 255, 7);
+    border-radius: 0;
+    opacity: 0.7;
+    font-size: 14px;
+    color: $clr-black;
+  }
+  @include breakpoint($mq-desktop-min, $type: min-width ) {
+    &.has-border {
+      &:hover {background: $clr-link;}
+    }
+    &:hover {
+      background: $clr-text;
+      color: $clr-white;
+    }
+  }
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    &.has-border {
+      &:hover {
+        background: transparent;
+        color: $clr-text;
+      }
+    }
+    &:hover {
+      color: $clr-text;
+      background: $clr-link;
+    }
+  }
+}

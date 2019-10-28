@@ -1,0 +1,88 @@
+.calc {
+  .site-header &__img-box {display: none;}
+  &__box {
+    background: linear-gradient(45deg, #d4dae6 0%,#f6f6f6 100%);
+    text-align: center;
+
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 35px;
+  }
+  &__descr {
+    font-size: 16px;
+    line-height: 1.5;
+    width: 95%;
+    margin: 0 auto;
+    p + p {margin-top: 12px;}
+  }
+  &__action {
+    * + & {margin-top: 26px;}
+    .icon {
+      fill: $clr-text;
+      width: 40px;
+      height: 40px;
+      &:hover {
+        fill: $clr-link;
+      }
+    }
+  }
+  &__img-box {
+    position: absolute;
+    bottom: 0;
+    right: 64px;
+    z-index: 0;
+  }
+}
+.calculate-credit-section {
+  .calc {
+    &__box {
+      position: relative;
+      max-width: 1024px;
+      padding: 120px 128px;
+      margin: 0 auto;
+      background: none;
+      text-align: left;
+    }
+    &__title {
+      position: relative;
+      z-index: 1;
+      width: 60%;
+      margin-bottom: 20px;
+      font-size: 30px;
+      line-height: 34px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &__descr {
+      position: relative;
+      z-index: 1;
+      width: 60%;
+      margin: 0;
+    }
+    &__action {
+      position: relative;
+      * + & {margin-top: 45px;}
+    }
+  }
+  @include breakpoint($mq-mobile) {
+    .calc {
+      &__box {padding: 60px 12px 200px;}
+      &__title {
+        width: 75%;
+        font-size: 22px;
+        line-height: 26px;
+      }
+      &__img-box {
+        max-height: 240px;
+        right: 0;
+        overflow: hidden;
+      }
+      &__descr {width: 75%;}
+      &__action {
+        * + & {margin-top: 25px;}
+      }
+    }
+  }
+}

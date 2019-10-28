@@ -1,0 +1,90 @@
+<div id="order">
+    <span class="order_hide popup_hide"></span>
+    <div class="thank-you" style="display:none;" id="thank-you{{ form.content.formID }}">
+        <div class="thank_you_title">{{ form.content.thankYouTextTitle }}</div>
+        <div class="thank_you_text">{{ form.content.thankYouText }}</div>
+
+        <div class="popup_thanks">
+            <div class="popup_thanks_inner">
+                <span class="popup_thanks_close"></span>
+                <div class="thank_you_title">{{ form.content.thankYouTextTitle }}</div>
+                <div class="thank_you_text">{{ form.content.thankYouText }}</div>
+                <button class="popup_thanks_close btn_full">ok</button>
+            </div>
+        </div>
+    </div>
+    <form
+            action="#"
+            method="post"
+            name="callback{{ form.content.formID }}"
+            id="callback{{ form.content.formID }}"
+            data-url="{{ form.content.url }}"
+            class="order-form callback-form"
+            onsubmit="return false;"
+    >
+        {% if form.content.formTitle !='' %}
+            <span class="form-title">
+                {{ form.content.formTitle }} <span class="product-name"></span>
+            </span>
+        {% endif %}
+        {#{% if form.content.formDescription !='' %}#}
+            {#<div class="form-description">#}
+                {#{{ form.content.formDescription }}#}
+            {#</div>#}
+        {#{% endif %}#}
+
+        <input type="hidden" name="type" value="order" />
+        <input type="hidden" name="product" id="product" value=""/>
+        <input type="hidden" name="sum" id="sum"/>
+        <input type="hidden" name="days" id="days" value="1"/>
+
+        <div class="form_field">
+            <input
+                    id="name{{ form.content.formID }}"
+                    placeholder="{{ form.name.placeholder }}"
+                    name="name"
+                    class="form-field name"
+                    data-error="{{ form.name.error }}"
+            />
+        </div>
+        <div class="form_field">
+            <input
+                    id="phone{{ form.content.formID }}"
+                    placeholder="{{ form.phone.placeholder }}"
+                    name="phone"
+                    class="form-field tel"
+                    data-error="{{ form.phone.error }}"
+            />
+        </div>
+        <div class="form_field">
+            <select name="city" id="city{{ form.content.formID }}" class="city">
+            </select>
+        </div>
+        <div class="form_field">
+            <label for="date_from{{ form.content.formID }}">{{ form.date_from.placeholder }}</label>
+            <input type="text" class="tcal order_date date_from" name="date_from" id="date_from{{ form.content.formID }}" data-error="{{ form.date_from.error }}" data-pos="fix"/>
+        </div>
+        <div class="form_field">
+            <label for="date_to{{ form.content.formID }}">{{ form.date_to.placeholder }}</label>
+            <input type="text" class="tcal order_date date_to" name="date_to" id="date_to{{ form.content.formID }}" data-error="{{ form.date_to.error }}" data-pos="fix"/>
+        </div>
+        <div class="form_field checkbox_field">
+            <label for="delivery{{ form.content.formID }}">
+                <input type="checkbox" name="delivery" value="+" id="delivery{{ form.content.formID }}"/>
+                <span></span>
+                {{ form.delivery.placeholder }}<span id="home_delivery"></span>
+            </label>
+        </div>
+
+        <div class="form_field">
+            <label for="sum{{ form.content.formID }}">{{ form.sum.placeholder }}</label>
+            <span id="sum_value"></span>
+            <label for="days_value">{{ form.days.placeholder }}</label>
+            <span id="days_value">1</span>
+        </div>
+
+        <div class="btn yellow">
+            <input type="submit" id="submit{{ form.content.formID }}" name="submit" value="{{ form.content.submitText }}">
+        </div>
+    </form>
+</div>

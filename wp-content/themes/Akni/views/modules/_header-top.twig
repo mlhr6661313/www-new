@@ -1,0 +1,14 @@
+{% if config_page  %}
+	{% if config_page.info_message_on.value == true  %}
+		{% if config_page.info_message.value !='' %}
+			<span class="site-header__notice" id="header-top-message">{{ config_page.info_message.value }}</span>
+		{% endif %}
+		{% if config_page.info_message_link.value !='' and config_page.info_message_link_text.value !='' %}
+			<span class="site-header__notice" id="header-top-link">
+				<a href="{{ config_page.info_message_link.value }}">
+					{{ config_page.info_message_link_text.value }}
+				</a>
+			</span>
+		{% endif %}
+	{% endif %}
+{% endif %}

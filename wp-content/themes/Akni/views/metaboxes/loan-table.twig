@@ -1,0 +1,25 @@
+{% if call > 0 %}
+    <table>
+        <tr>
+            <th>{{ lang.metal_sample_text }}</th>
+            {% for discount in discounts %}
+                <th>{{ discount.post_title }}</th>
+            {% endfor %}
+        </tr>
+        {% for i in 1..call %}
+            <tr>
+                {% for j in 0..row %}
+                    {% if j == 0 %}
+                        <td>
+                            <input  type="text"  value="{{ sample[i] }}" name="sample[{{ i }}]"/>
+                        </td>
+                    {% else %}
+                        <td>
+                            <input  type="number" min="0.01" step="any" value="{{ price[i][j] }}" name="price[{{ i }}][{{ j }}]"/>
+                        </td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}

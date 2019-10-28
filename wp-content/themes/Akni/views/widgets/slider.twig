@@ -1,0 +1,29 @@
+{% if slider_widget is not empty %}
+    <section class="slider-widget">
+        <div class="slider-widget__holder content-width">
+            <div class="slider-widget__heading">
+                <div data-title="h2" class="slider-widget__title">{{ slider_widget_title }}</div>
+            </div>
+            <div class="swiper-container-mob">
+                <div class="slider-widget__list swiper-wrapper">
+                    {% for slide in slider_widget %}
+                        <div class="slider-widget swiper-slide">
+                            <div class="slider-widget__img-box">
+                                <img class="slider-widget__img"
+                                     src="{{ slide.image.url }}"
+                                     alt="{{ slide.image.alt }}"
+                                     title="{{ slide.image.title }}"/>
+                            </div>
+                            <div class="slider-widget__text-wrapper">
+                                <div class="slider-widget__text_1">{{ slide.text_1 }}</div>
+                                <div class="slider-widget__text_2">{{ slide.text_2 }}</div>
+                                <div class="slider-widget__text_3">{{ slide.text_3 }}</div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+{% endif %}

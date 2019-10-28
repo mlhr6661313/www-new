@@ -1,0 +1,14 @@
+.map-button {
+    cursor: pointer;
+    &__user-location {
+        background: url("~/wp-content/plugins/BranderMap/frontend/images/my-location-btn.png") no-repeat center;
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+        margin-left: .8em;
+        &[data-position~=right] {
+            margin-left: 0;
+            margin-right: .8em;
+        }
+    }
+}

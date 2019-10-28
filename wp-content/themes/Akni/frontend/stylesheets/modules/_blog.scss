@@ -1,0 +1,120 @@
+.blog {
+  &__top-block {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  &__title {margin-bottom: 25px;}
+  &__filters {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -100vw;
+      top: calc(100% - 2px);
+      z-index: 0;
+      width: 300vw;
+      height: 1px;
+      background: #ebebeb;
+    }
+  }
+  &__filters-list {
+    @extend %list-reset;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    z-index: 1;
+    li + li {margin-left: 44px;}
+    a {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 14px 0 12px;
+      border-bottom: 3px solid transparent;
+      color: $clr-grey;
+      &:hover {color: $clr-text;}
+    }
+    li[data-state='active'] {
+      a {
+        border-color: #ffdd00;
+        color: $clr-text;
+      }
+    }
+  }
+  &__show-more {margin-top: 45px;}
+  &__content {padding-bottom: 80px;}
+  &__additional-block {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 35px;
+  }
+  &__additional-item {
+    width: 50%;
+    max-width: 50%;
+    flex: 1 0 50%;
+    padding: 75px 37.45px;
+    text-align: center;
+    &:nth-child(2n+1) {background: linear-gradient(45deg, #e6e2d4 0%,#fff3e1 100%);}
+    &:nth-child(2n) {background: linear-gradient(45deg, #d4dae6 0%,#f6f6f6 100%);}
+    h3 {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 500;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+    }
+    .description {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 300;
+      margin: 0 auto 40px;
+      width: 66.66%;
+    }
+    .action {
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        &:hover {
+          .icon-more {fill: $clr-link;}
+        }
+      }
+    }
+    .icon-more {fill: #75736e;}
+  }
+  @include breakpoint($mq-mobile) {
+    &__top-block {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    &__title {margin-bottom: 15px;}
+    &__filters-list {
+      li + li {margin-left: 22px;}
+      a {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 10px 0 8px;
+      }
+    }
+    &__show-more {margin-top: 25px;}
+    &__content {padding-bottom: 40px;}
+    &__additional-block {padding-bottom: 25px;}
+    &__additional-item {
+      width: 100%;
+      max-width: 100%;
+      flex: 1 0 100%;
+      padding: 37px 19px;
+      h3 {
+        font-size: 18px;
+        line-height: 20px;
+        margin-bottom: 25px;
+      }
+      .description {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 20px;
+        width: 87.5%;
+      }
+    }
+  }
+}

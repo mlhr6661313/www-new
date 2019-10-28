@@ -1,0 +1,12 @@
+.form-row {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.form_field {
+  & + & {margin-top: 20px;}
+}
+.form-actions {
+  * + & {margin-top: 50px;}
+}

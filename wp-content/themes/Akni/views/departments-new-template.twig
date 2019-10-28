@@ -1,0 +1,25 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+	<section class="departments-section">
+		<div class="departments-section__holder content-width">
+			<div class="">
+				<div data-title="{{ page.post_title }}" data-departments-title hidden></div>
+				{{ department_map }}
+			</div>
+
+			<div class="departments-seo_holder seo-block">
+				<div class="departments-section__content seo-text" data-link-more="{{ lang.more_text }}" data-link-hide="{{ lang.less_text }}">
+					{{ page.post_content }}
+				</div>
+				<div class="read-more">
+					<span class="btn-text" data-hide="{{ lang.less_text }}">{{ lang.more_text }}</span><span class="ic-arrow-down"></span>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

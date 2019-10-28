@@ -1,0 +1,43 @@
+{% extends '_layout.twig' %}
+
+{% block breadcrumbs %}
+
+{% endblock %}
+
+{% block title %}
+    404
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}
+
+
+{% block content %}
+    <div class="page-404" data-css-container="offset">
+        <div class="content-width">
+            <h1 class="page-404__title">
+                <span class="page-404__heading">4<span>0</span>4</span>
+                <span>{{ lang.main_text_404 }}</span>
+            </h1>
+            <div class="page-404__text">
+                <div class="page-404__subtitle">{{ lang.sub_text_404 }}</div>
+                {% if contacts.url !='' %}
+                    {{ lang.page_exists_text }}
+                    <a href="{{ contacts.url }}">{{ lang.tell_us_text }}</a>
+                    {% if config_page.header_phones is not empty !='' %}
+                        {% if config_page.header_phones.0.phone.original and config_page.header_phones.0.phone.clear %}
+                            {{ lang.or_call_us_text }}
+                            <a href="tel:{{ config_page.header_phones.0.phone.clear }}">
+                                {{ config_page.header_phones.0.phone.original }}
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block contact_form %}
+
+{% endblock %}

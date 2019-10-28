@@ -1,0 +1,98 @@
+{
+  "class" : {
+    "labels"    : {
+      "name"              : "Category",
+      "singular_name"     : "Category",
+      "search_items"      : "Search Category",
+      "all_items"         : "All Categories",
+      "parent_item"       : "Parent Category",
+      "parent_item_colon" : "Parent Category:",
+      "edit_item"         : "Edit Category",
+      "update_item"       : "Update Category",
+      "add_new_item"      : "Add New Category",
+      "new_item_name"     : "New Category Name",
+      "menu_name"         : "Category"
+    },
+    "args"      : {
+      "hierarchical"      : false,
+      "show_ui"           : true,
+      "show_admin_column" : true,
+      "query_var"         : true,
+      "public"            : true,
+      "rewrite"           : {"slug" : "class"}
+    },
+    "post_type" : ["blog"]
+  },
+  "groups" : {
+    "labels": {
+      "name": "Group",
+      "singular_name": "Group",
+      "search_items": "Search Group",
+      "all_items": "All Groups",
+      "parent_item": "Parent Group",
+      "parent_item_colon": "Parent Group:",
+      "edit_item": "Edit Group",
+      "update_item": "Update Group",
+      "add_new_item": "Add New Group",
+      "new_item_name": "New Group Name",
+      "menu_name": "Groups"
+    },
+    "args": {
+      "hierarchical": false,
+      "show_ui": true,
+      "show_admin_column": true,
+      "query_var": true,
+      "public": true,
+      "rewrite": "false"
+    },
+    "post_type": "faq"
+  },
+  "pledge" : {
+    "labels": {
+      "name": "Pledge",
+      "singular_name": "Pledge",
+      "search_items": "Search Pledge",
+      "all_items": "All Pledges",
+      "parent_item": "Parent Pledge",
+      "parent_item_colon": "Parent Pledge:",
+      "edit_item": "Edit Pledge",
+      "update_item": "Update Pledge",
+      "add_new_item": "Add New Pledge",
+      "new_item_name": "New Pledge Name",
+      "menu_name": "Pledge"
+    },
+    "args": {
+      "hierarchical": true,
+      "show_ui": true,
+      "show_admin_column": true,
+      "query_var": false,
+      "public": true,
+      "rewrite":false
+    },
+    "post_type": "tariff"
+  },
+  "credit_tabs" : {
+    "labels": {
+      "name": "Credit Tabs",
+      "singular_name": "Credit Tab",
+      "search_items": "Search Credit Tab",
+      "all_items": "All Credit Tabs",
+      "parent_item": "Parent Credit Tab",
+      "parent_item_colon": "Parent Credit Tab:",
+      "edit_item": "Edit Credit Tab",
+      "update_item": "Update Credit Tab",
+      "add_new_item": "Add New Credit Tab",
+      "new_item_name": "New Credit Tab Name",
+      "menu_name": "Credit Tabs"
+    },
+    "args": {
+      "hierarchical": true,
+      "show_ui": true,
+      "show_admin_column": true,
+      "query_var": false,
+      "public": false,
+      "rewrite":false
+    },
+    "post_type": "credit_tariffs"
+  }
+}

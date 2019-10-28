@@ -1,0 +1,111 @@
+<div class="meta-form">
+    <div class="form-group">
+        <label class="custom-fields" data-css="textarea">
+            <span>{{ messages.address }}</span>
+            <textarea
+                    class="form-control"
+                    rows="5"
+                    id="address"
+                    placeholder="Enter address"
+                    name="address"
+            >{% if department_group.address !='' %}{{ department_group.address }}{% endif %}</textarea>
+        </label>
+    </div>
+    <div class="map-coordinates">
+        <div class="form-group">
+            <label class="custom-fields" data-css="input">
+                <span>{{ messages.lat }}</span>
+                <input
+                        type="text"
+                        class="form-control"
+                        id="lat"
+                        placeholder="Enter latitude"
+                        name="lat"
+                        data-js-required
+                        v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('lat') }"
+                        @blur="validateMeta"
+                        {% if department_group.lat !='' %}
+                        value= {{ department_group.lat }}
+                {% endif %}
+                >
+            </label>
+            <span v-if="errors.has('lat')"
+                    class="help is-danger error-msg coordinates-error"
+            >{{ messages.required }}</span>
+        </div>
+        <div class="form-group">
+            <label class="custom-fields" data-css="input">
+                <span>Longitude:</span>
+                <input
+                        type="text"
+                        class="form-control"
+                        id="long"
+                        placeholder="Enter longitude"
+                        name="lng"
+                        data-js-required
+                        v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('lng') }"
+                        @blur="validateMeta"
+                        {% if department_group.lng !='' %}
+                        value= {{ department_group.lng }}
+                {% endif %}
+                >
+                <span v-if="errors.has('lng')" class="help is-danger error-msg coordinates-error">{{ messages.required }}</span>
+            </label>
+        </div>
+    </div>
+    
+    <div class="work-days">
+        {% if days is not empty %}
+            {% for day in days %}
+                <div class="form-group">
+                    <div class="form-group__day-wrapper">
+                        <admin-work-day
+                                day-state="{{ department_group.days[loop.index] !='' }}"
+                                loop-index="{{ loop.index }}"
+                        >{{ day }}</admin-work-day>
+                    </div>
+                    <div class="form-group__timeline-wrapper">
+                        <time-filter
+                                :input-data="{
+                                    from: {
+                                        name: 'days_group[work_from][{{ loop.index }}]',
+                                        id: 'from{{ loop.index }}',
+                                        value: '{{ department_group.work_from[loop.index] }}'
+                                    },
+                                    to: {
+                                        name: 'days_group[work_to][{{ loop.index }}]',
+                                        id: 'to{{ loop.index }}',
+                                        value: '{{ department_group.work_to[loop.index] }}'
+                                    }
+                                }"
+                        ></time-filter>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="form-group">
+        <label class="custom-fields" data-css="textarea">
+            <span>{{ messages.notes }}</span>
+             <textarea
+                     class="form-control"
+                     rows="5"
+                     id="address"
+                     placeholder="Enter notes"
+                     name="notes"
+             >{% if department_group.notes !='' %}{{ department_group.notes }}{% endif %}</textarea>
+        </label>
+    </div>
+    <div class="form-group">
+        <label class="custom-fields" data-css="textarea">
+            <span>{{ messages.phone }}</span>
+             <input
+                     class="form-control"
+                     id="phone"
+                     placeholder="Enter phone"
+                     name="phone"
+                     value="{% if department_group.phone !='' %}{{ department_group.phone }}{% endif %}"
+             />
+        </label>
+    </div>
+</div>

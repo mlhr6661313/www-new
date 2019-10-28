@@ -1,0 +1,85 @@
+{% extends '_layout.twig' %}
+
+{% block content %}
+	<div class="blog__top-block">
+		<div class="content-width" data-css-container>
+			<h1 id="title" class="blog__title">{{ page.post_title }}</h1>
+		</div>
+	</div>
+	{% if aktsii_to is not empty %}
+		<section class="actions__content">
+			<div class="content-width">
+				<div class="init-tabs-actions">
+
+{#					<!-- Navigation container -->#}
+{#					<div class="smarty-controller">#}
+{#						<ul class="smarty-controller__list">#}
+{#							<li class="smarty-controller__item"> {{ lang.new_actions_text }} </li>#}
+{#							<li class="smarty-controller__item"> {{ lang.actions_over_text }} </li>#}
+{#						</ul>#}
+{#					</div>#}
+
+					<!-- Navigation container -->
+					<div class="smarty-content">
+						<div class="smarty-content__item smarty-content__item--active">
+							<div>
+							{% for action in aktsii_to %}
+								<div>
+									<a href="{{ action.url }}" title="{{ action.name }}">
+										<img src="{{ action.image }}" alt="{{ action.name }}" title="{{ action.name }}">
+										<div class="action-wrap">
+											<span>{{ action.name }}</span>
+											<div>
+												{% if action.to_data %}
+													<div>
+														<span>{{ lang.to_end_text }}</span>
+														<span>{{ action.to_data }}</span>
+														<span> {{ action.days }}</span>
+													</div>
+													
+												{% else %}
+													<span> {{ action.days }}</span>
+												{% endif %}
+											</div>
+										</div>
+										
+									</a>
+								</div>
+							{% endfor %}
+								{{ pagin }}
+							</div>
+						</div>
+{#						<div class="smarty-content__item">#}
+{#							<div>#}
+{#								{% for action in aktsii_to %}#}
+{#									<div>#}
+{#										<a href="{{ action.url }}" title="{{ action.name }}">#}
+{#											<img src="{{ action.image }}"  alt="{{ action.name }}" title="{{ action.name }}">#}
+{#											<div class="action-wrap">#}
+{#												<span>{{ action.name }}</span>#}
+{#												<div>#}
+{#													{% if action.to_data %}#}
+{#														<div>#}
+{#															<span>{{ lang.to_end_text }}</span>#}
+{#															<span>{{ action.to_data }}</span>#}
+{#															<span> {{ action.days }}</span>#}
+{#														</div>#}
+
+{#													{% else %}#}
+{#														<span> {{ action.days }}</span>#}
+{#													{% endif %}#}
+{#												</div>#}
+{#											</div>#}
+
+{#										</a>#}
+{#									</div>#}
+{#								{% endfor %}#}
+{#							</div>#}
+{#						</div>#}
+					</div>
+
+				</div>
+			</div>
+		</section>
+	{% endif %}
+{% endblock %}

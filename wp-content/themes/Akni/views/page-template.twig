@@ -1,0 +1,23 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+    <meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+    <section class="text-page content-width">
+        <h1 id="title" class="text-page__title">
+            {% if page.acf.frontend_page_title.value !='' %}
+                {{ page.acf.frontend_page_title.value }}
+            {% else %}
+                {{ page.post_title }}
+            {% endif %}
+        </h1>
+        {% if page.post_content  !='' %}
+            <div class="text-page__content" data-css-container="offset">
+                {{ page.post_content }}
+            </div>
+        {% endif %}
+    </section>
+    {% include 'modules/_page_blocks.twig' %}
+{% endblock %}

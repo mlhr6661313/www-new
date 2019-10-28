@@ -1,0 +1,176 @@
+<section class="calc-section">
+
+    <div class="calc-holder-data" id="all_calc_wrapper{{ context_suffix }}">
+
+        <div class="smarty-tabs calculate-tabs{{ context_suffix }}">
+            <div class="calc-title">{{ lang.calc_popup_title }}</div>
+
+            <div class="smarty-controller__wrapper">
+                <div class="smarty-controller">
+                    <ul class="smarty-controller__list">
+                        {% for tab in tabs %}
+                            <li id="{{ tab.id }}{{ context_suffix }}" class="smarty-controller__item">{{ tab.name }}</li>
+                        {% endfor %}
+                        <li id="other-tab{{ context_suffix }}" class="smarty-controller__item">{{ lang.other_pledge_text }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="smarty-content">
+                {% for index, term  in tabs %}
+                    <div class="smarty-content__item">
+                        <div id="{{ term.slug }}{{ context_suffix }}" class="calculator" data-samples='{{ samples[term.id] }}' data-tab="{{ term.id }}">
+                            <div class="calculator__items">
+                                <form @submit.prevent="calculateAction" class="calculator-form" action="#" name="calc" method="POST">
+                                    <div class="calculator__input-box" data-loan-id="{{ term.id }}">
+                                        <label class="calculator__label">
+                                            <span class="calculator__label-name">{{ lang.jewelry_weight_text }}</span>
+                                        </label>
+                                        <div class="calculator__select-wrapper">
+                                            <input id="weight{{ context_suffix }}" class="calculator__input" type="text" name="weight" maxlength="10" placeholder="{{ lang.specify_weight_text }}" @input="onInputValidate" @focus="setLetter" @blur="setLetter" data-letter="{{ lang.g_text }}" v-model="weightValue"/>
+                                        </div>
+                                    </div>
+
+                                    <div :class="['calculator__input-box', {disabled: !chosenField.samples}]">
+                                        <label class="calculator__label">
+                                            <span class="calculator__label-name">{{ lang.metal_sample_text }}</span>
+                                        </label>
+                                        <div class="calculator__select-wrapper">
+                                            <v-select v-model="samplesValue" :searchable="false" :options="selectSamples" :reset-on-options-change="true" placeholder="{{ lang.chouse_sample_text }}"></v-select>
+                                        </div>
+                                    </div>
+
+                                    <div class="calculator__input-box checkbox-holder stones-checkbox {{ current_lang }}">
+                                        <input class="check" name="stones" type="checkbox"/>
+                                        <label class="label" @click="changeInput">
+                                            {{ lang.stones_and_inserts_text }}
+                                        </label>
+                                        <span>{{ lang.final_estimated_value_text }}</span>
+                                    </div>
+
+                                    <div :class="['calculator__input-box', {disabled: !chosenField.tariff}]">
+                                        <label class="calculator__label">
+                                            <span class="calculator__label-name">{{ lang.tariff_plan_text }}</span>
+                                        </label>
+                                        <div class="calculator__select-wrapper">
+                                            <v-select v-model="tariffValue" :searchable="false" :options="tariffs" placeholder="{{ lang.chouse_tariff_plan_text }}"></v-select>
+                                        </div>
+                                        <div class="calculator__info info-block" v-if="tariffInfo">
+                                            <div class="info-block__button" @mouseover="tooltipAction" @mouseleave="tooltipAction">?
+                                            </div>
+                                            <div class="info-block__tooltip-wrapper">
+                                                <div class="info-block__tooltip">
+                                                    <div class="info-block__tooltip-text">
+                                                        ${tariffInfo}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div :class="['calculator__input-box', {disabled: !chosenField.discount}]">
+                                        <label class="calculator__label">
+                                            <span class="calculator__label-name">{{ lang.discount_status_text }}</span>
+                                        </label>
+                                        <div class="calculator__select-wrapper">
+                                            <v-select v-model="discountValue" :searchable="false" :options="discountOptions" :reset-on-options-change="true" placeholder="{{ lang.chouse_discount_status_text }}"></v-select>
+                                        </div>
+                                        <div class="calculator__info info-block" v-if="discountInfo">
+                                            <div class="info-block__button" @mouseover="tooltipAction" @mouseleave="tooltipAction">?
+                                            </div>
+                                            <div class="info-block__tooltip-wrapper">
+                                                <div class="info-block__tooltip">
+                                                    <div class="info-block__tooltip-text">
+                                                        ${discountInfo}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div :class="['calculator__input-box', {disabled: !chosenField.term}]">
+                                        <label class="calculator__label">
+                                            <span class="calculator__label-name">{{ lang.loan_terms_text }}</span>
+                                        </label>
+                                        <div class="calculator__range-slider" data-js-rangecontainer>
+
+                                            <vue-slider ref="slider" v-model="sliderOptions.value" :min="sliderOptions.min" :max="sliderOptions.max">
+                                                <template slot="tooltip" scope="tooltip">
+                                                    <div class="diy-tooltip">
+                                                        <span id="minus{{ context_suffix }}" @click.stop="sliderOptionsValueUpdate(tooltip.value-1)"></span>
+                                                        <span>${ tooltip.value }
+                                                            {{ lang.d_text }}</span>
+                                                        <span id="plus{{ context_suffix }}" @click.stop="sliderOptionsValueUpdate(tooltip.value+1)
+                                                            "></span>
+                                                    </div>
+                                                </template>
+                                            </vue-slider>
+                                        </div>
+                                    </div>
+
+                                    <div class="calculator__helper-input" hidden>
+                                        <input type="hidden" name="sample" :value="setSamplesValue"/>
+                                        <input type="hidden" name="tariff" :value="setTariffValue"/>
+                                        <input type="hidden" name="discount" :value="setDiscountValue"/>
+                                        <input type="hidden" name="days" :value="setTermValue"/>
+                                    </div>
+
+                                    <button class="calculator__calculate-btn button60" :disabled="!chosenField.term" @click="calculateCredit">
+                                        {{ lang.calculate_text }}
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="calculator__items">
+                                <div class="graphics disabled" data-js-calculatorgraphics>
+                                    <div class="graphics__container">
+                                        <div class="graphics__graph">
+                                            <div class="graphics__column">
+                                                <div class="graphics__item sum"></div>
+                                            </div>
+                                            <div class="graphics__info">
+                                                <div class="graphics__name">{{ lang.credit_sum_text }}</div>
+                                                <div class="graphics__value">${sum}</div>
+                                            </div>
+                                        </div>
+                                        <div class="graphics__graph">
+                                            <div class="graphics__column percent">
+                                                <div class="graphics__item percent" :style="{height: setPercent + '%'}"></div>
+                                            </div>
+                                            <div class="graphics__info">
+                                                <div class="graphics__name">{{ lang.percent_credit_sum_text }}</div>
+                                                <div class="graphics__value">${percent}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="graphics__notes">
+                                        {{ lang.calculator_info_text }}
+                                    </div>
+                                    <button class="graphics__button button60" data-options='{"baseClass":"not100height"}' data-fancybox data-src="#order-popup-{{ index }}" @click.prevent="fillWithContent" :disabled="!chosenField.orderBtn"></button>
+                                </div>
+                                {# ==========POPUP FORM============= #}
+                                <div id="order-popup-{{ index }}{{ context_suffix }}" class="hide">
+                                    <calculator-popup>{{ order_form }}</calculator-popup>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="smarty-content__item">
+                    <div data-loan-id="other" data-file-size="{{ file_max_size }}" data-error-size="{{ lang.error_file_size }}" data-error-type="{{ lang.error_file_type }}" data-required-message="{{ lang.required_file_message }}" data-thanks-message="{{ lang.thanks_message }}" data-submit-message="{{ lang.error_submit_message }}">
+                        <div id="calculator1">
+                            <div class="start-window">
+                                {{ tech_select }}
+                            </div>
+                            <div class="mobile_form_window" style="display: none; padding-top: 150px;">
+                                {{ mobile_form }}
+                            </div>
+                            <div class="other_form_window" style="display: none;">
+                                {{ other_form }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

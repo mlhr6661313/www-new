@@ -1,0 +1,17 @@
+.site-wrapper {
+	position: relative;
+	max-width: 100%;
+	overflow: hidden;
+	min-height: 100%;
+}
+.content-width {
+	width: 100%;
+
+	@include section-center($siteWidth, $padding: 50px);
+	@include breakpoint($mq-tablet) {
+		@include section-center($siteWidth, $padding: 40px);
+	}
+	@include breakpoint($mq-mobile) {
+		@include section-center($siteWidth, $padding: 30px);
+	}
+}

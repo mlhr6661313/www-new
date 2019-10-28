@@ -1,0 +1,72 @@
+@mixin bp-max($point) {
+    @media screen and (max-width: #{$point}) {
+        @content;
+    }
+}
+.region-filters {
+
+    &__title {
+        font-size: 1em;
+        line-height: 1em;
+        color: #707070;
+        font-weight: 500;
+        margin-bottom: 2em;
+    }
+
+    &__filters {
+        max-height: 240px;
+        overflow: auto;
+        
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+    }
+
+    .work-filter {
+        width: 50%;
+        &:nth-child(2n) {
+            padding-left: 1em;
+        }
+        &:nth-child(n + 3) {
+            padding-top: 0.1em;
+        }
+    }
+
+    @include bp-max(890px) {
+        .work-filter {
+            width: 33.33%;
+            padding-left: 1em;
+            &:nth-child(n + 3) {
+                padding-top: 0;
+            }
+            &:nth-child(n + 4) {
+                padding-top: 2em;
+            }
+            &:nth-child(3n + 1) {
+                padding-left: 0;
+            }
+        }
+    }
+    @include bp-max(470px) {
+        .work-filter {
+            width: 50%;
+            padding-left: 0;
+            &:nth-child(n + 4) {
+                padding-top: 0;
+            }
+            &:nth-child(3n + 1) {
+                padding-left: 0;
+            }
+            &:nth-child(2n) {
+                padding-left: 1em;
+            }
+            &:nth-child(n + 3) {
+                padding-top: 2em;
+            }
+        }
+    }
+}

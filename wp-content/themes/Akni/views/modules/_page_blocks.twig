@@ -1,0 +1,23 @@
+{% if config_page.pages_blocks.value and config_page.pages_blocks.value is not empty %}
+    <section class="blog__additional-block content-width">
+        {% for block in config_page.pages_blocks.value %}
+            {% if block.title !='' and block.description !='' %}
+                <div class="blog__additional-item">
+                    <div data-title="h3">{{ block.title }}</div>
+                    <div class="description">
+                        {{ block.description }}
+                    </div>
+                    {% if block.link !='' and block.link_text !='' %}
+                        <div class="action">
+                            <a href="{{ block.link }}">
+                                <svg viewBox="0 0 25 25" class="icon icon-more">
+                                    <use xlink:href="#icon-more"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </section>
+{% endif %}

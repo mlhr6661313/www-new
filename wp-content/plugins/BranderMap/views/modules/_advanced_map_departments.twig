@@ -1,0 +1,22 @@
+<div class="departments">
+    {% if mapData is not empty %}
+        <span class="title">{{ labels.lombards_near_you }}</span>
+        {% for department in mapData %}
+            {% if department.post_meta.department_group %}
+                {% if department.post_meta.department_group.lat !='' and department.post_meta.department_group.lng !='' %}
+                    <div
+                            data-department-id="{{ department.ID }}"
+                            class="department"
+                            @click="setMapPosition({{ department.post_meta.department_group.lat }}, {{ department.post_meta.department_group.lng }})"
+                    >
+                        <span class="title">{{ department.post_title }}</span>
+                        <div class="info">
+                            <div class="work-time"></div>
+                        </div>
+                        <div class="range"></div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+</div>

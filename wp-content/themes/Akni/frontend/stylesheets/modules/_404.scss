@@ -1,0 +1,44 @@
+.page-404 {
+  height: 600px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  &__title {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  &__heading {
+    display: block;
+    font-size: 165px;
+    line-height: 172px;
+    margin-bottom: 36px;
+    color: #b0ca1f;
+    span {color: #ffdd00;}
+  }
+  &__text {
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    a {
+      color: #7286ad;
+      &:hover {color: $clr-link;}
+    }
+  }
+  @include breakpoint($mq-mobile) {
+    height: 400px;
+    &__title {margin-bottom: 25px;}
+    &__heading {
+      display: block;
+      font-size: 80px;
+      line-height: 86px;
+      margin-bottom: 18px;
+    }
+    &__text {
+      max-width: 87.5%;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

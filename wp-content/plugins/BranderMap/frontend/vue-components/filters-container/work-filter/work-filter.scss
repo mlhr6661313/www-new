@@ -1,0 +1,70 @@
+@mixin bp-max($point){
+    @media screen and (max-width: #{$point}) {@content;}
+}
+
+.work-time {
+    &__when {
+
+        display: flex;
+        justify-content: space-between;
+
+        @include bp-max(640px) {
+            flex-wrap: wrap;
+
+        }
+    }
+
+    &__title {
+        font-size: 1em;
+        line-height: 1em;
+        color: #707070;
+        font-weight: 500;
+    }
+
+    & > div + div {
+        padding-top: 2em;
+    }
+
+    @include bp-max(890px) {
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 3em;
+
+        &__title {
+            order: 1;
+            width: 50%;
+        }
+        &__button-wrapper {
+            order: 2;
+            width: 50%;
+            padding-top: 0 !important;
+            text-align: right;
+        }
+        &__when {
+            order: 3;
+            width: 100%;
+        }
+        &__timeline {
+            order: 4;
+            width: 100%;
+        }
+    }
+
+    @include bp-max(480px) {
+        &__when {
+            .work-filter {
+                width: 50%;
+            }
+        }
+    }
+
+    @include bp-max(400px) {
+        &__when {
+            .work-filter {
+                width: 100%;
+            }
+        }
+    }
+}
+

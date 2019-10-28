@@ -1,0 +1,96 @@
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 100;
+  display: inline;
+  transform: translateY(-50%);
+
+  .sidebar-item {
+    background-color: #000;
+    height: 60px;
+    width: 240px;
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: transform 0.3s;
+    transform: translateX(170px);
+
+    &:hover {
+      transform: translateX(0);
+      
+    }
+
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+
+    .sic {
+      display: block;
+      width: 44px;
+      height: 44px;
+      margin-left: 18px;
+      margin-right: 14px;
+
+      &:before {
+        content: '';
+        width: 44px;
+        height: 44px;
+        display: block;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+
+    a {
+      color: currentColor;
+    }
+    
+    &.money {
+      color: #000;
+      background-color: #f6ee31;
+
+      .sic:before {
+        background-image: url(../images/money.svg);
+      }
+    }
+    
+    &.car {
+      color: #fff;
+      background-color: #8973b3;
+
+      .sic:before {
+        background-image: url(../images/car.svg);
+      }
+    }
+
+    &.online {
+      color: #fff;
+      background-color: #008341;
+
+      .sic:before {
+        background-image: url(../images/card.svg);
+      }
+    }
+  }
+
+  .sidebar-text {
+    // margin-left: 40px;
+    // text-align: center;
+  }
+
+  .tochka-inner {
+    position: absolute;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+  }
+}

@@ -1,0 +1,180 @@
+.calc-section {
+	padding: 60px 0 80px;
+	&__title {margin-bottom: 20px;}
+	&__preview {
+		margin-bottom: 60px;
+		max-width: 66.66%;
+	}
+	&__tabs-list {
+		@extend %list-reset;
+		display: flex;
+		flex-flow: row nowrap;
+		position: relative;
+		z-index: 1;
+		margin-bottom: 85px;
+		&:before {
+			content: '';
+			position: absolute;
+			left: -100vw;
+			top: calc(100% - 2px);
+			z-index: 0;
+			width: 300vw;
+			height: 1px;
+			background: #ebebeb;
+		}
+		li + li {margin-left: 44px;}
+		a {
+			display: inline-block;
+			font-size: 18px;
+			line-height: 22px;
+			padding: 14px 0 12px;
+			border-bottom: 3px solid transparent;
+			color: $clr-grey;
+			&:hover {color: $clr-text;}
+		}
+		li[data-state='active'] {
+			a {
+				border-color: #ffdd00;
+				color: $clr-text;
+			}
+		}
+	}
+	.wpcf7-form {
+		display: flex;
+		flex-flow: row wrap;
+		.form-box {
+			margin-top: 100px;
+			width: 50%;
+			&.is-dropzone {
+				padding-left: 75px;
+				margin-top: 0;
+			}
+		}
+		.form-row {
+			.wpcf7-form-control-wrap {position: relative;}
+			&.has-label {
+				input {padding-right: 35px;}
+			}
+			&.is-small {
+				> span {
+					&:first-child {max-width: 180px;}
+					&:nth-child(2) {
+						flex: 1 0 calc(100% - 260px);
+						width: calc(100% - 260px);
+						max-width: calc(100% - 260px);
+					}
+				}
+			}
+
+			> span {
+				display: block;
+				&:first-child {
+					flex: 1 0 180px;
+					width: 180px;
+					color: $clr-grey;
+				}
+				&:nth-child(2) {
+					flex: 1 0 calc(100% - 180px);
+					width: calc(100% - 180px);
+					font-size: 16px;
+					line-height: 18px;
+				}
+			}
+		}
+		.form-row + .form-row {margin-top: 20px;}
+	}
+
+	[data-loan-id="other"] {
+		.wpcf7-form {
+
+			.form-row {
+
+				> span {
+					&:first-child {
+						color: #000;
+					}
+				}
+			}
+
+		}
+	}
+	@include breakpoint($mq-tablet){
+		.smarty-tabs {
+			// padding-right: 32px;
+			// padding-left: 32px;
+		}
+		.wpcf7-form {
+			.form-box {
+				width: 100%;
+				&.is-dropzone {
+					padding-left:0;
+					padding-top: 50px;
+					width: 100%;
+				}
+			}
+		}
+		.wpcf7-radio .wpcf7-list-item {margin-left: 0.5em;}
+	}
+	@include breakpoint($mq-mobile) {
+		.smarty-tabs {
+			// padding-right: 16px;
+			// padding-left: 16px;
+			.smarty-controller {
+				&__item {
+					font-size: 12px;
+					& + .smarty-controller__item {margin-left: 0.5em;}
+				}
+			}
+			.calculator {
+				&__items {
+					width: 100%;
+					& + .calculator__items {
+						// margin-top: 3em;
+					}
+				}
+				&__input-box {padding-right: 0;}
+			}
+			.info-block__button {display: none;}
+		}
+		.wpcf7-form {
+			.form-box {
+				width: 100%;
+				&.is-dropzone {
+					// margin-top: 3em;
+					padding-left: 0;
+					width: 100%;
+				}
+			}
+			.form-row {
+				&.has-label {
+					input {padding-right: 35px;}
+				}
+				&.is-small {
+					> span {
+						&:first-child {
+							max-width: 90px;
+						}
+						&:nth-child(2) {
+							flex: 1 0 calc(100% - 170px);
+							width: calc(100% - 170px);
+							max-width: calc(100% - 170px);
+						}
+					}
+				}
+				> span {
+					display: block;
+					&:first-child {
+						font-size: 10px;
+						flex: 1 0 90px;
+						width: 90px;
+						padding-right: 1em;
+					}
+					&:nth-child(2) {
+						flex: 1 0 calc(100% - 90px);
+						width: calc(100% - 90px);
+					}
+				}
+			}
+		}
+	}
+}

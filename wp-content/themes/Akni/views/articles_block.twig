@@ -1,0 +1,36 @@
+<div class="publications-section__list" data-js-articles>
+    {% for article in articles %}
+        <div class="publication-item">
+            <a href="{{ article.post_url }}">
+                {% if article.action_date !='' %}
+                    <div class="publication-item__action">
+                        <span>{{ lang.action_text }}</span>
+                        <span>{{ lang.before_text }} {{ article.action_date }}</span>
+                    </div>
+                {% endif %}
+                <div class="publication-item__img-box">
+                    {% if article.main_thumnail_url !='' %}
+                        <img class="publication-item__img"
+                             src="{{ article.main_thumnail_url }}"
+                             alt="{{ article.main_thumnail_url.alt }}"
+                             title="{{ article.main_thumnail_url.title }}"/>
+                    {% elseif article.default_thumnail_url !='' %}
+                        <img class="publication-item__img"
+                             src="{{ article.default_thumnail_url }}"
+                             alt="{{ article.default_thumnail_url.alt }}"
+                             title="{{ article.default_thumnail_url.title }}"/>
+                    {% endif %}
+                </div>
+
+                <div class="blog-link__text">
+                    <div class="button__layer" data-css="black"></div>
+                    <div class="button__layer" data-css="orange"></div>
+                    <div class="button__layer" data-css="text">
+                        <div data-title="h3" class="publication-item__title">{{ article.post_title }}</div>
+                        <span class="publication-item__date">{{ article.date }}</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>

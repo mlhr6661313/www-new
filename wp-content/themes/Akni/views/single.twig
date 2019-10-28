@@ -1,0 +1,113 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+    <meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="text-page">
+        {% if config_page.acf.product_title.value !='' %}
+            <h1 id="title" class="text-page__title content-width">{{ config_page.acf.product_title.value }}</h1>
+        {% endif %}
+        <div class="about-us__content" data-css-container="offset">
+            <div class="product-content__wrapper">
+                <section class="product-info">
+                    <div class="about-product"
+                         data-css="in-product-info"
+                         data-screen="mobile-start-only">
+                        <div data-title="h2" class="about-product__title">{{ page.post_title }}</div>
+                        <div class="about-product__line" data-br="offset"></div>
+
+                        <div class="about-product__content">
+                            {% if page.post_content %}
+                                <p class="about-product__description">
+                                    {{ page.post_content }}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    {% if page.main_thumnail_url !='' %}
+                        <div class="product-info__pic">
+                            <img class="product-info__img"
+                                 src="{{ page.main_thumnail_url }}"
+                                 alt="{{ page.post_name }}-image"
+                                 title="{{ page.post_name }}-image"/>
+                        </div>
+                    {% endif %}
+
+                    {% if page.acf.product_subtitle.value !='' or page.acf.product_subdescription.value %}
+                        <div class="product-info__head-table">
+                            {% if page.acf.product_subtitle.value !='' %}
+                                <div class="product-info__title">
+                                    {{ page.acf.product_subtitle.value }}
+                                </div>
+                            {% endif %}
+                            {% if page.acf.product_subdescription.value !='' %}
+                                <div class="product-info__subtitle">
+                                    {{ page.acf.product_subdescription.value }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+
+                    <section id="table" class="product-info__table">
+                        {% include 'modules/_table.twig' %}
+                    </section>
+
+                    {% if config_page.acf.product_text.value !='' %}
+                        <div class="product-info__description">
+                            {{ config_page.acf.product_text.value }}
+                        </div>
+                    {% endif %}
+                </section>
+
+                <aside class="about-product">
+                    <div class="about-product__head">
+                        <div data-title="h2" class="about-product__title"
+                            data-screen="desktop-only">{{ page.post_title }}</div>
+                        <div class="about-product__btn-wrapper">
+                            <div class="about-product__btn button"
+                                 data-css="reverse-color full-size"
+                                 data-js-clarifyPrice
+                            >
+                                <div class="button__layer" data-css="black"></div>
+                                <div class="button__layer" data-css="orange"></div>
+                                <div class="button__layer" data-css="text">{{ lang.specify_price_text }}</div>
+                            </div>
+                        </div>
+                        <div class="popoup-form"
+                             data-js-popup="clarify-price"
+                             data-state="hide">
+                            <div class="popoup-form__wrapper">
+                                <div class="popoup-form__btn-close" data-js-closePopup></div>
+                                <div class="popoup-form__title">{{ lang.specify_price_text }}</div>
+                                {{ forms.order }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-product__line"
+                         data-screen="desktop-only"
+                         data-br="offset"
+                    ></div>
+
+                    <div class="about-product__content"
+                         data-screen="desktop-only">
+                        {% if page.post_content %}
+                            <div class="about-product__description">{{ page.post_content }}</div>
+                        {% endif %}
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <section id="similar-products">
+            {% include 'modules/_similar_products.twig' %}
+        </section>
+
+        <section id="similar-articles">
+            {% include 'modules/_similar_articles.twig' %}
+        </section>
+    </div>
+{% endblock %}

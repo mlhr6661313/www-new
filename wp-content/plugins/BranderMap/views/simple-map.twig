@@ -1,0 +1,12 @@
+<div
+        id="brander-simple-map-{{ serial }}"
+        class="brander-map"
+        data-department="{{ departmentCoordinates }}"
+>
+    <simple-map
+            map-id="{{ serial }}"
+            :options="defaultMapOptions"
+            json-departments="{{ departmentCoordinates }}"
+            json-labels="{{ labels }}"
+    ></simple-map>
+</div>

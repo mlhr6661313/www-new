@@ -1,0 +1,25 @@
+@import "fields";
+@import "elements";
+
+.callback-form {
+  max-width: 450px;
+  margin: 0 auto;
+  .actions {
+    text-align: center;
+    * + & {margin-top: 60px;}
+  }
+  .thank-you {
+    .thank_you_title {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 15px;
+    }
+    .thank_you_text {
+      line-height: 24px;
+      margin-bottom: 35px;
+    }
+    &__actions {
+      text-align: center;
+    }
+  }
+}

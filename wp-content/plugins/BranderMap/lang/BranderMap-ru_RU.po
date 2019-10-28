@@ -1,0 +1,81 @@
+# BRANDER MAP ru_RU
+# Copyright (C) 2017 BRANDER MAP
+# BRANDER <stevenaknidev@gmail.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-28 21:01+0300\n"
+"PO-Revision-Date: 2019-03-25 12:28+0200\n"
+"Language-Team: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+
+msgid "This field Required"
+msgstr "Это поле обязательно для заполнения"
+
+msgid "Latitude:"
+msgstr "Широта:"
+
+msgid "Brander Map"
+msgstr "Карты Brander"
+
+msgid "Map key"
+msgstr "Ключ карты"
+
+msgid "Your city"
+msgstr "Ваш город"
+
+msgid "What gets"
+msgstr "Что принимает"
+
+msgid "When works"
+msgstr "Когда работает"
+
+msgid "Lombard filters"
+msgstr "Фильтры ломбардов"
+
+msgid "Now"
+msgstr "Сейчас"
+
+msgid "Weekend"
+msgstr "Выходные"
+
+msgid "Round the clock"
+msgstr "Круглосуточно"
+
+msgid "Lombards near you"
+msgstr "Ломбарды возле вас"
+
+msgid "Every day"
+msgstr "Каждый день"
+
+msgid "km"
+msgstr "км"
+
+msgid "More info"
+msgstr "Больше информации"
+
+msgid "Calculate loan"
+msgstr "Рассчитать кредит"
+
+msgid "Lombard accepts"
+msgstr "Ломбард принимает"
+
+msgid "from you"
+msgstr "от вас"
+
+msgid "Address:"
+msgstr "Адрес:"
+
+msgid "Notes"
+msgstr "Примечания"
+
+msgid "Phone"
+msgstr "Телефон"

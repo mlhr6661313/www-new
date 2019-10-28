@@ -1,0 +1,153 @@
+{% if success_msg is not empty %}
+    <div id="message" class="updated">
+        <p><strong>{{ success_msg }}</strong></p>
+    </div>
+{% endif %}
+<div class="form-group">
+    <table width="600" border="0">
+        <tr>
+            <td> Header Logo: </td>
+            <td>
+                <img class="header_logo" src="{{ theme_options.header_logo }}" height="100" width="100"/>
+                <div>
+                    <a href="#" class="header_logo_upload">Upload</a>
+                    <a href="#" class="header_logo_reset">Reset</a>
+                </div>
+                <input type="hidden" class="header_logo_url" name="ice-theme-settings[header_logo]" size="60" value="{{ theme_options.header_logo }}" alt="logo image" title="logo image">
+            </td>
+        </tr>
+        <tr>
+            <td> Footer Logo: </td>
+            <td>
+                <img class="footer_logo" src="{{ theme_options.footer_logo }}" height="100" width="100"/>
+                <div>
+                    <a href="#" class="footer_logo_upload">Upload</a>
+                    <a href="#" class="footer_logo_reset">Reset</a>
+                </div>
+                <input type="hidden" class="footer_logo_url" name="ice-theme-settings[footer_logo]" size="60" value="{{ theme_options.footer_logo }}" alt="logo image" title="logo image">
+            </td>
+        </tr>
+
+        <td>logo alt</td>
+        <td>
+            <input type="text" name="ice-theme-settings[logo_alt]" value ="{{theme_options.logo_alt}}"/>
+        </td>
+        </tr>
+        <td>logo title</td>
+        <td>
+            <input type="text" name="ice-theme-settings[logo_title]" value ="{{theme_options.logo_title}}"/>
+        </td>
+        </tr>
+        <tr>
+            <td>vk</td>
+            <td>
+                <input type="text" name="ice-theme-settings[social][vk]" value ="{{theme_options.social.vk}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>fb</td>
+            <td>
+                <input type="text" name="ice-theme-settings[social][fb]" value ="{{theme_options.social.fb}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>twitter</td>
+            <td>
+                <input type="text" name="ice-theme-settings[social][twitter]" value ="{{theme_options.social.twitter}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>insta</td>
+            <td>
+                <input type="text" name="ice-theme-settings[social][insta]" value ="{{theme_options.social.insta}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>
+                <input type="text" name="ice-theme-settings[email]" value ="{{theme_options.email}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>currency</td>
+            <td>
+                <input type="text" name="ice-theme-settings[currency]" value ="{{theme_options.currency}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Livechat</td>
+            <td>
+                <textarea rows="30" cols="50" name="ice-theme-settings[live_chat]">
+                    {{theme_options.live_chat}}
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>yandex metrika</td>
+            <td>
+                <textarea rows="30" cols="50" name="ice-theme-settings[yandex_metric]">{{theme_options.yandex_metric}}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Google analytics</td>
+            <td>
+                <textarea rows="30" cols="50" name="ice-theme-settings[google_analytics]">{{theme_options.google_analytics}}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Additional Scripts</td>
+            <td>
+                <textarea rows="30" cols="50" name="ice-theme-settings[additional_scripts]">{{theme_options.additional_scripts}}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Default image id</td>
+            <td>
+                <input type="number" step="1" min="1" name="ice-theme-settings[default_image_id]" value ="{{theme_options.default_image_id}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>contact page id</td>
+            <td>
+                <input type="number" step="1" min="1" name="ice-theme-settings[contact_page_id]" value ="{{theme_options.contact_page_id}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Department page id</td>
+            <td>
+                <input type="number" step="1" min="1" name="ice-theme-settings[department_page_id]" value ="{{theme_options.department_page_id}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>config page id</td>
+            <td>
+                <input type="number" step="1" min="1" name="ice-theme-settings[config_page_id]" value ="{{theme_options.config_page_id}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>blog page id</td>
+            <td>
+                <input type="number" step="1" min="1" name="ice-theme-settings[blog_page_id]" value ="{{theme_options.blog_page_id}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>actions page id</td>
+            <td>
+                <input type="number" step="1" min="1" name="ice-theme-settings[actions_page_id]" value ="{{theme_options.actions_page_id}}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>All credits</td>
+            <td>
+                <input type="number" step="1" min="1" name="ice-theme-settings[all_credits_id]" value ="{{theme_options.all_credits_id}}"/>
+            </td>
+        </tr>
+        {#<tr>#}
+            {#<td> How we work id</td>#}
+            {#<td>#}
+                {#<input type="number" step="1" min="1" name="ice-theme-settings[how_we_work_id]" value ="{{theme_options.how_we_work_id}}"/>#}
+            {#</td>#}
+        {#</tr>#}
+    </table>
+    <input type="submit" value="Save" />
+</div>

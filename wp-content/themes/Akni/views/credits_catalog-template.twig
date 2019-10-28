@@ -1,0 +1,17 @@
+{% extends '_layout.twig' %}
+
+{% block content %}
+    <section class="credits-page content-width">
+        <div class="page-title">
+            <h1 id="title" >{{ page.acf.custom_title.value }}</h1>
+        </div>
+        {% include 'modules/credits-catalog/_steps.twig' %}
+        {% include 'modules/credits-catalog/_tabs.twig' %}
+        {% include 'modules/credits-catalog/_receptions.twig' %}
+        {% if page.post_content %}
+            <section class="receptions-info-section">
+                {{ page.post_content }}
+            </section>
+        {% endif %}
+    </section>
+{% endblock %}

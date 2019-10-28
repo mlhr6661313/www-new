@@ -1,0 +1,132 @@
+<div role="form" class="wpcf7" lang="ru-RU" dir="ltr">
+    <div class="screen-reader-response"></div>
+    <form action="sendOrderForm" data-js="calculator-order-form" method="post" class="wpcf7-form" novalidate="novalidate">
+        <h3 class="order-popup__title">{{ lang.checkout_title_text }}</h3>
+        <div class="order-popup__info">
+            <div class="form-row">
+                <p>{{ lang.jewelry_weight_text }} <span class="order-weight"></span></p>
+                <input type="hidden"
+                       name="order-weight"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+            <div class="form-row">
+                <p>{{ lang.stones_and_inserts_text }} <span class="order-stones"></span></p>
+                <input type="hidden"
+                       name="order-stones"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+            <div class="form-row">
+                <p>{{ lang.metal_sample_text }} <span class="order-sample"></span></p>
+                <input type="hidden"
+                       name="order-sample"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+            <div class="form-row">
+                <p>{{ lang.tariff_plan_text }}<span class="order-tariff"></span></p>
+                <input type="hidden"
+                       name="order-tariff"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+            <div class="form-row">
+                <p>{{ lang.discount_status_text }}<span class="order-discount"></span></p>
+                <input type="hidden"
+                       name="order-discount"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+            <div class="form-row">
+                <p>{{ lang.loan_terms_text }}<span class="order-days"></span></p>
+                <input type="hidden"
+                       name="order-days"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+            <div class="form-row">
+                <p>{{ lang.credit_sum_text }} <span class="order-sum"></span></p>
+                <input type="hidden"
+                       name="order-sum"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+            <div class="form-row">
+                <p>{{ lang.percent_credit_sum_text }}<span class="order-percent"></span></p>
+                <input type="hidden"
+                       name="order-percent"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+            </div>
+        </div>
+        <div class="order-popup__form">
+
+            <div class="form-row">
+                <span>{{ lang.your_name_text }}</span>
+                <span class="wpcf7-form-control-wrap your-name">
+                    <input type="text"
+                           name="your-name"
+                           value=""
+                           size="40"
+                           maxlength="200"
+                           autocomplete="name"
+                           class="wpcf7-form-control wpcf7-text form-input is-required"
+                           aria-invalid="false" />
+                </span>
+            </div>
+
+            <div class="form-row">
+                <span>{{ lang.phone_text }}</span>
+                <span class="wpcf7-form-control-wrap your-tel">
+                    <input type="tel"
+                           name="your-tel"
+                           value=""
+                           size="40"
+                           maxlength="20"
+                           class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-input is-required"
+                           aria-invalid="false"/>
+                </span>
+            </div>
+
+            <div class="form-row">
+                <span>{{ lang.email_faq_text }}</span>
+                <span class="wpcf7-form-control-wrap your-email">
+                    <input type="email"
+                           name="your-email"
+                           value=""
+                           size="40"
+                           maxlength="100"
+                           autocomplete="email"
+                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form-input"
+                           aria-invalid="false" />
+                </span>
+            </div>
+
+            <div class="subscribe">
+                <label>
+                  <input data-js="subscribe-checkbox" name="subscribe" type="checkbox" title="{{ lang.subscribe_text }}"><b></b>
+                  <span>{{ lang.subscribe_text }}</span>
+                </label>
+            </div>
+
+            <div data-js="error-message" style="display:none;color:red;">
+                <span>{{ lang.error_submit_message }}</span>
+            </div>
+
+            <div class="form-actions">
+                <input type="hidden"
+                       name="type"
+                       value=""
+                       class="wpcf7-form-control wpcf7-hidden" />
+                <input type="submit"
+                       value="{{ lang.checkout_text }}"
+                       class="wpcf7-form-control wpcf7-submit btn"
+                       data-js="submit-btn"
+                />
+            </div>
+        </div>
+
+        <div class="wpcf7-response-output wpcf7-display-none"></div>
+    </form>
+</div>

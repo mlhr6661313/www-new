@@ -1,0 +1,57 @@
+{% if similar_posts is not empty %}
+<section id="similar-posts" class="publications-section">
+    <div class="publications-section__holder content-width">
+        <div class="publications-section__heading">
+            {% if similar_posts_label !='' %}
+                <div data-title="h2" class="publications-section__title">{{ similar_posts_label }}</div>
+            {% endif %}
+            {% if blog_permalink and blog_permalink !='' %}
+                <a class="btn has-border" href="{{ blog_permalink }}">
+                    {{ lang.load_more_text }}
+                    {% if more_text_data and more_text_data !='' %}
+                        {{ more_text_data }}
+                    {% endif %}
+                </a>
+            {% endif %}
+        </div>
+        <div class="publications-section__list">
+        {% for article in similar_posts %}
+            <div class="publication-item">
+                <a href="{{ article.post_url }}">
+                    {% if article.action_date !='' %}
+                        <div class="publication-item__action">
+                            <span>{{ lang.action_text }}</span>
+                            <span>{{ lang.before_text }} {{ article.action_date }}</span>
+                        </div>
+                    {% endif %}
+                    <div class="publication-item__img-box">
+                        {% if article.main_thumnail_url !='' %}
+                            <img width="100px" height="100px" class="blog-link__img"
+                                 src="{{ article.main_thumnail_url }}"
+                                 alt="{{ article.post_title }}"
+                                 title="{{ article.post_title }}"/>
+                        {% elseif article.default_thumnail_url !='' %}
+                            <img width="100px" height="100px" class="blog-link__img"
+                                 src="{{ article.default_thumnail_url }}"
+                                 alt="{{ article.post_title }}"
+                                 title="{{ article.post_title }}"/>
+                        {% endif %}
+                    </div>
+                    <div class="blog-link__text button">
+                        <div class="button__layer" data-css="black"></div>
+                        <div class="button__layer" data-css="orange"></div>
+                        <div class="button__layer" data-css="text">
+                            <span class="blog-link__date">{{ article.date }}</span>
+                            <div data-title="h3" class="blog-link__title">{{ article.post_title }}</div>
+                            <div class="button-arrow">
+                                <div class="button-arrow__arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}

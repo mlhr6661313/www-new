@@ -1,0 +1,71 @@
+<table style="border-collapse: collapse; text-align: center" class="order-table" border="1">
+    <style>
+        td {
+            padding: 3px;
+        }
+    </style>
+    <tr>
+        <td>Id</td>
+        <td>Имя</td>
+        <td>Телефон</td>
+        <td>Почта</td>
+        <td>Наименование залога</td>
+        <td>Фото</td>
+        <td>Состояние</td>
+        <td>Оригинальная уп.</td>
+        <td>Желаемая сумма</td>
+        <td>Комплектация</td>
+        <td>Год покупки</td>
+        <td>Модель</td>
+        <td>Производитель</td>
+        <td>Дата</td>
+        <td>Статус</td>
+        <td>Обновить</td>
+        <td>Удалить</td>
+    </tr>
+    {% for order in orders %}
+        <tr>
+            <form name="order-page" method="post" action="{{ current_url }}">
+                <td>
+                    {{ order.id }}
+                    <input type="hidden" name="id" value="{{ order.id }}" />
+                </td>
+                <td>{{ order.your_name }}</td>
+                <td>{{ order.your_tel }}</td>
+                <td>{{ order.your_email }}</td>
+                <td>{{ order.pledge }}</td>
+                <td>
+                    {% if order.photo %}
+                    <a href="{{ order.photo }}" target="_blank">Скачать</a>
+                    {% endif %}
+                </td>
+                <td>{{ order.stars }}</td>
+                <td>{{ order.pack }}</td>
+                <td>{{ order.summ }}</td>
+                <td>{{ order.complectation }}</td>
+                <td>{{ order.prod_year }}</td>
+                <td>{{ order.model }}</td>
+                <td>{{ order.manufacturer }}</td>
+                <td>{{ order.date }}</td>
+                <td class="status">
+                    <select name="status" title="status">
+                        {% for key, status in statuses %}
+                            <option
+                                    value="{{ key }}"
+                                    {% if key == order.status %}
+                                        selected="selected"
+                                    {% endif %}
+                            >{{ status }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td class="update">
+                    <input type="submit" name="update" value="update"/>
+                </td>
+                <td class="delete">
+                    <input type="submit" name="delete" value="delete"/>
+                </td>
+            </form>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,28 @@
+.custom-fields {
+    * {
+        display: inline-block;
+    }
+    span {
+        vertical-align: baseline;
+        line-height: 1;
+        min-width: 6em;
+    }
+    input {
+        width: 25em;
+    }
+    textarea {
+        width: 25em;
+        height: 10em;
+        resize: none;
+    }
+    &[data-css~=textarea] {
+        span {
+            vertical-align: top;
+        }
+    }
+}
+
+.coordinates-error {
+    margin-left: 6em;
+    display: block;
+}

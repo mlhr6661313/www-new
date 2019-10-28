@@ -1,0 +1,28 @@
+{% if filters is not empty %}
+    <div class="blog__filters" data-css-container data-css="desktop">
+        <div class="filters__filter"
+             data-js-filter
+             data-state="active"
+             data-id="all">
+        </div>
+        <ul class="blog__filters-list">
+        {% for filter in filters %}
+            {% if loop.index == 1 %}
+                <li class="filters__filter"
+                     data-js-filter
+                     data-state="active"
+                     data-id="{{ filter.slug }}">
+                    <a href="#" class="filters__text"> {{ filter.name }}</a>
+                </li>
+            {% else %}
+                <li class="filters__filter"
+                    data-js-filter
+                    data-state
+                    data-id="{{ filter.slug }}">
+                    <a href="#" class="filters__text"> {{ filter.name }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+{% endif %}

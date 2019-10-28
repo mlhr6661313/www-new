@@ -1,0 +1,49 @@
+.departments-section {
+	&__holder {
+		padding-top: 30px;
+		padding-bottom: 45px;
+	}
+	&__map {
+		height: 700px;
+		padding-bottom: 70px;
+		margin-bottom: 70px;
+	}
+	&__content {
+		line-height: 24px;
+		color: #8392af;
+		.inner-text {
+			display: inline;
+			p {display: inline;}
+		}
+	}
+	
+	@include bp-max($mq-mobile-medium){
+		.content-width{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	
+	@include bp-max(480px){
+		.content-width{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	
+}
+
+.advanced-map{
+	.departments-popup{
+
+		.button60-border {
+			width: 100%;
+			
+		}
+
+		@media screen and (max-width: 640px) {
+			width: 100%;
+		}
+	}
+	
+}

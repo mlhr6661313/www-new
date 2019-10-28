@@ -1,0 +1,47 @@
+{% if page.acf.vacancy_benefits.value %}
+<a name="vacancy-benefits"></a>
+<section>
+	<div class="vacancy-benefits">
+		<div data-title="h2">{{ page.acf.benefits_title.value }}</div>
+		<div class="vacancy-benefits-list">
+			{% for benefit in page.acf.vacancy_benefits.value %}
+				<div class="vacancy-benefit-item">
+					<div class="item-title">{{ benefit.title }}</div>
+					<div class="show-on-hover">{{ benefit.text }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<script>
+	(function (){
+		function rep(){
+			if(typeof $ != 'function')
+				setTimeout(rep,100);
+			else
+				setClickBenefit();
+		}
+		rep();
+
+		function setClickBenefit(){
+			$(document).ready(function(){
+				var items = $('.vacancy-benefits-list .vacancy-benefit-item');
+
+				items.each(function(){
+					var item = $(this);
+					item.find('.item-title').click(function(){
+						if(item.hasClass('opened')){
+							items.removeClass('opened');
+						} else {
+							items.removeClass('opened');
+							item.addClass('opened');
+						}
+
+					})
+				});
+			});
+		}
+	})();
+
+</script>
+{% endif %}

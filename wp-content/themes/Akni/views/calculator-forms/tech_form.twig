@@ -1,0 +1,64 @@
+{# <div role="form" class="wpcf7" id="wpcf7-f546-o1" lang="ru-RU" dir="ltr"> #}
+    <div class="screen-reader-response"></div>
+    <form action="{{ ajax_url }}" method="post" class="wpcf7-form" enctype="multipart/form-data" novalidate="novalidate">
+        <div class="form-box">
+            <div class="form-row">
+                <span>{{ lang.your_name_text }}*</span>
+                <span class="wpcf7-form-control-wrap your-name">
+                    <input type="text" name="your-name" value="" size="40" maxlength="200" autocomplete="name" class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false"/>
+                </span>
+            </div>
+
+            <div class="form-row">
+                <span>{{ lang.phone_text }}*</span>
+                <span class="wpcf7-form-control-wrap your-tel">
+                    <input type="tel" name="your-tel" value= "" size="40" maxlength="20" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel form-input is-required" aria-invalid="false"/>
+                </span>
+            </div>
+
+            <div class="form-row">
+                <span>{{ lang.email_faq_text }}</span>
+                <span class="wpcf7-form-control-wrap your-email">
+                    <input type="email" name="your-email" value="" size="40" maxlength="200" autocomplete="email" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form-input" aria-invalid="false"/>
+                </span>
+            </div>
+
+            <div class="form-row">
+                <span>{{ lang.tech_name_text }}*</span>
+                <span class="wpcf7-form-control-wrap pledge">
+                    <input type="text" name="pledge" size="40" maxlength="200" class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false" value = ""/>
+                </span>
+            </div>
+            <div class="form-row">
+                <span>тест*</span>
+                <span class="calc1">
+                    <input type="text" name="calc1" size="40" maxlength="200" class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false"/>
+                </span>
+            </div>
+        <button @click = "backStep()" type="button" class="btn btn-primary">Назад</button>               
+        </div>
+        <div class="form-box is-dropzone">
+            <div id="js-dropzone" class="dropzone">
+                <div class="fallback">
+                    <span class="wpcf7-form-control-wrap photo">
+                        <input type="file" name="photo" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false"/>
+                    </span>
+                </div>
+                <p>
+                    <a href="#" class="btn has-border">{{ lang.tech_photo_text }}</a>
+                </p>
+            </div>
+        </div>
+        {# не убирать класс wpcf7-checkbox #}
+        <div class="subscribe wpcf7-checkbox">
+            <label>
+                <input data-js="subscribe-checkbox" name="subscribe" type="checkbox" title="{{ lang.subscribe_text }}"><b></b>
+                <span>{{ lang.subscribe_text }}</span>
+            </label>
+        </div>
+        <div class="form-actions">
+            <input type="submit" value="{{ lang.tech_send_text }}" class="wpcf7-form-control wpcf7-submit btn js-send-form"/>
+        </div>
+        <div class="wpcf7-response-output wpcf7-display-none"></div>
+    </form>
+{# </div> #}

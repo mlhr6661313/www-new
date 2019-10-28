@@ -1,0 +1,67 @@
+<table style="border-collapse: collapse; text-align: center" class="order-table" border="1">
+    <style>
+        td {
+            padding: 3px;
+        }
+    </style>
+    <tr>
+        <td>Id</td>
+        <td>Вес</td>
+        <td>Проба</td>
+        <td>Тариф</td>
+        <td>С камнем</td>
+        <td>Дискон.статус</td>
+        <td>Срок</td>
+        <td>Сумма кредита</td>
+        <td>Сумма %</td>
+        <td>Имя</td>
+        <td>Телефон</td>
+        <td>Почта</td>
+        <td>Дата</td>
+        <td>Тип</td>
+        <td>Статус</td>
+        <td>Обновить</td>
+        <td>Удалить</td>
+    </tr>
+    {% for order in orders %}
+        <tr>
+            <form name="order-page" method="post" action="{{ current_url }}">
+                <td>
+                    {{ order.id }}
+                    <input type="hidden" name="id" value="{{ order.id }}" />
+                </td>
+                <td>{{ order.order_weight }}</td>
+                <td>{{ order.order_sample }}</td>
+                <td>{{ order.order_tariff }}</td>
+                <td>{{ order.order_stones }}</td>
+                <td>{{ order.order_discount }}</td>
+                <td>{{ order.order_days }}</td>
+                <td>{{ order.order_sum }}</td>
+                <td>{{ order.order_percent }}</td>
+                <td>{{ order.your_name }}</td>
+                <td>{{ order.your_tel }}</td>
+                <td>{{ order.your_email }}</td>
+                <td>{{ order.date }}</td>
+                <td>{{ order.type }}</td>
+                <td class="status">
+                    <select name="status" title="status">
+                        {% for key, status in statuses %}
+                            <option
+                                    value="{{ key }}"
+                                    {% if key == order.status %}
+                                        selected="selected"
+                                    {% endif %}
+                            >{{ status }}</option>
+                        {% endfor %}
+                    </select>
+                </td>
+                <td class="update">
+                    <input type="submit" name="update" value="update"/>
+                </td>
+                <td class="delete">
+                    <input type="submit" name="delete" value="delete"/>
+                </td>
+            </form>
+        </tr>
+    {% endfor %}
+</table>

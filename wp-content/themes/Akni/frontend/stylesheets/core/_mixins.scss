@@ -1,0 +1,126 @@
+@mixin anim($param: all, $dur: .18s, $type: ease-out, $delay: 0s) {
+	transition: $param $dur $type $delay;
+}
+@mixin anim-param($params...) {
+	transition-property: $params;
+}
+@mixin gradv($color1, $color2, $opacity: 50%) {
+	background: mix($color1, $color2, $opacity) linear-gradient(to bottom, $color1 0%, $color2 100%);
+}
+@mixin column-width($i) {
+	column-width: $i;
+}
+@mixin column-count($i) {
+	column-count: $i;
+}
+@mixin column-gap($i) {
+	column-gap: $i;
+}
+@mixin columns($i, $j: 0) {
+	@include column-count($i);
+	@include column-gap($j);
+}
+@mixin letter-spacing($ls, $fz: 1em) {
+	letter-spacing: (($fz/1000)*$ls);
+}
+@mixin breakpoint($point, $type: max-width) {
+	@media screen and (#{$type}: #{$point}) {@content;}
+}
+@mixin bp-max($point){
+	@media screen and (max-width: #{$point}) {@content;}
+}
+@mixin bp-min($point){
+	@media screen and (min-width: #{$point}) {@content;}
+}
+@mixin bp($point, $type: max) {
+	@media screen and (#{$type}-width: #{$point}px) {@content;}
+}
+@mixin breakpoint-range($min, $max) {
+	@media screen and (min-width: $min) and (max-width: $max) {@content;}
+}
+@mixin section-center($width: $siteWidth, $padding: 16px){
+	margin: 0 auto;
+	max-width: $width + ($padding * 2);
+	padding-right: $padding;
+	padding-left: $padding;
+}
+@mixin placeholder() {
+	&::-webkit-input-placeholder {@content}
+	&::-moz-placeholder          {@content}/* Firefox 19+ */
+	&:-moz-placeholder           {@content}/* Firefox 18- */
+	&:-ms-input-placeholder      {@content}
+}
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+@function strip-units($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@mixin scrollbar {
+	&::-webkit-scrollbar{
+		width: 7px;
+	}
+	&::-webkit-scrollbar-track{
+		
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: #d8d8d8;
+		border-radius: 100px;
+	}
+}
+
+@mixin contentWidth {
+	max-width: 780px;
+	margin: 0 auto;
+}
+
+@mixin animation-fill-mode($str) {
+	-webkit-animation-fill-mode: #{$str};
+	-moz-animation-fill-mode: #{$str};
+}
+
+// Transition mixins
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+}
+
+@mixin transition-property($args...) {
+	-webkit-transition-property: $args;
+	-moz-transition-property: $args;
+}
+
+// Keyframe animations
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}
+	@keyframes $animation-name {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+}
+
+// Media queries
+@mixin smaller($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin b767 {
+  // Set global device param
+  $media: only screen;
+
+  @media #{$media} and (max-width: 767px) {
+    @content;
+  }
+}

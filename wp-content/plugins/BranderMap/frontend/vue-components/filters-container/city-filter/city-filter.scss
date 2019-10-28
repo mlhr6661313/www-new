@@ -1,0 +1,10 @@
+.v-select.unsearchable input[type=search] {
+  max-width: none!important;
+}
+.v-select .selected-tag {
+  border: none!important;
+  background: none!important;
+  margin: 0!important;
+  padding: 0!important;
+  line-height: inherit!important;
+}

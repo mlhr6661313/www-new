@@ -1,0 +1,21 @@
+{
+  "name": "brander/brander_map",
+  "description": "maps for pawnshops",
+  "type": "Project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "stevenakni",
+      "email": "stevenaknidev@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "twig/twig": "1.24.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "BranderMap\\": ""
+    }
+  }
+}

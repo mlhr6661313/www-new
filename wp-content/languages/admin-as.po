@@ -1,0 +1,1118 @@
+# Translation of WordPress - 4.7.x - Administration in Assamese
+# This file is distributed under the same license as the WordPress - 4.7.x - Administration package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-11-22 18:59:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: as_IN\n"
+"Project-Id-Version: WordPress - 4.7.x - Administration\n"
+
+#: wp-admin/user-new.php:470
+msgid "Send the new user an email about their account."
+msgstr "নতুন ব্যৱহাৰকাৰীলৈ তেওঁৰ একাউন্টৰ বিষয়ে জনাই ইমেইল পঠিৱাওক |"
+
+#: wp-admin/user-new.php:467
+msgid "Send User Notification"
+msgstr "ব্যৱহাৰকাৰীৰ জাননী পঠিৱাওক"
+
+#. translators: %s: menu name
+#: wp-admin/nav-menus.php:820
+msgctxt "menu location"
+msgid "(Currently set to: %s)"
+msgstr "(বৰ্তমান এয়াঃ %s)"
+
+#. translators: %s: WordPress version number
+#: wp-admin/about.php:269
+msgid "<strong>Version %s</strong> addressed one security issue."
+msgstr "<strong>সংস্কৰণ %s</strong>ৰ দ্বাৰা এটা নিৰাপত্তাজনিত বিষয় ঘোষিত হৈছে |"
+
+#. translators: %s: site link
+#: wp-admin/includes/schema.php:1010 wp-admin/includes/upgrade.php:163
+msgid "Welcome to %s. This is your first post. Edit or delete it, then start blogging!"
+msgstr "%s লৈ স্বাগতম | এইটো আপোনাৰ প্ৰথম লেখা | ইয়াক মচি পেলাওক নাইবা সম্পাদনা কৰক, তাৰ পিছত ব্ল'গিং আৰম্ভ কৰক |"
+
+#: wp-admin/user-edit.php:501
+msgid "https://en.gravatar.com/"
+msgstr "https://en.gravatar.com/"
+
+#. translators: %s: Gravatar URL
+#: wp-admin/user-edit.php:500
+msgid "You can change your profile picture on <a href=\"%s\">Gravatar</a>."
+msgstr "আপুনি আপোনাৰ পৰিলেখ(প্ৰফাইল) ছবি <a href=\"%s\">Gravatar</a>ত সলনি কৰিব পাৰিব |"
+
+#: wp-admin/user-edit.php:494
+msgid "Profile Picture"
+msgstr "পৰিলেখ ছবি"
+
+#: wp-admin/about.php:47 wp-admin/about.php:266
+msgid "Maintenance and Security Releases"
+msgstr "ৰক্ষণাবেক্ষণ আৰু নিৰাপত্তা মুক্তিসমূহ"
+
+#: wp-admin/about.php:260
+msgid "Maintenance Releases"
+msgstr "ৰক্ষণাবেক্ষণ উন্মোচনসমূহ"
+
+#: wp-admin/about.php:263
+msgid "Security Releases"
+msgstr "নিৰাপত্তা উন্মোচনসমূহ"
+
+#: wp-admin/options-permalink.php:181
+msgid "Plain"
+msgstr "সৰল"
+
+#: wp-admin/options-permalink.php:161
+msgid "WordPress offers you the ability to create a custom URL structure for your permalinks and archives. Custom URL structures can improve the aesthetics, usability, and forward-compatibility of your links. A <a href=\"https://codex.wordpress.org/Using_Permalinks\">number of tags are available</a>, and here are some examples to get you started."
+msgstr "WordPress offers you the ability to create a custom URL structure for your permalinks and archives. Custom URL structures can improve the aesthetics, usability, and forward-compatibility of your links. A <a href=\"https://codex.wordpress.org/Using_Permalinks\">number of tags are available</a>, and here are some examples to get you started."
+
+#: wp-admin/options-permalink.php:29
+msgid "Permalinks can contain useful information, such as the post date, title, or other elements. You can choose from any of the suggested permalink formats, or you can craft your own if you select Custom Structure."
+msgstr "Permalinks can contain useful information, such as the post date, title, or other elements. You can choose from any of the suggested permalink formats, or you can craft your own if you select Custom Structure."
+
+#. translators: %s: Codex URL
+#: wp-admin/setup-config.php:168
+msgid "Need more help? <a href=\"%s\">We got it</a>."
+msgstr "আৰু সহায়ৰ প্ৰয়োজন ? <a href=\"%s\">আমি এয়া পালোঁ</a> |"
+
+#. translators: %s: wp-config.php
+#: wp-admin/setup-config.php:360
+msgid "Sorry, but I can&#8217;t write the %s file."
+msgstr "দুঃখিত, আপুনি %s নথিখন লিখিব নোৱাৰে |"
+
+#. translators: %s: localhost
+#: wp-admin/setup-config.php:208
+msgid "You should be able to get this info from your web host, if %s doesn&#8217;t work."
+msgstr "যদি %s অক্ষম, তেন্তে আপুনি আপোনাৰ আয়োজকৰ পৰা এই তথ্য পাব পাৰে |"
+
+#. translators: %s: wp-config.php
+#: wp-admin/setup-config.php:364
+msgid "You can create the %s manually and paste the following text into it."
+msgstr "You can create the %s manually and paste the following text into it."
+
+#. translators: 1: wp-config-sample.php, 2: wp-config.php
+#: wp-admin/setup-config.php:161
+msgid "If for any reason this automatic file creation doesn&#8217;t work, don&#8217;t worry. All this does is fill in the database information to a configuration file. You may also simply open %1$s in a text editor, fill in your information, and save it as %2$s."
+msgstr "If for any reason this automatic file creation doesn&#8217;t work, don&#8217;t worry. All this does is fill in the database information to a configuration file. You may also simply open %1$s in a text editor, fill in your information, and save it as %2$s."
+
+#. translators: %s: wp-config.php
+#: wp-admin/setup-config.php:155
+msgid "We&#8217;re going to use this information to create a %s file."
+msgstr "We&#8217;re going to use this information to create a %s file."
+
+#. translators: %s: wp-content/uploads
+#: wp-admin/options-media.php:110
+msgid "Default is %s"
+msgstr "ন্যূণতা হৈছে %s"
+
+#. translators: %s: style.css
+#: wp-admin/includes/class-theme-upgrader.php:452
+msgid "The theme is missing the %s stylesheet."
+msgstr "এই থীমটোৱে %s শৈলীপাতটো হেৰুৱাইছে |"
+
+#. translators: %s: style.css
+#: wp-admin/includes/class-theme-upgrader.php:463
+msgid "The %s stylesheet doesn&#8217;t contain a valid theme header."
+msgstr "%s শৈলীপাতটোত এটা বৈধ থীম শিৰোলেখ নাই |"
+
+#. translators: %s: index.php
+#: wp-admin/includes/class-theme-upgrader.php:473
+msgid "The theme is missing the %s file."
+msgstr "এই থীমটোৱে %s নথিখন হেৰুৱাইছে |"
+
+#: wp-admin/maint/repair.php:74
+msgid "Database repair results"
+msgstr "তথ্যাগাৰ মেৰামতি ফলাফল"
+
+#: wp-admin/maint/repair.php:66
+msgid "Check secret keys"
+msgstr "গোপন চাবিসমূহ পৰীক্ষা কৰক"
+
+#: wp-admin/maint/repair.php:157
+msgid "WordPress database repair"
+msgstr "ৱৰ্ডপ্ৰেছ তথ্যাগাৰ মেৰামতি"
+
+#: wp-admin/setup-config.php:144
+msgid "Before getting started"
+msgstr "আপুনি আৰম্ভ কৰাৰ আগতে"
+
+#: wp-admin/setup-config.php:401
+msgid "Successful database connection"
+msgstr "তথ্যাগাৰ সংযোগ সফল"
+
+#. translators: %s: nav menu title
+#: wp-admin/includes/nav-menu.php:1084
+msgid "%s has been updated."
+msgstr "%s উন্নীতকৰণ হ'ল |"
+
+#. translators: %s: file extension
+#: wp-admin/theme-editor.php:226
+msgid "%s files"
+msgstr "%s নথিসমূহ"
+
+#: wp-admin/theme-install.php:217
+msgid "Themes list"
+msgstr "থীমসমূহৰ তালিকা"
+
+#: wp-admin/plugins.php:490
+msgid "All selected plugins are up to date."
+msgstr "নিৰ্বাচিত সকলো প্লাগিনসূুহ আধুনিক হৈ আছে |"
+
+#: wp-admin/plugins.php:473
+msgid "The selected plugin has been <strong>deleted</strong>."
+msgstr "নিৰ্বাচিত প্লাগিনটো <strong>মচি</strong> দিয়া হৈছে |"
+
+#: wp-admin/plugin-install.php:104 wp-admin/plugins.php:415
+msgid "Plugins list navigation"
+msgstr "প্লাগিনসমূহৰ তালিকাৰ সাঁৰণী"
+
+#: wp-admin/plugin-install.php:105 wp-admin/plugins.php:416
+msgid "Plugins list"
+msgstr "প্লাগিনসমূহৰ তালিকা"
+
+#. translators: %s: plugin file name
+#: wp-admin/plugin-editor.php:206
+msgid "Editing %s (active)"
+msgstr "%s সম্পাদনা (সক্ৰিয়)"
+
+#. translators: %s: plugin file name
+#: wp-admin/plugin-editor.php:214
+msgid "Editing %s (inactive)"
+msgstr "%s সম্পাদনা (সক্ৰিয়)"
+
+#: wp-admin/includes/ms.php:988
+msgid "Site: %s"
+msgstr "চাইটঃ %s"
+
+#: wp-admin/includes/file.php:18
+msgid "Theme Footer"
+msgstr "থীম পাদলেখ"
+
+#: wp-admin/includes/file.php:17
+msgid "Theme Header"
+msgstr "থীম শিৰোলেখ"
+
+#: wp-admin/includes/class-wp-users-list-table.php:218
+msgid "No role"
+msgstr "কোনো ভূমিকা নাই"
+
+#: wp-admin/includes/class-wp-users-list-table.php:548
+msgctxt "no user roles"
+msgid "None"
+msgstr "কোনো নহয়"
+
+#. translators: 1: comment author, 2: notification if the comment is pending
+#: wp-admin/includes/dashboard.php:698
+msgid "From %1$s %2$s"
+msgstr "%1$s %2$s ৰ পৰা"
+
+#. translators: date and time format for recent posts on the dashboard, from a
+#. different calendar year, see https://secure.php.net/date
+#: wp-admin/includes/dashboard.php:850
+msgid "M jS Y"
+msgstr "M jS Y"
+
+#: wp-admin/includes/class-wp-screen.php:1227
+msgid "View Mode"
+msgstr "পৰিদৰ্শন প্ৰণালী"
+
+#: wp-admin/includes/class-wp-screen.php:1180
+msgid "Pagination"
+msgstr "পৃষ্ঠাঙ্কন"
+
+#: wp-admin/includes/dashboard.php:568
+msgid "View all drafts"
+msgstr "সকলো খঁচৰা চাওক"
+
+#. translators: 1: Title of an update, 2: Error message
+#: wp-admin/includes/class-bulk-upgrader-skin.php:42
+msgid "An error occurred while updating %1$s: %2$s"
+msgstr "%1$s উন্নীত কৰি থাকোতে এইটা ত্ৰুতি দেখা দিছেঃ %2$s"
+
+#: wp-admin/export.php:197 wp-admin/export.php:239 wp-admin/export.php:271
+msgid "End date:"
+msgstr "শেষ তাৰিখঃ"
+
+#. translators: %s: the new user
+#: wp-admin/includes/ajax-actions.php:1354
+msgid "User %s added"
+msgstr "ব্যৱহাৰকাৰী %s যোগ কৰা হ'ল"
+
+#. translators: %s: all comments count
+#: wp-admin/includes/class-wp-comments-list-table.php:207
+msgctxt "comments"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "সকলো <span class=\"count\">(%s)</span>"
+msgstr[1] "সকলো <span class=\"count\">(%s)</span>"
+
+#. translators: %s: approved comments count
+#: wp-admin/includes/class-wp-comments-list-table.php:221
+msgctxt "comments"
+msgid "Approved <span class=\"count\">(%s)</span>"
+msgid_plural "Approved <span class=\"count\">(%s)</span>"
+msgstr[0] "অনুমোদিত <span class=\"count\">(%s)</span>"
+msgstr[1] "অনুমোদিত <span class=\"count\">(%s)</span>"
+
+#. translators: %s: spam comments count
+#: wp-admin/includes/class-wp-comments-list-table.php:228
+msgctxt "comments"
+msgid "Spam <span class=\"count\">(%s)</span>"
+msgid_plural "Spam <span class=\"count\">(%s)</span>"
+msgstr[0] "আৱৰ্জনা <span class=\"count\">(%s)</span>"
+msgstr[1] "আৱৰ্জনা <span class=\"count\">(%s)</span>"
+
+#. translators: %s: pending comments count
+#: wp-admin/includes/class-wp-comments-list-table.php:214
+msgctxt "comments"
+msgid "Pending <span class=\"count\">(%s)</span>"
+msgid_plural "Pending <span class=\"count\">(%s)</span>"
+msgstr[0] "বিচাৰাধীন <span class=\"count\">(%s)</span>"
+msgstr[1] "বিচাৰাধীন <span class=\"count\">(%s)</span>"
+
+#: wp-admin/edit-form-advanced.php:161
+msgid "Page draft updated."
+msgstr "খচৰা পৃষ্ঠা উন্নীত কৰা হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:157
+msgid "Page published."
+msgstr "পৃষ্ঠা প্ৰকাশ হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:159
+msgid "Page submitted."
+msgstr "পৃষ্ঠা দাখিল কৰা হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:145
+msgid "Post submitted."
+msgstr "লেখনি দাখিল কৰা হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:147
+msgid "Post draft updated."
+msgstr "লেখনিৰ খচৰা উন্নীত কৰা হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:146
+msgid "Post scheduled for: %s."
+msgstr "%sৰ বাবে লেখনিটো সময়সূচিত কৰা হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:143
+msgid "Post published."
+msgstr "লেখনিটো প্ৰকাশ হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:127
+msgid "View page"
+msgstr "পৃষ্ঠা চাওক"
+
+#: wp-admin/edit-form-advanced.php:97 wp-admin/edit-form-advanced.php:103
+msgid "Preview post"
+msgstr "লেখাটো পূৰ্বলোকন কৰক"
+
+#: wp-admin/edit-form-advanced.php:115 wp-admin/edit-form-advanced.php:121
+msgid "Preview page"
+msgstr "পৃষ্ঠাটো পূৰ্বলোকন কৰক"
+
+#. translators: %s: comment link
+#: wp-admin/comment.php:187
+#: wp-admin/includes/class-wp-comments-list-table.php:648
+msgid "In reply to %s."
+msgstr "%sৰ উত্তৰত |"
+
+#: wp-admin/user-edit.php:543
+msgid "Generate Password"
+msgstr "পাছৱৰ্ড নিৰ্মাণ কৰক"
+
+#: wp-admin/includes/class-wp-list-table.php:660
+#: wp-admin/includes/class-wp-list-table.php:672
+#: wp-admin/includes/class-wp-list-table.php:685
+msgid "No comments"
+msgstr "মন্তব্য নাই"
+
+#: wp-admin/includes/class-wp-list-table.php:654
+msgid "%s approved comment"
+msgid_plural "%s approved comments"
+msgstr[0] "%s অনুমোদিত মন্তব্য"
+msgstr[1] "%s অনুমোদিত মন্তব্যসমূহ"
+
+#: wp-admin/includes/class-wp-list-table.php:655
+msgid "%s pending comment"
+msgid_plural "%s pending comments"
+msgstr[0] "%s বিচাৰাধীন মন্তব্য"
+msgstr[1] "%s বিচাৰাধীন মন্তব্যসমূহ"
+
+#: wp-admin/includes/class-wp-list-table.php:653
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] "%s মন্তব্য"
+msgstr[1] "%s মন্তব্যসমূহ"
+
+#: wp-admin/install.php:167 wp-admin/user-edit.php:567
+#: wp-admin/user-new.php:458
+msgid "Confirm Password"
+msgstr "পাছৱৰ্ড নিশ্চিত কৰক"
+
+#: wp-admin/includes/class-wp-users-list-table.php:485
+msgid "%s post by this author"
+msgid_plural "%s posts by this author"
+msgstr[0] "এই লেখকৰ দ্বাৰা %s লেখনি"
+msgstr[1] "এই লেখকৰ দ্বাৰা %s লেখনিসমূহ"
+
+#: wp-admin/includes/class-wp-press-this.php:1524
+msgid "More actions"
+msgstr "অধিক ক্ৰিয়াসমূহ"
+
+#: wp-admin/includes/class-wp-list-table.php:798
+msgid "First page"
+msgstr "প্ৰথম পৃষ্ঠা"
+
+#: wp-admin/edit-form-comment.php:104 wp-admin/includes/meta-boxes.php:214
+msgid "Date and time"
+msgstr "তাৰিখ আৰু সময়"
+
+#: wp-admin/edit-form-comment.php:84
+msgid "Comment status"
+msgstr "মন্তব্য অৱস্থা"
+
+#. translators: %s: post link
+#: wp-admin/edit-form-comment.php:122
+msgid "In response to: %s"
+msgstr "এওঁৰ সঁহাৰি হিচাপেঃ %s"
+
+#. translators: %s: comment link
+#: wp-admin/edit-form-comment.php:137
+msgid "In reply to: %s"
+msgstr "এওঁৰ উত্তৰ হিচাপেঃ %s"
+
+#: wp-admin/includes/dashboard.php:1501
+msgid "https://codex.wordpress.org/First_Steps_With_WordPress"
+msgstr "https://codex.wordpress.org/First_Steps_With_WordPress"
+
+#: wp-admin/includes/meta-boxes.php:622 wp-admin/includes/meta-boxes.php:676
+msgid "https://codex.wordpress.org/Introduction_to_Blogging#Managing_Comments"
+msgstr "https://codex.wordpress.org/Introduction_to_Blogging#Managing_Comments"
+
+#: wp-admin/includes/file.php:1207
+msgid "example: www.wordpress.org"
+msgstr "উদাহৰণঃ www.wordpress.org"
+
+#: wp-admin/options-general.php:259 wp-admin/options-general.php:295
+msgid "example:"
+msgstr "উদাহৰণঃ"
+
+#: wp-admin/includes/class-wp-media-list-table.php:502
+msgid "Detach"
+msgstr "পৃথক"
+
+#: wp-admin/menu-header.php:246
+msgid "Main menu"
+msgstr "মূখ্য মেনু"
+
+#: wp-admin/includes/ajax-actions.php:433
+#: wp-admin/includes/class-wp-list-table.php:762
+#: wp-admin/includes/class-wp-list-table.php:1349
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] "%s বিষয়"
+msgstr[1] "%s বিষয়সমূহ"
+
+#. translators: date and time format for exact current time, mainly about
+#. timezones, see https://secure.php.net/date
+#: wp-admin/options-general.php:21
+msgctxt "timezone date format"
+msgid "Y-m-d H:i:s"
+msgstr "Y-m-d H:i:s"
+
+#: wp-admin/includes/file.php:31 wp-admin/includes/template.php:1721
+msgid "Posts Page"
+msgstr "লেখাসমূহৰ পৃষ্ঠা"
+
+#: wp-admin/includes/template.php:1717
+msgid "Front Page"
+msgstr "সন্মূখ পৃষ্ঠা"
+
+#: wp-admin/update-core.php:421
+msgid "New translations are available."
+msgstr "নতুন অনুবাদসমুহ উপলবদ্ধ"
+
+#: wp-admin/includes/revision.php:208 wp-admin/includes/revision.php:250
+msgctxt "revision date short format"
+msgid "j M @ H:i"
+msgstr "j M @ H:i"
+
+#: wp-admin/includes/class-wp-posts-list-table.php:981
+msgid "Y/m/d g:i:s a"
+msgstr "Y/m/d g:i:s a"
+
+#. translators: Publish box date format, see https://secure.php.net/date
+#: wp-admin/edit-form-advanced.php:133 wp-admin/edit-form-comment.php:93
+#: wp-admin/includes/meta-boxes.php:175 wp-admin/includes/meta-boxes.php:308
+#: wp-admin/includes/revision.php:207 wp-admin/includes/revision.php:249
+msgid "M j, Y @ H:i"
+msgstr "M j, Y @ H:i"
+
+#: wp-admin/comment.php:195
+msgid "Submitted on"
+msgstr "দাখিল কৰা হৈছিল"
+
+#. translators: column name or table row header
+#: wp-admin/comment.php:169
+#: wp-admin/includes/class-wp-comments-list-table.php:402
+msgid "In Response To"
+msgstr "সঁহাৰিত"
+
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:95
+msgctxt "Plugin Installer"
+msgid "Recommended"
+msgstr "প্ৰস্তাৱিত"
+
+#: wp-admin/options-discussion.php:224
+msgid "Mystery Person"
+msgstr "ৰহস্যজনক ব্যক্তি"
+
+#: wp-admin/includes/dashboard.php:1130
+msgid "https://planet.wordpress.org/feed/"
+msgstr "https://planet.wordpress.org/feed/"
+
+#: wp-admin/includes/dashboard.php:1121 wp-admin/index.php:76
+#: wp-admin/index.php:82
+msgid "https://planet.wordpress.org/"
+msgstr "https://planet.wordpress.org/"
+
+#: wp-admin/includes/class-wp-screen.php:1047
+msgctxt "Welcome panel"
+msgid "Welcome"
+msgstr "স্বাগতম"
+
+#: wp-admin/includes/class-wp-users-list-table.php:193
+msgctxt "users"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "সকলো <span class=\"count\">(%s)</span>"
+msgstr[1] "সকলো <span class=\"count\">(%s)</span>"
+
+#: wp-admin/edit-tags.php:535 wp-admin/options-general.php:352
+msgid "Note:"
+msgstr "টোকাঃ"
+
+#: wp-admin/theme-install.php:292
+msgctxt "Button label for a theme"
+msgid "Previous"
+msgstr "পূৰ্বৱৰ্তী"
+
+#: wp-admin/theme-install.php:293
+msgctxt "Button label for a theme"
+msgid "Next"
+msgstr "পৰৱৰ্তী"
+
+#: wp-admin/includes/template.php:727
+msgid "Minute"
+msgstr "Minute"
+
+#: wp-admin/includes/template.php:726
+msgid "Hour"
+msgstr "Hour"
+
+#: wp-admin/includes/template.php:724
+msgid "Day"
+msgstr "Day"
+
+#: wp-admin/includes/template.php:714
+msgid "Month"
+msgstr "Month"
+
+#: wp-admin/includes/plugin-install.php:637
+msgid "Contributors"
+msgstr "অৱদানকাৰীসকল"
+
+#: wp-admin/includes/class-wp-plugin-install-list-table.php:404
+msgctxt "Plugin installer group title"
+msgid "Tools"
+msgstr "সঁজুলিসমূহ"
+
+#: wp-admin/theme-install.php:156
+msgctxt "themes"
+msgid "Popular"
+msgstr "জনপ্ৰিয়"
+
+#: wp-admin/includes/class-wp-theme-install-list-table.php:66
+#: wp-admin/theme-install.php:157
+msgctxt "themes"
+msgid "Latest"
+msgstr "শেহতীয়া"
+
+#: wp-admin/theme-install.php:47
+msgid "Search Themes"
+msgstr "থীমসমূহ সন্ধান কৰক"
+
+#: wp-admin/maint/repair.php:147
+msgid "https://wordpress.org/support/forum/how-to-and-troubleshooting"
+msgstr "https://wordpress.org/support/forum/how-to-and-troubleshooting"
+
+#: wp-admin/theme-install.php:48
+msgid "Search themes..."
+msgstr "থীমসমূহ সন্ধান কৰক..."
+
+#: wp-admin/theme-install.php:250
+msgctxt "theme"
+msgid "Details &amp; Preview"
+msgstr "সবিশেষসমূহ ও পূৰ্বালোকন"
+
+#: wp-admin/theme-install.php:23
+msgid "Add Themes"
+msgstr "থীমসমূহ যোগ কৰক"
+
+#. translators: date and time format for recent posts on the dashboard, see
+#. https://secure.php.net/date
+#: wp-admin/includes/dashboard.php:853
+msgid "M jS"
+msgstr "M jS"
+
+#: wp-admin/includes/dashboard.php:258
+msgid "%s Post"
+msgid_plural "%s Posts"
+msgstr[0] "%s লেখা"
+msgstr[1] "%s লেখাসমূহ"
+
+#: wp-admin/includes/dashboard.php:260
+msgid "%s Page"
+msgid_plural "%s Pages"
+msgstr[0] "%s পৃষ্ঠা"
+msgstr[1] "%s পৃষ্ঠাসমূহ"
+
+#. translators: 1: Error code, 2: Error message.
+#: wp-admin/includes/class-wp-automatic-updater.php:883
+msgid "Error: [%1$s] %2$s"
+msgstr "ত্ৰুতিঃ [%1$s] %2$s"
+
+#: wp-admin/theme-install.php:46 wp-admin/themes.php:138
+msgid "Add New Theme"
+msgstr "নতুন থীম যোগ কৰক"
+
+#: wp-admin/themes.php:158
+msgctxt "Add new theme"
+msgid "Add New"
+msgstr "নতুন যোগ কৰক"
+
+#: wp-admin/themes.php:453
+msgid "Update Available"
+msgstr "উন্নীতকৰণ উপলব্ধ"
+
+#: wp-admin/includes/dashboard.php:51 wp-admin/includes/dashboard.php:570
+msgid "Drafts"
+msgstr "খচৰা"
+
+#: wp-admin/includes/dashboard.php:768
+msgid "Publishing Soon"
+msgstr "সোনকালে প্ৰকাশ পাব"
+
+#: wp-admin/includes/dashboard.php:775
+msgid "Recently Published"
+msgstr "শেহতীয়াকৈ প্ৰকাশিত"
+
+#: wp-admin/includes/dashboard.php:56
+msgid "WordPress News"
+msgstr "ৱৰ্ডপ্ৰেছ খবৰ"
+
+#. translators: 1: version number, 2: theme name
+#: wp-admin/includes/update.php:286
+msgid "WordPress %1$s running %2$s theme."
+msgstr "ৱৰ্ডপ্ৰেছ %1$s পৰিচালিত কৰিছে %2$s থীম |"
+
+#: wp-admin/includes/dashboard.php:51
+msgid "Quick Draft"
+msgstr "দ্ৰুত খচৰা"
+
+#: wp-admin/includes/dashboard.php:515
+msgid "What&#8217;s on your mind?"
+msgstr "আপোনাৰ মগজুত কি খেলি আছে ?"
+
+#: wp-admin/includes/class-wp-automatic-updater.php:652
+msgid "WordPress %s is also now available."
+msgstr "ৱৰ্ডপ্ৰেছ %s বৰ্তমান উপলব্ধ |"
+
+#: wp-admin/update-core.php:411 wp-admin/update-core.php:419
+msgid "Translations"
+msgstr "অনুবাদসমূহ"
+
+#: wp-admin/update-core.php:412
+msgid "Your translations are all up to date."
+msgstr "আপোনাৰ অনুবাদসমূহ আধুনিক হৈ আছে |"
+
+#. translators: 1: audio track title
+#: wp-admin/includes/media.php:317
+msgid "\"%s\"."
+msgstr "\"%s\" |"
+
+#. translators: 1: audio track title, 2: artist name
+#: wp-admin/includes/media.php:314
+msgid "\"%1$s\" by %2$s."
+msgstr "%2$sৰ দ্বাৰা \"%1$s\" |"
+
+#. translators: 1: audio track title, 2: album title
+#: wp-admin/includes/media.php:311
+msgid "\"%1$s\" from %2$s."
+msgstr "%2$sৰ পৰা \"%1$s\" |"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/hello-dolly/"
+msgstr "http://wordpress.org/plugins/hello-dolly/"
+
+#: wp-admin/user-edit.php:658
+msgid "Capabilities"
+msgstr "সামৰ্থসমূহ"
+
+#: wp-admin/includes/class-wp-posts-list-table.php:910
+#: wp-admin/includes/misc.php:749
+msgid "%s is currently editing"
+msgstr "বৰ্তমান %s-এ সম্পাদনা কৰি আছে"
+
+#: wp-admin/includes/ms.php:352
+msgid "<strong>ERROR</strong>: The email address is already used."
+msgstr "<strong>ত্ৰুতিঃ</strong> এই ইমেইলটো ইতিমধ্যে ব্যৱহৃত হৈ আছে |"
+
+#: wp-admin/includes/class-wp-themes-list-table.php:239
+msgid "This <a href=\"%1$s\">child theme</a> requires its parent theme, %2$s."
+msgstr "এই <a href=\"%1$s\">শিশু থীম</a>ক ইয়াৰ মূল থীম %2$sৰ প্ৰয়োজন |"
+
+#: wp-admin/includes/widgets.php:224
+msgctxt "widget"
+msgid "Edit"
+msgstr "সম্পাদনা"
+
+#: wp-admin/options-permalink.php:21
+msgid "Permalinks are the permanent URLs to your individual pages and blog posts, as well as your category and tag archives. A permalink is the web address used to link to your content. The URL to each post should be permanent, and never change &#8212; hence the name permalink."
+msgstr "পাৰমালিংক হৈছে আপোনাৰ গাইগুটীয়া পৃষ্ঠা আৰু ব্লগ লেখাসমূহ, তাৰোপৰি আপোনাৰ শিতান আৰু টেগ সংৰক্ষণাগাৰলৈ স্থায়ী সংযোগ (URL)। পাৰমালিংক হৈছে আপোনাৰ বিষয়বস্তুক সংযোগ কৰা ৱেব ঠিকনা। প্ৰত্যেকটো পষ্টলৈ ইউআৰএল স্থায়ী হোৱা উচিত আৰু সলনি হোৱা অনুচিত — সেইকাৰণেই ইয়াৰ নাম পাৰমালিংক (permalink)।"
+
+#: wp-admin/options-discussion.php:230
+msgid "Retro (Generated)"
+msgstr "বিপৰীতমূখী (সৃষ্ট)"
+
+#: wp-admin/upgrade.php:110
+msgid "Your WordPress database has been successfully updated!"
+msgstr "আপোনাৰ ৱৰ্ডপ্ৰেছ তথ্যাগাৰ সফলতাৰে উন্নীতকৰণ কৰা হৈছে!"
+
+#: wp-admin/includes/class-bulk-upgrader-skin.php:40
+msgid "The update process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "উন্নীতকৰণ প্ৰক্ৰিয়াটো আৰম্ভ হৈছে | এই প্ৰক্ৰিয়াৰ বাবে কিছুমান আয়োজক(হ'ষ্ট)ত কিছুসময়ৰ প্ৰয়োজন হয়, সেয়ে অনুগ্ৰহ কৰি ধৈৰ্যশীল হওঁক |"
+
+#: wp-admin/options-media.php:99
+msgid "Uploading Files"
+msgstr "ফাইলবোৰ আপলোড কৰি থকা হৈছে"
+
+#: wp-admin/options-permalink.php:138
+msgid "You should update your .htaccess now."
+msgstr "আপুনি এতিয়া আপোনাৰ .htaccess ফাইলটো উন্নীত কৰা উচিত"
+
+#: wp-admin/options-permalink.php:129
+msgid "Permalink structure updated."
+msgstr "পাৰ্মালিংক সজ্জাটো উন্নীত হ'ল |"
+
+#: wp-admin/options-media.php:116
+msgid "Full URL path to files"
+msgstr "নথিবোৰৰ পূৰ্ণ ইউআৰএল পথ"
+
+#: wp-admin/user-new.php:100
+msgid "[%s] Joining confirmation"
+msgstr "[%s] যোগদান কৰাৰ স্বীকৃতি"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:295
+#: wp-admin/includes/class-wp-comments-list-table.php:560
+#: wp-admin/includes/class-wp-comments-list-table.php:563
+#: wp-admin/includes/dashboard.php:632
+msgid "Approve"
+msgstr "অনুমোদন কৰক"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:293
+#: wp-admin/includes/class-wp-comments-list-table.php:558
+#: wp-admin/includes/class-wp-comments-list-table.php:564
+#: wp-admin/includes/dashboard.php:633
+msgid "Unapprove"
+msgstr "অনুমোদন নকৰিব"
+
+#: wp-admin/edit-form-comment.php:43
+msgid "Name:"
+msgstr "নামঃ"
+
+#: wp-admin/edit-form-comment.php:47
+msgid "Email:"
+msgstr "ইমেইলঃ"
+
+#: wp-admin/edit-form-comment.php:53
+msgid "URL:"
+msgstr "ইউ আৰ এলঃ"
+
+#: wp-admin/export.php:17 wp-admin/menu.php:242
+msgid "Export"
+msgstr "ৰপ্তানি"
+
+#: wp-admin/includes/class-wp-posts-list-table.php:317
+msgctxt "posts"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "সকলো <span class=\"count\">(%s)</span>"
+msgstr[1] "সকলো <span class=\"count\">(%s)</span>"
+
+#: wp-admin/export.php:169 wp-admin/includes/class-wp-users-list-table.php:322
+msgid "Posts"
+msgstr "লেখাসমূহ"
+
+#: wp-admin/comment.php:123
+msgid "Permanently Delete Comment"
+msgstr "মন্তব্য স্থায়ীভাবে মচি পেলাওক"
+
+#: wp-admin/comment.php:127
+msgid "Approve Comment"
+msgstr "মন্তব্য অনুমোদিত কৰক"
+
+#: wp-admin/comment.php:126
+msgid "You are about to approve the following comment:"
+msgstr "আপুনি তলৰ মন্তব্যটো অনুমোদন কৰিব খুজিছেঃ"
+
+#: wp-admin/comment.php:329
+msgid "Unknown action."
+msgstr "অজ্ঞাত ক্ৰিয়া |"
+
+#: wp-admin/custom-background.php:225 wp-admin/includes/theme.php:250
+msgid "Custom Background"
+msgstr "নিজাববীয়া নেপথ্য"
+
+#: wp-admin/custom-background.php:242
+msgid "Background updated. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr "নেপথ্য উন্নীত হ'ল | দেখিবলৈ কেনে হৈছে তাৰ বাবে <a href=\"%s\">আপোনাৰ চাইট পৰিদৰ্শন কৰক</a> |"
+
+#: wp-admin/custom-background.php:320 wp-admin/custom-header.php:575
+msgid "Choose an image from your computer:"
+msgstr "আপোনাৰ কম্পিউটাৰৰ পৰা এটা ছবি বাঁচনি কৰকঃ"
+
+#: wp-admin/custom-background.php:324 wp-admin/custom-header.php:579
+#: wp-admin/includes/class-wp-theme-install-list-table.php:63
+#: wp-admin/includes/media.php:1951 wp-admin/includes/media.php:1953
+msgid "Upload"
+msgstr "আপল'ড"
+
+#: wp-admin/includes/template.php:1948 wp-admin/nav-menus.php:657
+#: wp-admin/options.php:300
+msgid "Save Changes"
+msgstr "সলনিসমূহ সংৰক্ষণ কৰক"
+
+#: wp-admin/custom-header.php:456 wp-admin/includes/theme.php:252
+msgid "Custom Header"
+msgstr "নিজাববীয়া শিৰোলেখ"
+
+#: wp-admin/custom-header.php:473
+msgid "Header updated. <a href=\"%s\">Visit your site</a> to see how it looks."
+msgstr "শিৰোলেখ উন্নীত হ'ল | দেখিবলৈ কেনে হৈছে তাৰ বাবে <a href=\"%s\">আপোনাৰ চাইট পৰিদৰ্শন কৰক</a> |"
+
+#. translators: %s: link name
+#. translators: %s: attachment title
+#. translators: %s: post title
+#. translators: %s: taxonomy term name
+#. translators: %s: post title
+#: wp-admin/includes/class-wp-links-list-table.php:190
+#: wp-admin/includes/class-wp-media-list-table.php:655
+#: wp-admin/includes/class-wp-media-list-table.php:704
+#: wp-admin/includes/class-wp-posts-list-table.php:1229
+#: wp-admin/includes/class-wp-terms-list-table.php:442
+#: wp-admin/includes/dashboard.php:578 wp-admin/includes/dashboard.php:866
+msgid "Edit &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; সম্পাদনা"
+
+#: wp-admin/custom-header.php:787 wp-admin/custom-header.php:923
+msgid "Image Processing Error"
+msgstr "ছবি বনোৱা ক্ৰিয়াত ত্ৰুটি"
+
+#: wp-admin/custom-header.php:804
+msgid "Choose the part of the image you want to use as your header."
+msgstr "শিৰোলেখ হিচাপে ব্যৱহাৰ কৰিব খোজা ছবিৰ অংশটো বাঁচনি কৰক |"
+
+#. translators: %s: attachment title
+#. translators: %s: post title
+#: wp-admin/includes/class-wp-media-list-table.php:684
+#: wp-admin/includes/class-wp-media-list-table.php:743
+#: wp-admin/includes/class-wp-posts-list-table.php:1286
+msgid "View &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; পৰিদৰ্শন কৰক"
+
+#: wp-admin/includes/class-wp-media-list-table.php:441
+#: wp-admin/includes/class-wp-posts-list-table.php:978
+msgid "Unpublished"
+msgstr "অপ্ৰকাশিত"
+
+#: wp-admin/includes/class-wp-media-list-table.php:447
+msgid "%s from now"
+msgstr "এতিয়াৰ পৰা %s"
+
+#: wp-admin/includes/class-wp-media-list-table.php:506
+msgid "(Unattached)"
+msgstr "(অসংযুক্ত)"
+
+#: wp-admin/includes/class-wp-media-list-table.php:154
+#: wp-admin/includes/class-wp-media-list-table.php:514
+#: wp-admin/includes/class-wp-media-list-table.php:694
+msgid "Attach"
+msgstr "সংযুক্ত"
+
+#. translators: %s: number of comments approved
+#: wp-admin/edit-comments.php:248
+msgid "%s comment approved"
+msgid_plural "%s comments approved"
+msgstr[0] "%s মন্তব্য অনুমোদিত"
+msgstr[1] "%s মন্তব্যসমূহ অনুমোদিত"
+
+#. translators: %s: number of comments marked as spam
+#: wp-admin/edit-comments.php:254
+msgid "%s comment marked as spam."
+msgid_plural "%s comments marked as spam."
+msgstr[0] "%s মন্তব্য আৱৰ্জনা হিচাপে চিহ্নিত হৈছে |"
+msgstr[1] "%s মন্তব্যসমুহ আৱৰ্জনা হিচাপে চিহ্নিত হৈছে |"
+
+#. translators: %s: number of comments restored from the spam
+#: wp-admin/edit-comments.php:259
+msgid "%s comment restored from the spam"
+msgid_plural "%s comments restored from the spam"
+msgstr[0] "%s মন্তব্য আৱৰ্জনাৰ পৰা পুনৰুদ্ধাৰ কৰা হৈছে"
+msgstr[1] "%s মন্তব্যসমূহ আৱৰ্জনাৰ পৰা পুনৰুদ্ধাৰ কৰা হৈছে"
+
+#. translators: %s: number of comments permanently deleted
+#: wp-admin/edit-comments.php:275
+msgid "%s comment permanently deleted"
+msgid_plural "%s comments permanently deleted"
+msgstr[0] "%s মন্তব্য চিৰদিনৰ বাবে মচি পেলোৱা হৈছে"
+msgstr[1] "%s মন্তব্যসমূহ চিৰদিনৰ বাবে মচি পেলোৱা হৈছে"
+
+#: wp-admin/edit-comments.php:301
+msgid "Search Comments"
+msgstr "মন্তব্যসমূহৰ সন্ধান"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:359
+msgid "Empty Spam"
+msgstr "আৱৰ্জনা খালী কৰক"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:359
+#: wp-admin/includes/class-wp-media-list-table.php:181
+#: wp-admin/includes/class-wp-posts-list-table.php:492
+msgid "Empty Trash"
+msgstr "অস্বীকৃতবোৰ খালী কৰক"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:189
+msgid "No comments found."
+msgstr "কোনো মন্তব্য পোৱা নগ'ল |"
+
+#: wp-admin/edit-form-advanced.php:137 wp-admin/edit-form-advanced.php:140
+msgid "Post updated."
+msgstr "লেখনী উন্নীতকৰণ হ'ল |"
+
+#. translators: %s: date and time of the revision
+#: wp-admin/edit-form-advanced.php:142
+msgid "Post restored to revision from %s."
+msgstr "পুনঃনিৰক্ষীণৰ %s পৰা লেখনী পুনৰুদ্ধাৰ কৰা হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:144
+msgid "Post saved."
+msgstr "লেখনী সংৰক্ষিত হ'ল |"
+
+#: wp-admin/edit-form-advanced.php:151 wp-admin/edit-form-advanced.php:154
+msgid "Page updated."
+msgstr "পৃষ্ঠা উন্নীতকৰণ হ'ল |"
+
+#. translators: %s: date and time of the revision
+#: wp-admin/edit-form-advanced.php:156
+msgid "Page restored to revision from %s."
+msgstr "পুনঃনিৰক্ষীণৰ %s পৰা পৃষ্ঠা পুনৰুদ্ধাৰ কৰা হ'ল |"
+
+#: wp-admin/edit.php:220 wp-admin/includes/class-wp-list-table.php:463
+msgid "Bulk Actions"
+msgstr "স্তূপীকৃত ক্ৰিয়াসমূহ"
+
+#: wp-admin/includes/deprecated.php:594
+msgid "Displaying %s&#8211;%s of %s"
+msgstr "প্ৰদৰ্শিত হৈ আছে %sৰ %s&#8211;%s"
+
+#: wp-admin/comment.php:119 wp-admin/edit-form-comment.php:162
+#: wp-admin/includes/class-wp-comments-list-table.php:308
+#: wp-admin/includes/class-wp-posts-list-table.php:407
+#: wp-admin/includes/media.php:1509 wp-admin/includes/meta-boxes.php:250
+msgid "Move to Trash"
+msgstr "অস্বীকৃতলৈ স্থানান্তৰ কৰক"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:340
+#: wp-admin/includes/class-wp-posts-list-table.php:1595
+msgid "Pings"
+msgstr "গুণগুণনিসমূহ"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:354
+#: wp-admin/includes/class-wp-links-list-table.php:115
+#: wp-admin/includes/class-wp-media-list-table.php:177
+#: wp-admin/includes/class-wp-posts-list-table.php:487
+msgid "Filter"
+msgstr "পৰিশোধন"
+
+#: wp-admin/includes/class-wp-screen.php:919
+msgid "Disable accessibility mode"
+msgstr "বিশেষ ব্যৱহাৰকাৰীৰ সুবিধা প্ৰণালী অগ্ৰাহ্য কৰক"
+
+#: wp-admin/includes/template.php:469
+msgid "Comment by %s marked as spam."
+msgstr "%sৰ দ্বাৰা প্ৰদান কৰা মন্তব্যটো আৱৰ্জনা হিচাপে চিহ্নিত কৰা হৈছে |"
+
+#: wp-admin/includes/template.php:489 wp-admin/includes/template.php:504
+#: wp-admin/includes/template.php:568 wp-admin/includes/template.php:629
+msgid "Value"
+msgstr "মূল্য"
+
+#: wp-admin/includes/template.php:558
+msgid "Key"
+msgstr "চাবি"
+
+#: wp-admin/includes/template.php:624
+msgid "Add New Custom Field:"
+msgstr "নিজাববীয়া নতুন ক্ষেত্ৰ যোগ দিয়কঃ"
+
+#: wp-admin/includes/template.php:650
+msgid "Enter new"
+msgstr "নতুন ভৰ্তি কৰক"
+
+#: wp-admin/includes/template.php:661
+msgid "Add Custom Field"
+msgstr "নিজাববীয়া ক্ষেত্ৰ যোগ দিয়ক"
+
+#: wp-admin/includes/template.php:861
+msgid "Before you can upload your import file, you will need to fix the following error:"
+msgstr "আপুনি আপোনাৰ নথিখন আমদানি কৰাৰ আগতে আপুনি তলৰ ত্ৰুটিটো শুধৰাব লাগিবঃ"
+
+#: wp-admin/includes/template.php:867
+msgid "Choose a file from your computer:"
+msgstr "আপোনাৰ কম্পিউটাৰৰ পৰা এখন নথি বাঁচনি কৰকঃ"
+
+#: wp-admin/includes/template.php:867
+msgid "Maximum size: %s"
+msgstr "বৃহত্তম আঁকাৰঃ %s"
+
+#: wp-admin/includes/template.php:872
+msgid "Upload file and import"
+msgstr " নথি আপল'ড আৰু আমদানি কৰক"
+
+#: wp-admin/includes/class-wp-screen.php:919
+msgid "Enable accessibility mode"
+msgstr "বিশেষভাবে অক্ষমলোকৰ বাবে আনুমোদিত কৰক"
+
+#: wp-admin/update.php:231
+msgid "Install Themes"
+msgstr "থীমসমূহ প্ৰতিস্থাপন কৰক"
+
+#: wp-admin/themes.php:67
+msgid "Manage Themes"
+msgstr "থীমসমূহ পৰিচালিত কৰক"
+
+#: wp-admin/includes/media.php:2450 wp-admin/includes/nav-menu.php:361
+#: wp-admin/includes/nav-menu.php:646
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: wp-admin/includes/media.php:2451 wp-admin/includes/nav-menu.php:362
+#: wp-admin/includes/nav-menu.php:647
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: wp-admin/includes/ajax-actions.php:755
+msgid "Comment %d does not exist"
+msgstr "%d মন্তব্যটো নাই"
+
+#: wp-admin/includes/taxonomy.php:116
+msgid "You did not enter a category name."
+msgstr "আপুনি শ্ৰেণীৰ নাম এটা নিদিলে |"
+
+#: wp-admin/includes/ajax-actions.php:1026
+msgid "Sorry, you must be logged in to reply to a comment."
+msgstr "দুঃখিত, আপুনি মন্তব্য এটাৰ উত্তৰ দিবলৈ প্ৰৱেশ কৰিব লাগিব |"
+
+#: wp-admin/includes/ajax-actions.php:1265
+#: wp-admin/includes/ajax-actions.php:1270
+#: wp-admin/includes/ajax-actions.php:1290
+msgid "Please provide a custom field value."
+msgstr "অনুগ্ৰহ কৰি এটা প্ৰচলিত ক্ষেত্ৰ মূল্য প্ৰদান কৰক |"
+
+#. translators: draft saved date format, see https://secure.php.net/date
+#: wp-admin/includes/misc.php:885
+msgid "g:i:s a"
+msgstr "g:i:s a"
+
+#: wp-admin/includes/ajax-actions.php:1620
+msgid "Someone"
+msgstr "কোনোবা"
+
+#: wp-admin/includes/ajax-actions.php:1621
+msgid "Saving is disabled: %s is currently editing this page."
+msgstr "সংৰক্ষণ অক্ষম হৈ আছেঃ %s এ বৰ্তমান এই পৃষ্ঠাটো সম্পাদনা কৰি আছে |"
+
+#: wp-admin/includes/ajax-actions.php:1621
+msgid "Saving is disabled: %s is currently editing this post."
+msgstr "সংৰক্ষণ অক্ষম হৈ আছেঃ %s এ বৰ্তমান এই লেখাটো সম্পাদনা কৰি আছে |"
+
+#: wp-admin/includes/ajax-actions.php:1727
+#: wp-admin/includes/ajax-actions.php:1732
+#: wp-admin/includes/edit-tag-messages.php:18
+msgid "Item not updated."
+msgstr "বিষয় উন্নীতকৰণ হোৱা নাই |"
+
+#: wp-admin/edit-form-comment.php:76 wp-admin/includes/ajax-actions.php:1773
+#: wp-admin/includes/class-wp-posts-list-table.php:1626
+msgid "Status"
+msgstr "অৱস্থা"
+
+#: wp-admin/includes/ajax-actions.php:1785
+#: wp-admin/includes/class-wp-posts-list-table.php:1000
+#: wp-admin/includes/class-wp-posts-list-table.php:1633
+#: wp-admin/includes/meta-boxes.php:88 wp-admin/includes/meta-boxes.php:112
+#: wp-admin/includes/template.php:1712
+msgid "Scheduled"
+msgstr "সময়সূচিত"
+
+#: wp-admin/admin.php:225
+msgid "Invalid plugin page"
+msgstr "অবৈধ প্লাগিন পৃষ্ঠা"
+
+#: wp-admin/admin.php:228
+msgid "Cannot load %s."
+msgstr "%s ল'ব পৰা নাই |"
+
+#: wp-admin/admin.php:285 wp-admin/import.php:18 wp-admin/menu.php:241
+msgid "Import"
+msgstr "আমদানি"
+
+#: wp-admin/comment.php:39 wp-admin/edit-form-comment.php:16
+#: wp-admin/includes/template.php:396
+msgid "Edit Comment"
+msgstr "মন্তব্য সম্পাদনা"
+
+#: wp-admin/comment.php:61 wp-admin/comment.php:255
+#: wp-admin/includes/post.php:1532
+msgid "Go back"
+msgstr "পিছলৈ যাওক"
+
+#: wp-admin/includes/ajax-actions.php:1773
+#: wp-admin/includes/class-wp-posts-list-table.php:577
+#: wp-admin/includes/class-wp-posts-list-table.php:1414
+msgid "Date"
+msgstr "Date"
+
+#: wp-admin/comment.php:67
+msgid "This comment is in the Trash. Please move it out of the Trash if you want to edit it."
+msgstr "এই মন্তব্যটো অস্বীকৃত হৈ আছে | যদি আপুনি ইয়াক সম্পাদনা কৰিব বিচাৰে অনুগ্ৰহ কৰি ইয়াক অস্বীকৃত অৱস্থাৰ পৰা বাহিৰলৈ আনক |"
+
+#: wp-admin/comment.php:122
+msgid "You are about to delete the following comment:"
+msgstr "আপুনি তলৰ মন্তব্যটো মচি পেলাব খুজিছেঃ"
+
+#. translators: %s: date and time
+#: wp-admin/includes/misc.php:887
+msgid "Draft saved at %s."
+msgstr "%s ত তথ্য সংৰক্ষিত কৰা হ'ল |"
+
+#: wp-admin/comment.php:114
+msgid "You are about to mark the following comment as spam:"
+msgstr "আপুনি এই মন্তব্যটো আৱৰ্জনা হিচাপে চিহ্নিত কৰিব খুজিছেঃ"
+
+#: wp-admin/comment.php:118
+msgid "You are about to move the following comment to the Trash:"
+msgstr "আপুনি এই মন্তব্যটো অস্বীকৃত হিচাপে আঁতৰাব খুজিছেঃ"

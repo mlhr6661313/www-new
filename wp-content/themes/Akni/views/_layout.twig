@@ -1,0 +1,246 @@
+	{% block advanced_meta %}{% endblock %}
+	<title>
+		{% spaceless %}
+			{% block title %}
+				{{ meta_title }}
+			{% endblock %}
+		{% endspaceless %}
+	</title>
+	<style>
+		#content-loader {
+			position: fixed;
+			z-index: 99999999999;
+			background-color: #fff;
+			margin: auto;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#content-spinner1,
+		#content-spinner2,
+		#content-spinner3,
+		#content-spinner4,
+		#content-spinner5 {
+			width: 11px;
+			height: 44px;
+			background-color: #F8E61E;
+			color: #b0ca1f;
+			text-indent: -9999em;
+			margin: 0 5px;
+			position: relative;
+			-webkit-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			transform: translateZ(0);
+			-webkit-animation: load1 1s infinite ease-in-out;
+			animation: load1 1s infinite ease-in-out;
+
+		}
+		#content-spinner2 {
+			background-color: #D53D3A;
+			-webkit-animation-delay: -0.16s;
+			animation-delay: -0.16s;
+		}
+		#content-spinner3 {
+			background-color: #2890CC;
+			-webkit-animation-delay: -0.32s;
+			animation-delay: -0.32s;
+		}
+		#content-spinner4 {
+			background-color: #278A4F;
+			-webkit-animation-delay: -0.48s;
+			animation-delay: -0.48s;
+		}
+		#content-spinner5 {
+			background-color: #9F84BC;
+			-webkit-animation-delay: -0.64s;
+			animation-delay: -0.64s;
+		}
+		@-webkit-keyframes load1 {
+			0%,
+			80%,
+			100% {
+				transform:scaleY(1);
+			}
+			40% {
+				transform:scaleY(2);
+			}
+		}
+		@keyframes load1 {
+			0%,
+			80%,
+			100% {
+				transform:scaleY(1);
+			}
+			40% {
+				transform:scaleY(2);
+			}
+		}
+	</style>
+
+    {% if theme_options.google_analytics !='' %}
+        {{ theme_options.google_analytics }}
+    {% endif %}
+
+    {% if theme_options.additional_scripts !='' %}
+        {{ theme_options.additional_scripts }}
+    {% endif %}
+
+    {% block base_stylesheets %}
+
+		<link href="{{ theme.path }}/public/css/general.css" media="all" rel="stylesheet">
+		 {% block stylesheets %}{% endblock %}
+    {% endblock %}
+
+	<script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var contentLoader = document.getElementById('content-loader'),
+          hiddenMap = document.getElementById('hidden-map');
+        if (contentLoader) {
+          contentLoader.style.display = 'none';
+		}
+
+		if (hiddenMap) {
+          hiddenMap.style.display = 'block';
+		}
+      });
+	</script>
+</head>
+<body {% block body_attributes %}{% endblock %} class="{% block body_class%}{% endblock %}">
+{{ map_config }}
+<div class="w1">
+<div id="content-loader">
+	<div id="content-spinner1"></div>
+	<div id="content-spinner2"></div>
+	<div id="content-spinner3"></div>
+	<div id="content-spinner4"></div>
+	<div id="content-spinner5"></div>
+</div>
+<div class="hide">
+	{% include 'modules/_sprites.twig' %}
+</div>
+<div id="wrapper" class="site-wrapper">
+	{% block header %}
+		{% include 'layout-blocks/_header.twig' %}
+	{% endblock %}
+	{% block sidebar %}
+		{% include 'layout-blocks/_sidebar.twig' %}
+	{% endblock %}
+	<main id="main">
+		{% block breadcrumbs %}
+			<div class="breadcrumbs"
+					xmlns:v="http://rdf.data-vocabulary.org/#">
+				<div class="content-width" data-css-container>
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"
+								data-arrow="&#8594;"
+								rel="v:url" property="v:title"
+								itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+							<a class="breadcrumbs__link"
+									href="{{ site_url }}" itemprop="url">
+							<span class="breadcrumbs__name"
+									itemprop="title">{{ lang.home_text }}</span>
+							</a>
+						</li>
+						
+						{% for crumb in breadcrumbs %}
+							
+							{% if not loop.last %}
+								<li class="breadcrumbs__item"
+										data-arrow="&#8594;"
+										rel="v:url" property="v:title" itemscope
+										itemtype="http://data-vocabulary.org/Breadcrumb">
+									
+									<a class="breadcrumbs__link"
+											href="{{ crumb.url }}" itemprop="url">
+									<span class="breadcrumbs__name"
+											itemprop="title">{{ crumb.title }}</span>
+									</a>
+								</li>
+							{% endif %}
+							{% if loop.last %}
+								<li class="breadcrumbs__item"
+										data-css="last"
+										data-arrow="&#8594;"
+										rel="v:url" property="v:title" itemscope
+										itemtype="http://data-vocabulary.org/Breadcrumb">
+									<a class="breadcrumbs__link" data-ignore="ignore"
+											href="{{ crumb.url }}" itemprop="url" onclick="return false;">
+									<span class="breadcrumbs__name"
+											itemprop="title">{{ crumb.title }}</span>
+									</a>
+								</li>
+							{% endif %}
+						
+						{% endfor %}
+					
+					</ul>
+				</div>
+			</div>
+		{% endblock %}
+		
+		{% block content %}
+		{% endblock %}
+	</main>
+<div class="footer_block">
+	{% block footer %}
+		{% include 'layout-blocks/_footer.twig' %}
+	{% endblock %}
+</div>
+
+{#<div class="overlay" data-js-overlay data-state="hide"></div>#}
+{#{% if theme_options.live_chat !='' %}#}
+	{#{{ theme_options.live_chat }}#}
+{#{% endif %}#}
+</div>
+</div>
+{% block callback_form %}
+	<div id="callback-formss" style="display: none">
+        {% include 'widgets/callback.twig' %}
+	</div>
+{% endblock %}
+{% block calc_footer %}
+	<div id="main-calculator-popup" style="display: none">
+		{{ calculator_form }}
+	</div>
+{% endblock %}
+{% block base_scripts %}
+	<script src="{{ theme.path }}/public/js/jquery.js" type="text/javascript"></script>
+	<script>
+        jQuery(function($) {
+            var seo=$('.seo-section__holder'),
+                seotext=seo.find('.seo-section__descr'),
+                readmore=seo.find('.read-more'),
+                btnText=readmore.find('.btn-text'),
+                text=btnText.html(),
+                hide=btnText.data('hide');
+
+            seo.addClass('seo-block');
+            seotext.addClass('seo-text');
+
+            readmore.on('click',function(){
+                if(seo.is('.opened')){
+                    seo.removeClass('opened');
+                    btnText.html(text);
+                }else{
+                    seo.addClass('opened');
+                    btnText.html(hide);
+                }
+            });
+        });
+	</script>
+	<link href="{{ theme.path }}/public/css/vendors/dropzone.css" media="all" rel="stylesheet">
+	<link href="{{ theme.path }}/public/css/vendors/swiper.min.css" media="all" rel="stylesheet">
+	<link href="{{ theme.path }}/public/css/vendors/jquery.fancybox.min.css" media="all" rel="stylesheet">
+	<script src="{{ theme.path }}/public/js/vendors/jquery.fancybox.min.js" type="text/javascript"></script>
+	<script src="{{ theme.path }}/public/js/vendors/markerclusterer.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVZ8DqPNhFy_iRlDZe-YXJHR3i7XDsq9E&language={{ current_lang }}&libraries=geometry"></script>
+	<script src="{{ theme.path }}/public/js/commons.js" type="text/javascript"></script>
+	<script src="{{ theme.path }}/public/js/main.js" type="text/javascript"></script>
+	<script src="{{ theme.path }}/public/js/calc.js"></script>
+{% endblock %}
+{% block scripts %}
+{% endblock %}

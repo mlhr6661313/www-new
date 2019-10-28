@@ -1,0 +1,33 @@
+{% if config_page.advantages.value is not empty %}
+<section id="advantages" class="advantages-section content-width">
+    <div class="swiper-container-mob">
+        <div class="advantages-section__list swiper-wrapper">
+            {% for section in config_page.advantages.value %}
+                {% if section.text !='' and section.image !=''%}
+                    {% if section.link %}
+                        <a href="{{ section.link }}" class="advantage-item swiper-slide">
+                            <div class="advantage-item__icon">
+                                <img src="{{ section.image.url }}"
+                                     alt="{{ section.image.alt }}"
+                                     title="{{ section.image.title }}"/>
+                            </div>
+                            <p class="advantage-item__text">{{ section.text }}</p>
+                        </a>
+                    {% else %}
+                        <div class="advantage-item swiper-slide">
+                            <div class="advantage-item__icon">
+                                <img class="advantages__service-img"
+                                     src="{{ section.image.url }}"
+                                     alt="{{ section.image.alt }}"
+                                     title="{{ section.image.title }}"/>
+                            </div>
+                            <p class="advantage-item__text">{{ section.text }}</p>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+{% endif %}

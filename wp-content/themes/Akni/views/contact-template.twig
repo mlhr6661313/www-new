@@ -1,0 +1,81 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+	<div class="contacts-page" data-js-contactPage>
+		{% if page.acf.frontend_page_title.value !='' %}
+			<h1 id="title" class="contacts-page__title"> {{ page.acf.frontend_page_title.value }} </h1>
+		{% else %}
+			<h1 id="title" class="contacts-page__title">{{ page.post_title }}</h1>
+		{% endif %}
+		
+		<div class="contacts-page__map">
+			<contact-info
+					content="{{ page.post_content }}"
+					json-offices='{{ offices_data }}'
+					v-if="contactInfoState"
+			>
+				<div class="contact-info__social-title">{{ lang.we_are_in_social_networks_text }}</div>
+				
+				<div class="contact-info__social-container">
+					{% if theme_options.social.vk !='' %}
+						<a rel="nofollow" class="contact-info__social-link vk" href="{{ theme_options.social.vk }}">
+							<svg viewBox="0 0 30 30" class="icon icon-vk">
+								<use xlink:href="#icon-vk"></use>
+							</svg>
+						</a>
+					{% endif %}
+					{% if theme_options.social.fb !='' %}
+						<a rel="nofollow" class="contact-info__social-link fb" target="_blank" href="{{ theme_options.social.fb }}">
+							<svg viewBox="0 0 30 30" class="icon icon-fb">
+								<use xlink:href="#icon-fb"></use>
+							</svg>
+						</a>
+					{% endif %}
+					{% if theme_options.social.twitter !='' %}
+						<a rel="nofollow" class="contact-info__social-link twitter" target="_blank" href="{{ theme_options.social.twitter }}">
+							<svg viewBox="0 0 30 30" class="icon icon-twitter">
+								<use xlink:href="#icon-twitter"></use>
+							</svg>
+						</a>
+					{% endif %}
+					{% if theme_options.social.insta !='' %}
+						<a rel="nofollow" class="contact-info__social-link insta" target="_blank" href="{{ theme_options.social.insta }}">
+							<svg viewBox="0 0 30 30" class="icon icon-insta">
+								<use xlink:href="#icon-insta"></use>
+							</svg>
+						</a>
+					{% endif %}
+				</div>
+			</contact-info>
+			
+			<contact-map
+					@init:contact-map="afterMapInit"
+					json-offices='{{ offices_data_map }}'
+			></contact-map>
+		</div>
+		
+		{% if page.acf.advanced.value is not empty %}
+			<div class="contacts-page__services">
+				{% if page.acf.advanced_title.value %}
+					<div data-title="h3" class="contacts-page__services-title">{{ page.acf.advanced_title.value }}</div>
+				{% endif %}
+				
+				<div class="contacts-page__services-links">
+					{% for advanced in page.acf.advanced.value %}
+						{% if advanced.text !='' and advanced.link !='' %}
+							<a href="{{ advanced.link }}" target="_blank" class="contacts-page__services-link">{{ advanced.text }}</a>
+						{% elseif advanced.text %}
+							<span class="contacts-page__services-link">{{ advanced.text }}</span>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+	</div>
+	
+	{% include 'modules/_page_blocks.twig' %}
+{% endblock %}

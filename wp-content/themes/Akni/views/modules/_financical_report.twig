@@ -1,0 +1,43 @@
+{% if page.acf.financical_report.value is not empty %}
+<section id="financical-report" class="financical-report content-width">
+    {% if page.acf.financical_report_title.value !=''%}
+        {% if page.acf.financical_report_link.value !='' %}
+            <div data-title="h2">
+                <a href="{{ page.acf.financical_report_link.value }}">{{ page.acf.financical_report_title.value }}</a>
+            </div>
+        {% else %}
+            <div data-title="h2">{{ page.acf.financical_report_title.value }}</div>
+        {% endif %}
+    {% endif %}
+    <div data-title="h2" class="financical-report__title">{{ lang.our_guarantees_text }}</div>
+    <div id="js-advantages__services" class="financical-report__benefits-list">
+        {% for section in page.acf.financical_report.value %}
+            {% if section.text !='' and section.image !=''%}
+                <a href="{{ section.image }}" data-fancybox="images" class="financical-report__popup-link">
+                    <img src="{{ section.image }}"
+                         alt="advantage{{ loop.index }}"
+                         title="advantage{{ loop.index }}"/>
+                </a>
+                <div data-title="h3" class="benefit-item__title">{{ section.text }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {#<div class="popup-holder">#}
+        {#<div id="js-advantages__services" class="financical-report__advantages-list">#}
+            {#{% for section in page.acf.financical_report.value %}#}
+                {#{% if section.text !='' and section.image !=''%}#}
+                    {#<div class="advantages__service">#}
+                        {#<div class="advantages__service-pic">#}
+                            {#<img class="advantages__service-img"#}
+                                 {#src="{{ section.image }}"#}
+                                 {#alt="advantage{{ loop.index }}"#}
+                                 {#title="advantage{{ loop.index }}"/>#}
+                        {#</div>#}
+                        {#<div data-title="h3" class="advantages__service-title">{{ section.text }}</div>#}
+                    {#</div>#}
+                {#{% endif %}#}
+            {#{% endfor %}#}
+        {#</div>#}
+    {#</div>#}
+</section>
+{% endif %}

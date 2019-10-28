@@ -1,0 +1,12 @@
+<div
+        id="brander-single-map-{{ serial }}"
+        class="brander-map"
+        data-department="{{ departmentData }}"
+>
+    <single-map
+            map-id="{{ serial }}"
+            :options="defaultMapOptions"
+            json-departments="{{ departmentData }}"
+            json-labels="{{ labels }}"
+    ></single-map>
+</div>

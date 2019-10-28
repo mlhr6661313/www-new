@@ -1,0 +1,100 @@
+{% extends '_layout.twig' %}
+
+{% block content %}
+<section class="text-page content-width">
+	<div class="first_vacancy_text">
+		<img src="{{ page.acf.main_vacancy_image.value.url }}" alt="{{ page.post_title }}" title="{{ page.post_title }}">
+		<h1 id="title" class="vacancy-page__title">
+						{{ page.post_title }}
+		</h1>
+		{% if page.post_content  !='' %}
+				<div class="vacancy-page__content" data-css-container="offset">
+						{{ page.post_content }}
+				</div>
+		{% endif %}
+		<a class="button60 ttu" href="#resume_form">{{ lang.send_resume_text }}</a>
+	</div>
+
+
+	<div class="second_vacancy_text">{{ page.acf.second_vacancy_text.value }}</div>
+	<a name="resume_form"></a>
+	<div class="resume_form">
+		<div class="vacancy_block-title" data-title="h2">
+				<span>{{ lang.send_resume_text }}</span>
+		</div>
+		<div id="success-block" style="display: none">{{ lang.vacancy_success_text }}</div>
+		<form id="vacancy_form" method="post" enctype="multipart/form-data">
+			<div class="form-left">
+				<div class="form_field">
+						<span>{{ lang.fio_text }}</span>
+						<span>
+							<input id="name"
+								type="text"
+								name="name"
+								required="required">
+						</span>
+				</div>
+				<div class="form_field">
+						<span>{{ lang.phone_text }}</span>
+						<span>
+							<input id="phone"
+								type="tel"
+								name="phone"
+								required="required"
+								placeholder="+38">
+						</span>
+				</div>
+				<div class="form_field">
+					<span></span>
+					<span>
+						<label class="uploadFile">
+							<input type="file"
+									id="file"
+									name="file"
+									required="required"
+									onchange="getName(this.value);"
+									accept="application/pdf, .doc, .docx">
+							<span id="fileName">
+								<span class="icon"></span><span data-default-text="{{ lang.file_text }}">{{ lang.file_text }}</span>
+							</span>
+						</label>
+						<span class="descr">
+							{{ lang.file_recommendations_text }}
+						</span>
+						<span id="file-size-error" style="display: none;color: red;"><br>{{ lang.file_error_text }}</span>
+					</span>
+				</div>
+
+			</div>
+			<div class="form-right">
+				<div class="form_field">
+						<span>{{ lang.city_text }}</span>
+						<span>
+							<input id="city"
+									 type="text"
+									 name="city"
+									 required="required">
+						</span>
+				</div>
+
+				<div class="form_field">
+						<span>{{ lang.comment_text }}</span>
+						<span>
+							<textarea id="comment"
+								name="comment"
+								maxlength="1000"></textarea>
+						<span>
+				</div>
+			</div>
+			<div class="form-bottom">
+				<div class="form_field">
+					<span></span>
+					<span>
+						<input class="save-support button60 df w100" type="submit" name="save_support" value="{{ lang.send_resume_text }}">
+					</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>
+{% endblock %}

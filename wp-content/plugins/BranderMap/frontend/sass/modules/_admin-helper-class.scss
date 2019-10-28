@@ -1,0 +1,18 @@
+#publishing-action {
+    position: relative;
+}
+
+.disabled-overlay {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+.error-msg {
+    color: #ff5c4d;
+    font-size: 14px;
+}

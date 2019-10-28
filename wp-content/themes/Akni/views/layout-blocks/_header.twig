@@ -1,0 +1,89 @@
+<header id="header" class="site-header">
+	<div class="site-header__holder menu-width" data-css-container="justify height">
+		<div class="header-colors">
+			<div class="color1"></div>
+			<div class="color2"></div>
+			<div class="color3"></div>
+			<div class="color4"></div>
+			<div class="color5"></div>
+		</div>
+		<span id="ajax_params"
+			data-url="{{ ajax_url }}"
+			data-current_page="{{ currentPageId }}"
+			data-current_page_name="{% if page.post_name !='' %}{{ page.post_name }}{% endif %}"
+			data-lang = "{{ current_lang }}"
+			data-yes="{{ lang.yes_text }}"
+			data-no="{{ lang.no_text }}"
+			hidden
+		></span>
+		<div class="site-header__logo">
+			<a {% if logo_url is not empty %} href="{{ logo_url }}" {% endif %}>
+				{% if theme_options.header_logo %}
+					<img src="{{ theme_options.header_logo }}" {% if theme_options.logo_alt %}alt="{{ theme_options.logo_alt }}" {% endif %} {% if theme_options.logo_title %}title="{{ theme_options.logo_title }}"{% endif %} />
+				{% endif %}
+			</a>
+		</div>
+		<a href="javascript: void(0);" class="js-humburger humburger" data-js-burger data-state="close"></a>
+		<div class="js-mobile-menu">
+			<div class="js-mobile-menu-wrap">
+				<div class="site-header__logo">
+					<a {% if logo_url is not empty %} href="{{ logo_url }}" {% endif %}>
+						{% if theme_options.header_logo %}
+							<img src="{{ theme_options.header_logo }}" {% if theme_options.logo_alt %}alt="{{ theme_options.logo_alt }}" {% endif %} {% if theme_options.logo_title %}title="{{ theme_options.logo_title }}"{% endif %} />
+						{% endif %}
+					</a>
+				</div>
+				<div class="js-site-header__phones site-header__phones">
+					{% if config_page.header_phones is not empty !='' %}
+						{% for phone in config_page.header_phones %}
+							{% if phone.phone.original and phone.phone.clear %}
+								<span class="phone-opener"><svg class="sic"><use xlink:href="#phone"></use></svg><span>{{ phone.phone.original }}</span><span class="icon-opener"></span></span>
+							{% endif %}
+						{% endfor %}
+						<ul>
+							{% for phone in config_page.header_phones %}
+								{% if phone.phone.original and phone.phone.clear %}
+									<li class="phone__item">
+										<svg class="sic"><use xlink:href="#phone"></use></svg>
+										{% if phone.comment %}
+											<span class="phone__name">
+												{{ phone.comment }}
+											</span>
+										{% endif %}
+										<a class="phone__link" href="tel:{{ phone.phone.clear }}">
+											{{ phone.phone.original }}
+										</a>
+									</li>
+								{% endif %}
+							{% endfor %}
+							<li class="phone__item">
+								<a data-fancybox data-options='{"baseClass":"not100height", "touch": false}' rel="nofollow" href="#callback-formss" class="fancybox button">{{ lang.callback_title_text }}</a>
+							</li>
+						</ul>
+					{% endif %}
+				</div>
+				<nav class="main-nav">
+					{% if menus.primary_header_menu !=''%}
+						{{ menus.primary_header_menu }}
+					{% endif %}
+				</nav>
+				<div class="search-wrap">
+					{{ search_form }}
+					<div id="search-result"></div>
+				</div>
+				{% block main_calculator %}
+					<a href="#main-calculator-popup" class="fancybox-calc button calccredit">{{ lang.calculate_text }}</a>
+				{% endblock %}
+
+				<div class="callback_and_lang ml15">
+					<div class="lang-switcher">
+						<span class="mobile_title">{{ lang.lang_switcher_text }}</span>
+						{% if language_switcher !='' %}
+							{{ language_switcher }}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,122 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+	<div class="single-action">
+		<div class="content-width">
+			<section class="single-action__top-block" data-css-container data-css="text-container">
+				<h1 id="title" class="single-action__title">{{ page.post_title }}</h1>
+				{% if action_to %}
+					<div class="single-action-to">
+						<span>{{ lang.to_text }}</span>
+						<span class="single-action__date" data-css-container data-css="text-container">{{ action_to }}</span>
+					</div>
+				{% endif %}
+				<div class="single-action-content-wrap">
+					{% if action_image %}
+						<div class="single-action-image-wrap">
+							<div class="single-action__image-box">
+								<img src="{{ action_image }}"
+									 alt="{{ page.post_title }}"
+									 title="{{ page.post_title }}">
+							</div>
+
+							{% if is_action_active %}
+								<div id="action-to" class="action-to" data-js="action-to"
+									{% for key, action in to_data %} data-{{ key }}="{{ action }}"{% endfor %}>
+										<div class="days">
+											<span></span>
+											<span>{{ lang.days }}</span>
+										</div>
+										<div class="hours">
+											<span></span>
+											<span>{{ lang.hour }}</span>
+										</div>
+										<div class="minutes">
+											<span></span>
+											<span>{{ lang.min }}</span>
+										</div>
+									</div>
+							{% else %}
+								<div class="action-is-ended">
+									{{ lang.the_end_text }}
+								</div>
+							{% endif %}
+						</div>
+						
+					{% endif %}
+					<div class="single-action__content">
+						{{ page.post_content }}
+					</div>
+				</div>
+				
+			</section>
+		</div>
+	</div>
+	<script>
+		function updater() {
+
+			var dat=document.querySelector('#action-to'),
+			days=dat.querySelector('.days>span:first-child'),
+			hour=dat.querySelector('.hours>span:first-child'),
+			minutes=dat.querySelector('.minutes>span:first-child');
+
+			// День сброса - 27 сентября 2015 года (и далее каждые три дня)
+			var baseTime = new Date(
+				dat.getAttribute('data-year'),
+				dat.getAttribute('data-month')-1,
+				dat.getAttribute('data-day'),
+				dat.getAttribute('data-hour'),
+				dat.getAttribute('data-minute'),
+				dat.getAttribute('data-sec')
+			);
+
+			function update() {
+				var cur = new Date();
+				// сколько осталось миллисекунд
+
+				var diff = baseTime - cur;
+
+				if(diff>0){
+					// сколько миллисекунд до конца секунды
+					var millis = diff % 1000;
+					diff = Math.floor(diff/1000);
+
+					// сколько секунд до конца минуты
+					var sec = diff % 60;
+					if(sec < 10) sec = "0"+sec;
+					diff = Math.floor(diff/60);
+
+					// сколько минут до конца часа
+					var min = diff % 60;
+					if(min < 10) min = "0"+min;
+					diff = Math.floor(diff/60);
+
+					// сколько часов до конца дня
+					var hours = diff % 24;
+					if(hours < 10) hours = "0"+hours;
+					var day = Math.floor(diff / 24);
+				}else{
+					day=0;hours='00';min='00';
+				}
+
+				
+
+				days.innerHTML=day;
+				hour.innerHTML=hours;
+				minutes.innerHTML=min;
+
+
+				// следующий раз вызываем себя, когда закончится текущая секунда
+				setTimeout(update, millis);
+			}
+
+			setTimeout(update, 0);
+		}
+
+		updater();
+	</script>
+{% endblock %}

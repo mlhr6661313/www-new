@@ -1,0 +1,160 @@
+# Translation of WordPress - 4.7.x - Administration - Network Admin in Assamese
+# This file is distributed under the same license as the WordPress - 4.7.x - Administration - Network Admin package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-02-28 17:19:19+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: as_IN\n"
+"Project-Id-Version: WordPress - 4.7.x - Administration - Network Admin\n"
+
+#. translators: 1: localhost 2: localhost.localdomain
+#: wp-admin/includes/network.php:264
+msgid "Because you are using %1$s, the sites in your WordPress network must use sub-directories. Consider using %2$s if you wish to use sub-domains."
+msgstr "Because you are using %1$s, the sites in your WordPress network must use sub-directories. Consider using %2$s if you wish to use sub-domains."
+
+#: wp-admin/includes/network.php:203
+msgid "You cannot change this later."
+msgstr "আপুনি পিছত এইটো সলনি কৰিব নোৱাৰিব |"
+
+#. translators: 1: mod_rewrite, 2: mod_rewrite documentation URL, 3: Google
+#. search for mod_rewrite
+#: wp-admin/includes/network.php:191
+msgid "If %1$s is disabled, ask your administrator to enable that module, or look at the <a href=\"%2$s\">Apache documentation</a> or <a href=\"%3$s\">elsewhere</a> for help setting it up."
+msgstr "If %1$s is disabled, ask your administrator to enable that module, or look at the <a href=\"%2$s\">Apache documentation</a> or <a href=\"%3$s\">elsewhere</a> for help setting it up."
+
+#: wp-admin/includes/network.php:202
+msgid "Please choose whether you would like sites in your WordPress network to use sub-domains or sub-directories."
+msgstr "Please choose whether you would like sites in your WordPress network to use sub-domains or sub-directories."
+
+#. translators: %s: mod_rewrite
+#: wp-admin/includes/network.php:175
+msgid "Please make sure the Apache %s module is installed as it will be used at the end of this installation."
+msgstr "Please make sure the Apache %s module is installed as it will be used at the end of this installation."
+
+#. translators: %s: mod_rewrite
+#: wp-admin/includes/network.php:182
+msgid "It looks like the Apache %s module is not installed."
+msgstr "It looks like the Apache %s module is not installed."
+
+#: wp-admin/network.php:62
+msgid "Add the designated lines of code to wp-config.php (just before <code>/*...stop editing...*/</code>) and <code>.htaccess</code> (replacing the existing WordPress rules)."
+msgstr "Add the designated lines of code to wp-config.php (just before <code>/*...stop editing...*/</code>) and <code>.htaccess</code> (replacing the existing WordPress rules)."
+
+#: wp-admin/includes/network.php:180 wp-admin/includes/network.php:229
+#: wp-admin/includes/network.php:270 wp-admin/includes/network.php:280
+msgid "Warning!"
+msgstr "সতৰ্কীকৰণ!"
+
+#: wp-admin/includes/network.php:317
+msgid "Your email address."
+msgstr "আপোনাৰ ইমেইল ঠিকনা |"
+
+#: wp-admin/includes/network.php:113 wp-admin/includes/network.php:373
+#: wp-admin/includes/network.php:545 wp-admin/includes/network.php:585
+msgid "Warning:"
+msgstr "সকীয়নিঃ"
+
+#: wp-admin/network/sites.php:263
+msgid "Site marked as spam."
+msgstr "চাইট আৱৰ্জনা হিচাপে চিহ্নিত হৈছে |"
+
+#: wp-admin/network/sites.php:242
+msgid "Site deleted."
+msgstr "চাইট মচি দিয়া হ'ল |"
+
+#: wp-admin/network/sites.php:239
+msgid "Sites deleted."
+msgstr "চাইটসমূহ মচি দিয়া হ'ল |"
+
+#. translators: %s: network name
+#: wp-admin/network/site-new.php:140
+msgid "[%s] New Site Created"
+msgstr "[%s] নতুন চাইট তৈয়াৰ কৰা হ'ল"
+
+#: wp-admin/network/site-new.php:247
+msgid "The username and password will be mailed to this email address."
+msgstr "ব্যৱহাৰকাৰী নাম আৰু পাছৱৰ্ড এই ইমেইল ঠিকনালৈ মেইলত পঠিওৱা হ'ব |"
+
+#: wp-admin/network/site-new.php:243
+msgid "Admin Email"
+msgstr "প্ৰশাষকৰ ইমেইল"
+
+#: wp-admin/network/site-new.php:259
+msgid "Add Site"
+msgstr "চাইট যোগ কৰক"
+
+#: wp-admin/network/settings.php:331
+msgid "Default Language"
+msgstr "নিজস্ব ভাষা"
+
+#: wp-admin/network/settings.php:307
+msgid "Max upload file size"
+msgstr "আপল'ড নথিৰ সৰ্বোচ্চ আঁকাৰ"
+
+#: wp-admin/network/settings.php:275
+msgid "First Comment URL"
+msgstr "প্ৰথম মন্তব্য ইউ আৰ এল"
+
+#: wp-admin/network/settings.php:257
+msgid "First Comment Author"
+msgstr "প্ৰথম মন্তব্য লেখক"
+
+#: wp-admin/network/settings.php:247
+msgid "First Comment"
+msgstr "প্ৰথম মন্তব্য"
+
+#: wp-admin/network/settings.php:237
+msgid "First Page"
+msgstr "প্ৰথম পৃষ্ঠা"
+
+#: wp-admin/network/sites.php:107
+msgid "Confirm"
+msgstr "নিশ্চিত কৰক"
+
+#: wp-admin/network/user-new.php:37
+msgid "Cannot create an empty user."
+msgstr "উকা ব্যৱহাৰকাৰী সৃষ্টি কৰিব নোৱাৰি |"
+
+#: wp-admin/network/site-users.php:255
+msgid "Duplicated username or email address."
+msgstr "দ্বিগুণিত ব্যৱহাৰকাৰী নাম নাইবা ইমেইল ঠিকনা |"
+
+#: wp-admin/network/settings.php:124
+msgid "Allow new registrations"
+msgstr "নতুন পঞ্জীয়ন অনুমোদিত কৰক"
+
+#: wp-admin/network/settings.php:151
+msgid "Registration notification"
+msgstr "পঞ্জীয়ন জাঁননী"
+
+#: wp-admin/network/settings.php:162
+msgid "Add New Users"
+msgstr "নতুন ব্যৱহাৰকাৰীসমূহ যোগ কৰক"
+
+#: wp-admin/network/settings.php:169
+msgid "Banned Names"
+msgstr "নিষিদ্ধ নামসমূহ"
+
+#: wp-admin/network/settings.php:207
+msgid "Welcome Email"
+msgstr "স্বাগতম ইমেইল"
+
+#: wp-admin/network/settings.php:217
+msgid "Welcome User Email"
+msgstr "স্বাগতম ব্যৱহাৰকাৰী ইমেইল"
+
+#: wp-admin/network/settings.php:222
+msgid "The welcome email sent to new users."
+msgstr "স্বাগতম ইমেইলটো নতুন ব্যৱহাৰকাৰীসকললৈ পঠিওৱা হ'ল |"
+
+#: wp-admin/network/settings.php:192
+msgid "Banned Email Domains"
+msgstr "নিষিদ্ধ ইমেইল ডোমেইনসমূহ"
+
+#: wp-admin/network/settings.php:179
+msgid "Limited Email Registrations"
+msgstr "সীমিত ইমেইল পঞ্জীয়নসমূহ"

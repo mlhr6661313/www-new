@@ -1,0 +1,10 @@
+.single-map {
+    .departments-popup {
+        left: 0;
+        right: auto;
+        &__close-btn {
+            right: 1em;
+            left: auto;
+        }
+    }
+}

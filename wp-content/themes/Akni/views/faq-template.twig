@@ -1,0 +1,58 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+	<div class="faq">
+		{% if faqData is not empty and faqCategories is not empty %}
+			<section class="faq-section content-width">
+				<h1 id="title" class="faq-section__title">{{ page.post_title }}</h1>
+				<div class="faq-section__aside">
+					<ul class="faq-section__categories-list">
+						{% for slug, category in faqCategories %}
+							<li><a href="#{{ slug }}">{{ category }}</a></li>
+						{% endfor %}
+					</ul>
+					<div class="faq-section__have-questions">
+						<p>{{ lang.still_have_questions_text }}</p>
+						<p>{{ lang.we_answer_on_it_text }}</p>
+						<p>&nbsp;</p>
+						<a class="button60"
+							{# onclick="location.reload();"#}
+							href="#leave_question">{{ lang.ask_question_text }}</a>
+					</div>
+				</div>
+				<div class="faq-section__main">
+					{% for category, data in faqData %}
+						<div class="faq-section__box" id="{{ category }}">
+							<div data-title="h3">{{ data.title }}</div>
+							{% for question in data %}
+								{% if question.post_title !='' %}
+									<div class="js-accordion accordion">
+										<p class="accordion__link">{{ question.post_title }}</p>
+										<div class="accordion__content">
+											{{ question.post_content }}
+										</div>
+									</div>
+								{% endif %}
+							{% endfor %}
+						</div>
+					{% endfor %}
+				</div>
+			</section>
+			<div class="content-width">
+				<section class="faq-form" id="leave_question">
+						<div data-title="h3" class="faq-form__title">{{ lang.still_have_questions_text }}</div>
+						{% if contacts.url %}
+							<div class="faq-form__description">
+								<p>{{ lang.we_answer_by_email_text }} <a href="{{ contacts.url }}">{{ lang.contact_by_phone_text }}</a></p>
+							</div>
+							{{ forms.faq }}
+						{% endif %}
+				</section>
+			</div>
+		{% endif %}
+	</div>
+{% endblock %}

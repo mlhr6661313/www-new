@@ -1,0 +1,301 @@
+.promo-gallery {
+	//max-width: 1024px;
+	// height: 540px;
+	margin: 0 auto;
+
+	.swiper-container-horizontal > .swiper-pagination-bullets {
+		bottom: 15%;
+		text-align: left;
+
+		@include breakpoint($mq-mobile) {
+			text-align: center;
+		}
+
+
+		
+
+		.swiper-pagination-bullet {
+			&.swiper-pagination-bullet-active {
+				background: #000;
+			}
+			
+			&:hover {
+				background: #000;
+			}
+
+			width: 6px;
+			height: 6px;
+			margin: 0 7px;
+			background: #9b9b9b;
+			opacity: 1;
+			@include anim;
+		}
+	}
+	@include breakpoint($mq-mobile) {
+		.swiper-container-horizontal > .swiper-pagination-bullets {
+			bottom: 10px;
+			.swiper-pagination-bullet {
+				margin: 0 10px;
+			}
+		}
+	}
+
+	&.vacancy {
+		.img-wrap {
+			padding-left: 120px;
+
+			@include bp-max(1285px) {
+				padding-left: 9.25vw;
+			}
+
+			@include bp-max(640px) {
+				padding-left: 0;
+			}
+
+			img {
+				// border: 5px solid $yellow;
+			}
+		}
+
+		.text-wrap {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			transform: translateY(-50%);
+
+			@include bp-max(640px) {
+				position: static;
+				transform: translateY(0);
+				text-align: center;
+			}
+
+			[data-title~=h2] {
+				width: 50%;
+				font-size: 65px;
+				line-height: normal;
+				font-family: $family2;
+				margin-bottom: 40px;
+
+				@include bp-max(1285px) {
+					font-size: 5.06vw;
+					margin-bottom: 3.5vw;
+				}
+
+				@include bp-max(640px) {
+					width: auto;
+					margin-top: 3.5vw;
+					font-size: 33px;
+				}
+			}
+
+			.button60 {
+				margin-top: 10px;
+
+				@include bp-max(640px) {
+					margin: 10px;
+				}
+			}
+
+			.button60:nth-child(2) {
+				margin-right: 20px;
+
+				@include bp-max(640px) {
+					margin: 10px;
+				}
+			}
+		}
+
+
+		.swiper-container-horizontal > .swiper-pagination-bullets {
+			bottom: 0;
+
+			@include bp-max(640px) {
+				position: static;
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.swiper-slide {
+		height: auto;
+	}
+
+	.swiper-wrapper {
+		height: auto;
+	}
+	
+}
+.credit-slide {
+
+	&__content {
+		position: absolute;
+		z-index: 1;
+		// max-width: 1024px;
+		width: 100%;
+		margin: 0 auto;
+		// padding: 0 64px;
+
+		width: 40%;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@include bp-max(640px) {
+			position: relative;
+			top: 0;
+			width: 100%;
+			margin: 0;
+			transform: translateY(0%);
+			text-align: center;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 30px;
+		}
+
+		.knopka {
+			font-size: 18px;
+			line-height: 26px;
+			border-radius: 30px;
+			background-color: $yellow;
+			height: 60px;
+			display: inline-flex;
+			padding: 0 30px;
+			justify-content: center;
+			align-items: center;
+			color: #000;
+			font-family: $family2;
+		}
+	}
+
+	&__title {
+		font-size: 65px;
+		font-weight: 200;
+		line-height: 1;
+		letter-spacing: -0.6px;
+		text-transform: none;
+		font-family: $family2;
+		color: #000;
+		margin-bottom: 20px;
+
+		@include bp-max(1285px) {
+			font-size: 5.06vw;
+		}
+
+		// @include bp-max($mq-tablet) {
+		// 	font-size: 45px;
+		// 	line-height: 45px;
+		// }
+
+		@include bp-max(640px) {
+			font-size: 33px;
+			letter-spacing: -0.3px;
+		}
+
+	}
+	&__descr {
+		font-weight: 300;
+		line-height: 24px;
+		font-size: 16px;
+		color: rgba(255, 238, 209, 1);
+	}
+	&__img-box {
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		// z-index: 0;
+		width: 100%;
+		padding-left: 120px;
+		// max-width: 1180px;
+		// height: 100%;
+		overflow: hidden;
+
+		@include bp-max(640px) {
+			padding-left: 0;
+		}
+
+		img {
+			// position: absolute;
+			height: auto;
+			width: 100%;
+			// top: 50%;
+			// left: 0;
+			// transform: translateY(-50%);
+		}
+	}
+	&__action {
+		display: none;
+		width: 100%;
+		* + & {margin-top: 35px;}
+		a {display: inline-block;}
+		.icon-more {
+			height: 40px;
+			width: 40px;
+			fill: #fff;
+			&:hover {fill: $clr-link;}
+		}
+	}
+	// @include breakpoint($mq-tablet) {
+	// 	&__img-box {
+	// 		img {
+	// 			height: 100%;
+	// 			width: auto;
+	// 			max-width: none;
+	// 			min-width: 100%;
+	// 			left: 50%;
+	// 			transform: translate(-50%, -50%);
+	// 		}
+	// 	}
+	// }
+	// @include breakpoint($mq-mobile) {
+	// 	align-items: flex-start;
+	// 	padding: 40px 20px;
+	// 	&__title {
+	// 		font-size: 34px;
+	// 		line-height: 1.2;
+	// 		margin-bottom: 15px;
+	// 	}
+	// 	&__content {
+	// 		max-width: 300px;
+	// 		padding: 0 10px;
+	// 		margin: 0;
+	// 	}
+	// 	&__descr {
+	// 		font-size: 16px;
+	// 		line-height: 1.5;
+	// 	}
+	// 	&__action {
+	// 		* + & {margin-top: 18px;}
+	// 	}
+	// }
+}
+
+.credit-slide-wrap{
+	@include bp-max(640px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.swiper-wrapper {
+	height: auto;
+
+	.button60 {
+		border: 3px solid $yellow;
+		&:hover {
+			background-color: #fff;
+		}
+	}
+}
+
+.swiper-slide{
+	height: auto;
+}
+
+a[name=vacancy-benefits],
+a[name=vacancy-list] {
+	position: relative;
+	top: -50px;
+}
+
+a[name=vacancy-list] {
+	top: -150px;
+}

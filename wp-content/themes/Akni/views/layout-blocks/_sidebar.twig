@@ -1,0 +1,27 @@
+{% if config_page.menu_items.value is not empty %}
+    <section class="sidebar">
+        <div class="sidebar-items">
+            {% for item in config_page.menu_items.value %}
+                {% if item.text !=''%}
+                    <div class="sidebar-item {{ item.icon }}">
+                        <svg class="sic"><use xlink:href="#{{ item.icon }}"></use></svg>
+                        {#
+                        <div class="tochka-outer">
+                            <div class="tochka-inner">
+                                <span class="{{ item.icon }}"></span>
+                            </div>
+                        </div>
+                        #}
+                        <div class="sidebar-text">
+                            {% if item.link %}
+                                <a href="{{ item.link }}" title="{{ item.text }}">{{ item.text }}</a>
+                            {% else %}
+                            <span>{{ item.text }}</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+{% endif %}

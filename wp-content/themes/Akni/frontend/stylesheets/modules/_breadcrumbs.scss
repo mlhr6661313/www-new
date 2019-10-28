@@ -1,0 +1,44 @@
+.breadcrumbs {
+	padding: 20px 0;
+	font-size: 14px;
+	line-height: 23px;
+
+	
+	@include breakpoint($mq-mobile) {
+		display: none;
+	}
+}
+
+.breadcrumbs__list {
+	@extend %list-reset;
+	display: flex;
+	flex-flow: row nowrap;
+
+	a {
+		color: #000;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	li + li {
+		position: relative;
+		margin-left: 25px;
+		&:before {
+			content: '';
+			position: absolute;
+			left: -14px;
+			top: calc(50% - 3px);
+			background-color: $yellow;
+			width: 5px;
+			height: 5px;
+		}
+	}
+	
+	li:last-child {
+		&:before {color: #7d7d7d;}
+		a {
+			color: #7d7d7d;
+			pointer-events: none;
+		}
+	}
+}

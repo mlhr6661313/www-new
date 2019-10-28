@@ -1,0 +1,20 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+    <meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+    <div class="text-page">
+        <h1 id="title" class="text-page__title content-width">{{ page.post_title }}</h1>
+        {% include 'modules/_advantages.twig' %}
+        {% if page.post_content %}
+            <section class="text-page__content content-width">
+                <a href="{{ page.acf.lombard_pershii_file.value }}" target="_blank">{{ lang.lombard_pershii_file }}</a>
+                {{ page.post_content }}
+            </section>
+        {% endif %}
+        {% include 'modules/_financical_report.twig' %}
+        {% include 'modules/_page_blocks.twig' %}
+    </div>
+{% endblock %}

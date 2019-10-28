@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f60fdb09-9d58-4d60-8c5f-0b612765ea68" name="Default" comment="" />
+    <ignored path="www.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="www" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="calc-template.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/calc-template.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="64" column="140" lean-forward="false" selection-start-line="64" selection-start-column="119" selection-end-line="64" selection-end-column="140" />
+              <folding>
+                <element signature="e#3852#3873#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_calc-block.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_calc-block.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="202" column="53" lean-forward="false" selection-start-line="202" selection-start-column="53" selection-end-line="202" selection-end-column="53" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/calc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="118" column="36" lean-forward="false" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lang.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/app/config/lang.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="482">
+              <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Під іншу заставу</find>
+      <find>other_pledge_text</find>
+      <find>chosenField.category</find>
+      <find>category</find>
+      <find>setSamplesValue</find>
+      <find>file photo</find>
+      <find>Будь ласка, завантажте фотографію</find>
+      <find>required_file_message</find>
+      <find>loan-id</find>
+      <find>loan-id=&quot;other&quot;</find>
+      <find>requiredContainer</find>
+      <find>$_</find>
+      <find>wpcf7_before_send_mai</find>
+      <find>SaveContactForm7_</find>
+      <find>return img.src = file.dataURL;</find>
+      <find>isAddedFile</find>
+      <find>send</find>
+      <find>order-category</find>
+      <find>selectSamples</find>
+      <find>calcCategoriesObj</find>
+      <find>pershii.web</find>
+      <find>setCategoryValue</find>
+      <find>this.categoryValue</find>
+      <find>selectCategories</find>
+      <find>selectCats</find>
+      <find>categoryInfo</find>
+      <find>calcCategories</find>
+      <find>calcCategoriesCollection</find>
+      <find>categoryValue</find>
+      <find>order_form</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>work</replace>
+      <replace>guaranty</replace>
+      <replace>Category</replace>
+      <replace>category</replace>
+      <replace>&quot;</replace>
+      <replace>:</replace>
+      <replace>{{page.acf.baner.value}}</replace>
+      <replace>article</replace>
+      <replace>protected</replace>
+      <replace>$blogModel</replace>
+      <replace>days</replace>
+      <replace>days_group[days][]</replace>
+      <replace>post</replace>
+      <replace>$map</replace>
+      <replace>singleMap</replace>
+      <replace>page_block</replace>
+      <replace>credit</replace>
+      <replace>&lt;!--:ua--&gt;Всі права захищені © 2017&lt;!--:--&gt;&quot;,</replace>
+      <replace>`</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/wp-content/plugins/AkniCallback</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/frontend/js</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/BranderMap/Model</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/node_modules</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/BranderMap/node_modules</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/page-templates</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/AkniCallback/views</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/views</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/remove-redundant-links</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/wp-maintenance-mode</dir>
+      <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/wp-content</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/app</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/app/core</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/views/modules</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/BranderMap</dir>
+      <dir>$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/wordpress-seo</dir>
+      <dir>$PROJECT_DIR$/wp-content/plugins/contact-form-7</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/modules/blog/_similar_posts.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_blog-block.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/app/Model/LoanMetabox.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/Constructor/DeparmentMetabox.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/AdvancedMap.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/SingleMap.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_advanced_credit_blocks.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_advantages.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/single_department-template.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_calculate_credits_block.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/package.json" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/AkniCallback/Model/Db.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/AkniCallback/views/templates/callback_form.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/page-templates/calc-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/_layout.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/common/_footer.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/layout-blocks/_footer.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/modules/scrollTo.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/searchform.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/IсeThemeSettings/ice-theme-settings.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/contact-form-7/includes/submission.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/SimpleMap.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/searchpage.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/Constructor/Constructor.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/AkniCallback/Controller/CallbackForm.php" />
+        <option value="$PROJECT_DIR$/wp-config.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/search.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/main.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/app/core/CoreTheme.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/modules/_modules.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/core/_variables.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/modules/_search.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/core/_mixins.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/modules/autocomplit.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/layout-blocks/_header.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/common/_header.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/single_credit-template.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/credits_catalog-template.twig" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/wordpress-seo/frontend/class-opengraph.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/reception-template.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/taxonomy-reception.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/about-template.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/page-templates/home-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_promo-gallery.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/home-template.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/app/config/lang.json" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/modules/other-form.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/calc.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/calc-template.twig" />
+        <option value="$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_calc-block.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/wp-content/plugins/BranderMap/node_modules" />
+    <handled-path value="$PROJECT_DIR$/wp-content/themes/Akni/node_modules" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9001" />
+  <component name="PhpServers">
+    <servers>
+      <server id="3247aebc-c4de-49c7-b58f-1387613bdcf1" name="rentcar24.web" />
+      <server host="rentcar24.web" id="8892bdd4-f48e-467f-9062-2c660ecb9c10" name="rentcar24.web (1)" />
+      <server host="kapital.web" id="a4515d37-9e13-4437-8e3f-3506a097ce19" name="kapital.web" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/home/icefier/projects/kapital.web/www" />
+        </path_mappings>
+      </server>
+      <server host="pma.web" id="de1c572f-2cbf-40d2-a11d-08cf12de3cea" name="pma.web" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/wp-content" remote-root="/home/icefier/projects/pma" />
+        </path_mappings>
+      </server>
+      <server host="telehaus.web" id="a84c04b5-e90e-4780-883c-ee7920dceebb" name="telehaus.web" />
+      <server host="yellowservice.web" id="f3ccc24a-3991-4b44-88d4-4010aaca90e2" name="yellowservice.web" />
+      <server host="materialwizard.web" id="493fc0bb-e95f-4227-ba10-7706190d5624" name="materialwizard.web" />
+      <server host="pershii.web" id="ccbb29b5-d57c-4516-9aa4-77c2353611c3" name="kit-group" />
+      <server host="chip.web" id="b6f84b5f-fd6e-4af1-a14f-13b32c0ba788" name="chip.web" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/wp-admin" remote-root="/var/www/chip/www/wp-admin" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1853" />
+    <option name="height" value="992" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contact-form-7" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contact-form-7" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plugins" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="save-contact-form-7" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="page-templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layout-blocks" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="wp-content" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Akni" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kapital" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="SearchEverywhereHistoryKey" value=".Pot&#9;FILE&#9;file:///var/www/kit-group.web/www/wp-content/plugins/advanced-custom-fields-pro/lang/acf.pot&#10;get_he&#9;null&#9;null&#10;akni_call&#9;FILE&#9;file:///var/www/kit-group.web/www/wp-content/plugins/AkniCallback/views/public/js/akni_callback.js&#10;akni_ca&#9;FILE&#9;file:///var/www/kit-group.web/www/wp-content/themes/Akni/public/js/modules/akni_callback.js&#10;akni&#9;FILE&#9;file:///var/www/kit-group.web/www/wp-content/themes/Akni/frontend/js/scripts/modules/akni_callback.js" />
+    <property name="ToolWindowCommand Line Tools Console.ShowToolbar" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/wp-config.php" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/plugins/BranderMap/views" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/Interfaces" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/Abstract" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/Constructor" />
+      <recent name="$PROJECT_DIR$/wp-content/plugins/BranderMap/Model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/modules" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/Akni/views/modules" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/Akni" />
+      <recent name="$PROJECT_DIR$/wp-content/themes/Akni/public" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="kit-group" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f60fdb09-9d58-4d60-8c5f-0b612765ea68" name="Default" comment="" />
+      <created>1487338920906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1487338920906</updated>
+      <workItem from="1487338922971" duration="5940000" />
+      <workItem from="1487349391543" duration="107000" />
+      <workItem from="1487349615734" duration="2303000" />
+      <workItem from="1487575062896" duration="18949000" />
+      <workItem from="1487669777449" duration="14676000" />
+      <workItem from="1487833840825" duration="21335000" />
+      <workItem from="1487920137125" duration="23806000" />
+      <workItem from="1487949895467" duration="1979000" />
+      <workItem from="1488006301258" duration="28383000" />
+      <workItem from="1488274733466" duration="19241000" />
+      <workItem from="1488454984828" duration="23617000" />
+      <workItem from="1488524641737" duration="8130000" />
+      <workItem from="1488540296962" duration="4374000" />
+      <workItem from="1488782401921" duration="3988000" />
+      <workItem from="1488790517871" duration="916000" />
+      <workItem from="1488809727004" duration="5732000" />
+      <workItem from="1488876872495" duration="262000" />
+      <workItem from="1488877222396" duration="5153000" />
+      <workItem from="1489045567698" duration="588000" />
+      <workItem from="1489051783529" duration="4284000" />
+      <workItem from="1489061671027" duration="13699000" />
+      <workItem from="1489129086046" duration="27705000" />
+      <workItem from="1489389231464" duration="2203000" />
+      <workItem from="1489477139856" duration="337000" />
+      <workItem from="1489479860832" duration="11711000" />
+      <workItem from="1489558333558" duration="1225000" />
+      <workItem from="1489585923019" duration="4132000" />
+      <workItem from="1489590826806" duration="1428000" />
+      <workItem from="1489646545011" duration="28000" />
+      <workItem from="1489672549181" duration="2445000" />
+      <workItem from="1489734415012" duration="3273000" />
+      <workItem from="1489759988066" duration="612000" />
+      <workItem from="1489762466724" duration="711000" />
+      <workItem from="1489993000829" duration="94000" />
+      <workItem from="1490015419484" duration="60000" />
+      <workItem from="1490174944604" duration="1237000" />
+      <workItem from="1490193166292" duration="81000" />
+      <workItem from="1490251873397" duration="10186000" />
+      <workItem from="1490346178363" duration="3831000" />
+      <workItem from="1490682909259" duration="927000" />
+      <workItem from="1490777026973" duration="794000" />
+      <workItem from="1490783499796" duration="771000" />
+      <workItem from="1490784942750" duration="849000" />
+      <workItem from="1490785845928" duration="7000" />
+      <workItem from="1490788553325" duration="15000" />
+      <workItem from="1490788602702" duration="10000" />
+      <workItem from="1490875844619" duration="4927000" />
+      <workItem from="1490942236750" duration="5988000" />
+      <workItem from="1490950876871" duration="21000" />
+      <workItem from="1490953083239" duration="675000" />
+      <workItem from="1490959309725" duration="59000" />
+      <workItem from="1491482882742" duration="5769000" />
+      <workItem from="1491562098496" duration="6196000" />
+      <workItem from="1491572199350" duration="849000" />
+      <workItem from="1491802035947" duration="11175000" />
+      <workItem from="1491896180514" duration="364000" />
+      <workItem from="1491896551840" duration="971000" />
+      <workItem from="1491901325385" duration="7348000" />
+      <workItem from="1491914402699" duration="1897000" />
+      <workItem from="1491974966876" duration="690000" />
+      <workItem from="1492064713386" duration="27227000" />
+      <workItem from="1492149412582" duration="19982000" />
+      <workItem from="1492172770960" duration="803000" />
+      <workItem from="1492174941226" duration="56000" />
+      <workItem from="1492180184350" duration="1102000" />
+      <workItem from="1492494057758" duration="213000" />
+      <workItem from="1492494857492" duration="2796000" />
+      <workItem from="1492509325712" duration="549000" />
+      <workItem from="1492524714396" duration="174000" />
+      <workItem from="1492780374545" duration="307000" />
+      <workItem from="1493788773814" duration="1772000" />
+      <workItem from="1493815501624" duration="15000" />
+      <workItem from="1493815524416" duration="256000" />
+      <workItem from="1493894830918" duration="1101000" />
+      <workItem from="1493896750147" duration="155000" />
+      <workItem from="1494228936766" duration="8928000" />
+      <workItem from="1494414835714" duration="8005000" />
+      <workItem from="1494504750323" duration="6731000" />
+      <workItem from="1494569772259" duration="20569000" />
+      <workItem from="1494832782320" duration="1449000" />
+      <workItem from="1494836153668" duration="6069000" />
+      <workItem from="1494919844510" duration="24103000" />
+      <workItem from="1495003249840" duration="12926000" />
+      <workItem from="1495187160728" duration="623000" />
+      <workItem from="1495463617547" duration="637000" />
+      <workItem from="1495523872953" duration="414000" />
+      <workItem from="1495800018491" duration="1195000" />
+      <workItem from="1496300108313" duration="1145000" />
+      <workItem from="1496726128402" duration="1761000" />
+      <workItem from="1496815133900" duration="1986000" />
+      <workItem from="1497262246222" duration="4765000" />
+      <workItem from="1497278687631" duration="539000" />
+      <workItem from="1497332159264" duration="10669000" />
+      <workItem from="1497353454351" duration="9604000" />
+      <workItem from="1497426575821" duration="14728000" />
+      <workItem from="1497509519454" duration="9399000" />
+      <workItem from="1497536794010" duration="2147000" />
+      <workItem from="1497592485010" duration="183000" />
+      <workItem from="1497621724589" duration="201000" />
+      <workItem from="1497863200193" duration="8000" />
+      <workItem from="1498023998073" duration="1954000" />
+      <workItem from="1498035750452" duration="655000" />
+      <workItem from="1498045884322" duration="9396000" />
+      <workItem from="1498117372329" duration="9307000" />
+      <workItem from="1498130401514" duration="15499000" />
+      <workItem from="1498197169394" duration="27367000" />
+      <workItem from="1498231178046" duration="1198000" />
+      <workItem from="1498458403259" duration="26217000" />
+      <workItem from="1498544268020" duration="30630000" />
+      <workItem from="1498714457948" duration="2823000" />
+      <workItem from="1498718694131" duration="26019000" />
+      <workItem from="1498801246101" duration="10763000" />
+      <workItem from="1498812224401" duration="20467000" />
+      <workItem from="1499061046929" duration="20921000" />
+      <workItem from="1499146480756" duration="20505000" />
+      <workItem from="1499238411563" duration="22591000" />
+      <workItem from="1499322334627" duration="1583000" />
+      <workItem from="1499324888866" duration="11743000" />
+      <workItem from="1499407742042" duration="6114000" />
+      <workItem from="1499414911242" duration="303000" />
+      <workItem from="1513862290622" duration="3294000" />
+      <workItem from="1513865785756" duration="668000" />
+      <workItem from="1514896121655" duration="6258000" />
+      <workItem from="1514909876739" duration="543000" />
+      <workItem from="1514970975959" duration="566000" />
+      <workItem from="1514972883086" duration="1286000" />
+      <workItem from="1514995091383" duration="3605000" />
+      <workItem from="1515057872378" duration="13551000" />
+      <workItem from="1515080593043" duration="727000" />
+      <workItem from="1515082943474" duration="4189000" />
+      <workItem from="1515162623714" duration="3919000" />
+      <workItem from="1515509777078" duration="3350000" />
+      <workItem from="1515662713692" duration="6546000" />
+      <workItem from="1515744188924" duration="343000" />
+      <workItem from="1515748065111" duration="5056000" />
+      <workItem from="1515771944586" duration="4624000" />
+      <workItem from="1516008532062" duration="25786000" />
+      <workItem from="1516090539858" duration="16000" />
+      <workItem from="1516094930060" duration="1086000" />
+      <workItem from="1516175124346" duration="288000" />
+      <workItem from="1516175954994" duration="638000" />
+      <workItem from="1516177086633" duration="4000" />
+      <workItem from="1516177381803" duration="262000" />
+      <workItem from="1516179791171" duration="1313000" />
+      <workItem from="1516872643591" duration="1948000" />
+      <workItem from="1517477812205" duration="18505000" />
+      <workItem from="1517562399507" duration="13693000" />
+      <workItem from="1517996578431" duration="606000" />
+      <workItem from="1518520432266" duration="4716000" />
+      <workItem from="1518617542747" duration="558000" />
+      <workItem from="1518621873480" duration="698000" />
+      <workItem from="1518689052640" duration="325000" />
+      <workItem from="1518767564726" duration="939000" />
+      <workItem from="1518788517686" duration="7857000" />
+      <workItem from="1519023566821" duration="8734000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="946907000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22609176" sideWeight="0.49582464" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3486911" sideWeight="0.5063571" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3486911" sideWeight="0.4936429" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2837109" sideWeight="0.48977336" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41780105" sideWeight="0.48977336" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18960752" sideWeight="0.50417536" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50104386" sideWeight="0.51022667" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3507307" sideWeight="0.49585405" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33194155" sideWeight="0.48977336" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28524047" sideWeight="0.49582464" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18960752" sideWeight="0.50417536" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42066807" sideWeight="0.48977336" order="11" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page.php</url>
+          <line>5</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page.php</url>
+          <line>30</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/app/Model/CarPrice.php</url>
+          <line>82</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/catalog-page.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="243" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/catalog-page.php</url>
+          <line>35</line>
+          <option name="timeStamp" value="244" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="250" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/conditions-page.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="251" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single.php</url>
+          <line>64</line>
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single.php</url>
+          <line>56</line>
+          <option name="timeStamp" value="326" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single.php</url>
+          <line>45</line>
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/blog-page.php</url>
+          <line>48</line>
+          <option name="timeStamp" value="404" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/blog-page.php</url>
+          <line>9</line>
+          <option name="timeStamp" value="414" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-department.php</url>
+          <line>42</line>
+          <option name="timeStamp" value="532" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-department.php</url>
+          <line>38</line>
+          <option name="timeStamp" value="533" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-department.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="534" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-department.php</url>
+          <line>73</line>
+          <option name="timeStamp" value="535" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-department.php</url>
+          <line>62</line>
+          <option name="timeStamp" value="543" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-credit.php</url>
+          <line>85</line>
+          <option name="timeStamp" value="547" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/credits_catalog-page.php</url>
+          <line>70</line>
+          <option name="timeStamp" value="586" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/credits_catalog-page.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="590" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-credit.php</url>
+          <line>42</line>
+          <option name="timeStamp" value="592" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/single-credit.php</url>
+          <line>43</line>
+          <option name="timeStamp" value="593" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/credits_catalog-page.php</url>
+          <line>58</line>
+          <option name="timeStamp" value="598" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/wp-content/plugins/BranderMap/webpack.config.js</url>
+          <line>10</line>
+          <option name="timeStamp" value="544" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="629" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="get_post_meta($context['page']-&gt;ID,'_yoast_wpseo_title', true)" language="PHP" />
+        <watch expression="$context['page']" language="PHP" />
+        <watch expression="get_term_meta($context['page']-&gt;term_id)" language="PHP" />
+      </configuration>
+      <configuration name="plugins.php">
+        <watch expression="$posts" language="PHP" />
+        <watch expression="$key" language="PHP" />
+        <watch expression="$item['args']" language="PHP" />
+        <watch expression="register_post_type($key, $item['args'])" language="PHP" />
+      </configuration>
+      <configuration name="admin.php">
+        <watch expression="$context['nonce']" language="PHP" />
+        <watch expression="$this-&gt;_config-&gt;getPluginName()" language="PHP" />
+      </configuration>
+      <configuration name="post.php">
+        <watch expression=" get_post_meta($post-&gt;ID, 'department_group', true)" language="PHP" />
+      </configuration>
+      <configuration name="term.php">
+        <watch expression="$this-&gt;themePath" language="PHP" />
+        <watch expression="get_field('contact_id', $city)" language="PHP" />
+        <watch expression="$city" language="PHP" />
+      </configuration>
+      <configuration name="post-new.php">
+        <watch expression="$category" language="PHP" />
+        <watch expression="$category-&gt;term_id" language="PHP" />
+        <watch expression="$branderMap" language="PHP" />
+      </configuration>
+      <configuration name="edit.php">
+        <watch expression="$file" language="PHP" />
+        <watch expression="file_exists($this-&gt;_baseDir .'config/'.$file.'.json')" language="PHP" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>get_term_meta($context['page']-&gt;term_id)</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>get_term_meta($context['page']-&gt;term_id,'_yoast_wpseo_title', true)</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$context['page']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$context['page']-&gt;ID</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>get_post_meta($context['page']-&gt;ID,'_yoast_wpseo_title', true)</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$context['config_page']['advantages_home']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$context['page']-&gt;acf['credits_slider']['value']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$item['image']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$b['order']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$a['order']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/general.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/searchform.php" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/modules/autocomplit.js" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/core/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="27" lean-forward="false" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/core/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/modules/_modules.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/class-wp-query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="2770" column="20" lean-forward="false" selection-start-line="2770" selection-start-column="8" selection-end-line="2770" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/app/config/posts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/app/config/tax.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/BranderMap/Model/SimpleMap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="91" column="39" lean-forward="false" selection-start-line="91" selection-start-column="39" selection-end-line="91" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/BranderMap/config/tax.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/BranderMap/config/maps.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/BranderMap/config/posts.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/app/Model/MainAjax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#61#79#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/modules/_search.scss" />
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/layout-blocks/_header.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/stylesheets/common/_header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5130">
+          <caret line="285" column="1" lean-forward="false" selection-start-line="285" selection-start-column="1" selection-end-line="285" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/BranderMap/views/advanced-map.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/BranderMap/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/single-credit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/credits_catalog-template.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wordpress-seo/frontend/class-frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22410">
+          <caret line="1247" column="130" lean-forward="false" selection-start-line="1247" selection-start-column="21" selection-end-line="1247" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/wordpress-seo/frontend/class-opengraph.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4590">
+          <caret line="257" column="9" lean-forward="false" selection-start-line="257" selection-start-column="9" selection-end-line="257" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/reception-template.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/taxonomy-reception.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" column="102" lean-forward="false" selection-start-line="41" selection-start-column="102" selection-end-line="41" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/about-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/single_credit-template.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="117" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/about-template.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/_layout.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2196">
+          <caret line="122" column="22" lean-forward="false" selection-start-line="122" selection-start-column="22" selection-end-line="122" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/home-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="43" lean-forward="false" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/BranderMap/frontend/vue-components/departments-popup/departments-popup.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_promo-gallery.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/home-template.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="1544" column="4" lean-forward="false" selection-start-line="1544" selection-start-column="4" selection-end-line="1544" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-includes/shortcodes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3528">
+          <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/page-templates/calc-page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1926">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/contact-form-7/wp-contact-form-7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/contact-form-7/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/contact-form-7/modules/submit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="59" column="79" lean-forward="false" selection-start-line="59" selection-start-column="79" selection-end-line="59" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/save-contact-form-7/save-contact-form-7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7092">
+          <caret line="402" column="22" lean-forward="false" selection-start-line="402" selection-start-column="22" selection-end-line="402" selection-end-column="22" />
+          <folding>
+            <marker date="1500895910000" expanded="true" signature="908:1000" ph="..." />
+            <marker date="1500895910000" expanded="true" signature="1352:1823" ph="CREATE TABLE... IF" />
+            <marker date="1500895910000" expanded="true" signature="7967:8021" ph="select * fro... ${$wpdb-&gt;prefix}" />
+            <marker date="1500895910000" expanded="true" signature="8562:8639" ph="update SaveContactForm7_lookup... " />
+            <marker date="1500895910000" expanded="true" signature="8919:8991" ph="select * fro... ${$wpdb-&gt;prefix}" />
+            <marker date="1500895910000" expanded="true" signature="9527:9604" ph="update SaveContactForm7_lookup... " />
+            <marker date="1500895910000" expanded="true" signature="13304:13372" ph="select * fro... SaveContactForm7_lookup" />
+            <marker date="1500895910000" expanded="true" signature="28783:28999" ph="CREATE TABLE... IF" />
+            <marker date="1500895910000" expanded="true" signature="30632:31114" ph="INSERT INTO SaveContactForm7_lookup... " />
+            <marker date="1500895910000" expanded="true" signature="30759:30947" ph="SELECT * FRO... tmp" />
+            <marker date="1500895910000" expanded="true" signature="30774:30795" ph="SELECT %s, %... " />
+            <marker date="1500895910000" expanded="true" signature="30851:30946" ph="SELECT CF7_f... SaveContactForm7_lookup" />
+            <marker date="1500895910000" expanded="true" signature="31444:31525" ph="UPDATE `SaveContactForm7_lookup`... " />
+            <marker date="1500895910000" expanded="true" signature="31959:32117" ph="select `CFDB... SaveContactForm7_lookup" />
+            <marker date="1500895910000" expanded="true" signature="41559:41602" ph="insert into ${$table}... " />
+            <marker date="1500895910000" expanded="true" signature="45785:46001" ph="CREATE TABLE... IF" />
+            <marker date="1500895910000" expanded="true" signature="55212:55257" ph="ALTER TABLE ${$table}... " />
+            <marker date="1500895910000" expanded="true" signature="55427:55514" ph="UPDATE SaveContactForm7_lookup... " />
+            <marker date="1500895910000" expanded="true" signature="56420:56605" ph="select `CFDB... SaveContactForm7_lookup" />
+            <marker date="1500895910000" expanded="true" signature="57554:58036" ph="INSERT INTO SaveContactForm7_lookup... " />
+            <marker date="1500895910000" expanded="true" signature="57681:57869" ph="SELECT * FRO... tmp" />
+            <marker date="1500895910000" expanded="true" signature="57696:57717" ph="SELECT %s, %... " />
+            <marker date="1500895910000" expanded="true" signature="57773:57868" ph="SELECT CF7_f... SaveContactForm7_lookup" />
+            <marker date="1500895910000" expanded="true" signature="58342:58423" ph="UPDATE `SaveContactForm7_lookup`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/node_modules/dropzone/dist/dropzone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="145" column="264" lean-forward="false" selection-start-line="145" selection-start-column="260" selection-end-line="145" selection-end-column="264" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/modules/other-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="169" column="15" lean-forward="false" selection-start-line="169" selection-start-column="15" selection-end-line="169" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/public/js/calc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="690" column="0" lean-forward="false" selection-start-line="690" selection-start-column="0" selection-end-line="690" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/app/config/lang.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="105" column="38" lean-forward="false" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/frontend/js/calc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="118" column="36" lean-forward="false" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/calc-template.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="64" column="140" lean-forward="false" selection-start-line="64" selection-start-column="119" selection-end-line="64" selection-end-column="140" />
+          <folding>
+            <element signature="e#3852#3873#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/Akni/views/modules/_calc-block.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="202" column="53" lean-forward="false" selection-start-line="202" selection-start-column="53" selection-end-line="202" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

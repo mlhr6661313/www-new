@@ -1,0 +1,306 @@
+.fancybox-container {
+	.fancybox {
+		&-thumbs {
+			top: auto;
+			width: auto;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 140px;
+			padding: 20px;
+			background: transparent;
+			> ul {
+				display: flex;
+				justify-content: center;
+				> li {
+					width: 145px;
+					height: 95px;
+					margin: 0;
+					&:before {
+						border: 0;
+						background-color: rgba(0, 0, 0, .25);
+						opacity: 1;
+						@include anim;
+					}
+					&.fancybox-thumbs-active {
+						&:before {
+							background-color: transparent;
+						}
+					}
+				}
+				> li + li {
+					margin-left: 20px;
+				}
+			}
+		}
+		&-show-thumbs {
+			.fancybox-inner {
+				right: 0;
+				bottom: 140px;
+			}
+		}
+		&__image-wrap {
+			height: 100% !important;
+		}
+		&-stage {
+			left: 10%;
+			right: 10%;
+		}
+		&-arrow {
+			height: 100vh;
+			width: 12.5%;
+			margin: 0;
+			top: 0;
+			@include anim;
+			&:hover {
+				background: rgba(0, 0, 0, .25);
+			}
+			&:after {
+				width: 64px;
+				height: 64px;
+				background: none;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(45deg);
+				border-color: $clr-grey;
+				border-style: solid;
+				border-width: 3px 3px 0 0;
+			}
+		}
+		&-navigation {
+			button[disabled] {
+				pointer-events: none;
+			}
+		}
+		&-slide {
+			// background-color: #fff;
+			// overflow: hidden;
+			padding-right: 60px;
+			overflow: hidden;
+
+			@include bp-max($mq-mobile-small) {
+				padding-right: 0;
+			}
+
+			> * {
+				padding: 0;
+				margin: 0;
+				height: 100%;
+				overflow: visible;
+				max-width: 100%;
+
+				> div {
+					padding: 60px;
+
+				}
+
+			}
+
+			.calc-section {
+				overflow: auto;
+				overflow-x: hidden;
+				height: 100%;
+				color: #000;
+				padding-top: 0;
+				padding-bottom: 0;
+				padding: 60px;
+				@include scrollbar;
+
+				@include bp-max($mq-mobile) {
+					padding: 15px
+				}
+
+				.calc-title {
+					font-size: 36px;
+					line-height: 36px;
+					letter-spacing: -0.1px;
+					font-family: $family2;
+					margin-bottom: 40px;
+				}
+			}
+		}
+		&-close-small {
+			width: 60px;
+			height: 60px;
+			top: 0;
+			right: -60px;
+			background-color: $yellow;
+
+			@include bp-max($mq-mobile-small) {
+				right: 0;
+				background-color: #fff;
+				width: 40px;
+				height: 40px;
+			}
+
+			&:hover {
+				&:before, &:after {
+					background: $clr-link;
+					opacity: 1;
+				}
+			}
+			&:after, &:before {
+				content: "";
+				position: absolute;
+				border-radius: 0;
+				top: 50%;
+				left: 50%;
+				width: 37%;
+				height: 1px;
+				background: #000;
+				opacity: 1;
+				@include anim;
+			}
+			&:before {
+				transform: translate(-50%, -50%) rotate(45deg);
+			}
+			&:after {
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+		}
+		@include bp-max($mq-desktop-hd-min) {
+			&-stage {
+				right: 0;
+				left: 0;
+			}
+		}
+		@include breakpoint($mq-tablet) {
+			&-stage {
+				top: 50%;
+				transform: translateY(-50%);
+				height: 100%;
+
+			}
+			&-show-thumbs {
+				.fancybox-inner {
+					bottom: 0;
+				}
+			}
+			&-arrow {
+				&:after {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+		@include breakpoint($mq-mobile) {
+			&-arrow {
+				width: 64px;
+			}
+			&-stage {
+
+			}
+			// &-slide {
+			// 	> * {
+			// 		padding: 16px;
+			// 	}
+			// }
+		}
+	}
+}
+.order-popup {
+	padding: 60px;
+	height: 100%;
+	overflow: auto;
+	@include scrollbar;
+
+
+
+	&__title {
+		font-size: 30px;
+		margin-bottom: 30px;
+	}
+	&__info {
+		margin-bottom: 40px;
+		.form-row {
+			span {
+				display: inline-block;
+				margin-left: 15px;
+				font-weight: 700;
+			}
+			& + .form-row {margin-top: 10px;}
+		}
+	}
+	&__form {
+		.form-row {
+			display: flex;
+			flex-flow: row wrap;
+			& + .form-row {margin-top: 20px;}
+			> span {
+				&:first-child {
+					width: 200px;
+				}
+				&:last-child {width: calc(100% - 200px)}
+			}
+		}
+	}
+	@include breakpoint($mq-mobile) {
+		&__form {
+			.form-row {
+				> span {
+					&:first-child {
+						font-size: 12px;
+						width: 100px;
+					}
+					&:last-child {width: calc(100% - 100px)}
+				}
+			}
+		}
+	}
+}
+
+.not100height .fancybox-slide{
+	&>*{
+		height: auto;
+		max-height: 100%;
+	}
+}
+
+.subscribe {
+	padding-top: 15px;
+	
+	label {
+		position: relative;
+	}
+	input {
+		display: none;
+
+		&:checked + b {
+			&:before {
+				position: absolute;
+			    content: "";
+			    width: 28px;
+			    height: 28px;
+			    top: 50%;
+			    left: -3px;
+			    transform: translateY(-50%);
+			    background: url(/wp-content/plugins/BranderMap/frontend/images/check-yellow.png) no-repeat 50%;
+			    background-size: contain;
+			    z-index: 2;
+			    transition: all .1s ease-in-out;
+			}
+		}
+	}
+
+	b {
+		display: inline-block;
+		position: relative;
+		// position: absolute;
+		// top: 50%;
+		// left: 0;
+		// transform: translateY(-50%);
+		border: 2px solid #ccc;
+		width: 20px;
+		height: 20px;
+		border-radius: 2px;
+		z-index: 1;
+		vertical-align: middle;
+		margin-right: 10px;
+	}
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+
+	}
+}

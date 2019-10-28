@@ -1,0 +1,86 @@
+<footer class="site-footer">
+	<div style="display:none;" class="widget-scripts">
+		{% if theme_options.live_chat !='' %}
+			{{ theme_options.live_chat }}
+		{% endif %}
+		{% if theme_options.yandex_metric !='' %}
+			{{ theme_options.yandex_metric }}
+		{% endif %}
+	</div>
+	<div class="site-footer__holder content-width">
+		<div class="site-footer__top-block" data-css-container="offset footer">
+			<nav class="site-footer__nav" data-css="products">
+				{% if menus.primary_footer_menu is not empty %}
+					<ul class="site-footer__menu">
+						<li>
+							<div class="site-footer__logo" data-css="footer logo">
+								<a {% if logo_url is not empty %} href="{{ logo_url }}" {% endif %}>
+									{% if theme_options.footer_logo %}
+										<img src="{{ theme_options.footer_logo }}" alt="{{ theme_options.logo_alt }}" title="{{ theme_options.logo_title }}"/>
+									{% endif %}
+								</a>
+							</div>
+						</li>
+						<li>
+							<div class="site-footer__contacts">
+								{% if config_page.footer_phones is not empty !='' %}
+									<ul class="site-footer__contacts-list">
+										{% for phone in config_page.footer_phones %}
+											{% if phone.phone.original !='' and phone.phone.clear !='' and phone.comment !='' %}
+												<li>
+													<a href="tel:{{ phone.phone.clear }}">{{ phone.phone.original }}</a>
+												</li>
+											{% endif %}
+										{% endfor %}
+										{% if theme_options.email !='' %}
+											<li>
+												<a class="is-mail" href="mailto:{{ theme_options.email }}">
+													{{ theme_options.email }}
+												</a>
+											</li>
+										{% endif %}
+									</ul>
+								{% endif %}
+							</div>
+						</li>
+						<li>
+							<a href="{{ allCredits.url }}" class="header-credits__link">{{ lang.credits_text }}</a>
+						</li>
+						{% for item in menus.primary_footer_menu %}
+							<li>
+								<a href="{{ item.url }}" >{{ item.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			</nav>
+			{% if theme_options.social is not empty %}
+				<ul class="site-footer__socials">
+					{% for name, link in theme_options.social %}
+						{% if link %}
+						<li>
+							<a href="{{ link }}" rel="nofollow" target="_blank" class="soc-{{ name }}"></a>
+						</li>
+					{% endif %}
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</div>
+		<div class="site-footer__bottom-block">
+			<div class="site-footer__copyright">{{ lang.copyright_text }}</div>
+			<div class="site-footer__development-by">
+				{{ lang.development_by_text }} <a rel="nofollow" href="https://brander.ua/">BRANDER</a>
+			</div>
+		</div>
+	</div>
+	<div class="thank-you" style="display:none;" id="thank-you-popup">
+		<div class="popup_thanks">
+			<div class="popup_thanks_inner">
+				<span class="popup_thanks_close"></span>
+				<h4 class="thank_you_title">{{ lang.thank_you_for_text_title }}</h4>
+				<p class="thank_you_text">{{ lang.thank_you_for_callback_text }}</p>
+			</div>
+		</div>
+	</div>
+	<a href="#" id="to_top_scroll" class="site-footer__scroll-top"></a>
+</footer>

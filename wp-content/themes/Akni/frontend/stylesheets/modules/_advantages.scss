@@ -1,0 +1,73 @@
+.advantages-section {
+  margin-bottom: 50px;
+  &__list {
+    padding: 120px 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include breakpoint($mq-mobile) {
+    padding: 0;
+    &__list {
+      padding: 60px 0 10px;
+      flex-wrap: nowrap;
+    }
+  }
+  .swiper-slide {
+    width: auto;
+  }
+}
+.advantage-item {
+  padding: 0 10px;
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+  flex: 1 1 auto;
+  &__icon {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    max-width: 100px;
+  }
+  &__text {
+    font-size: 32px;
+    font-weight: 800;
+    color: rgba(38, 40, 41, 1);
+    line-height: 1.2;
+    padding: 0 0 13px 8px;
+    @include anim;
+  }
+  &__bg {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(52, 54, 56, 1);
+    line-height: 2;
+    background-color: rgba(237, 237, 237, 1);
+    border-radius: 10px;
+    padding: 3px 100px 19px 23px;
+    min-height: 93px;
+    span {
+      font-size: 36px;
+      letter-spacing: 0.01em;
+      line-height: 0.9;
+    }
+  }
+  @include breakpoint($mq-mobile) {
+    padding: 0;
+    flex: 0 0 auto;
+    &__text {
+      padding: 0 16px;
+      margin-bottom: 5px;
+    }
+    &__icon {
+      right: -10px;
+    }
+    &__bg {
+      border-radius: 0;
+    }
+  }
+}
+a.advantage-item {
+  &:hover {
+    .advantage-item__text {color: $clr-link;}
+  }
+}

@@ -1,0 +1,123 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+	<section class="one-department">
+		<div class="one-department__holder content-width">
+			<h1 id="title" class="one-department__title"> {{ pageTitle|upper }}</h1>
+			<div class="one-department__map-holder">
+				<div class="one-department__content">
+					<div class="one-department__img-box"><!-- 
+					-->{% if page.main_thumnail_url !='' %}
+							<a  href="{{ page.main_thumnail_url }}" data-fancybox="images">
+								<img class="page-link__img"
+									 src="{{ page.main_thumnail_url }}"
+									 alt="{{ page.post_name }}"
+									 title="{{ page.post_name }}"/>
+								<svg viewBox="0 0 25 25" class="icon icon-collection">
+									<use xlink:href="#icon-collection"></use>
+								</svg>
+								<svg viewBox="0 0 25 25" class="icon icon-loupe">
+									<use xlink:href="#icon-loupe"></use>
+								</svg>
+							</a>
+							{% if page.acf.galery.value is not empty %}
+								<div class="hide">
+									{% for value in page.acf.galery.value %}
+										<a  href="{{ value.image }}" data-fancybox="images">
+											<img src="{{ value.image }}"/>
+										</a>
+									{% endfor %}
+								</div>
+							{% endif %}
+
+						{% endif %}<!-- 
+				--></div>
+					<div class="one-department__data">
+                        {% if  page.post_content is not empty  %}
+						<div class="one-department__descr">
+                            <p>{{ lang.department_address }}</p>
+                            <p>{{ page.post_content }}</p>
+						</div>
+                        {%  endif  %}
+						<div class="one-department__phone">
+							{% if phone is not empty %}
+                                <p>{{ lang.department_phone }}</p>
+								{% if phone.phone.original !='' and phone.phone.clear !='' %}
+									<a href="tel:{{ phone.phone.clear }}">{{ phone.phone.original }}</a>
+								{% endif %}
+							{% endif %}
+						</div>
+						<div class="one-department__work-data">
+							{% if days is not empty %}
+                                <p>{{ lang.department_schedule }}</p>
+								{% for num, day in days %}
+									<div class="one-department__days">
+										<div class="days-info__name">{{ lang.days_full_text[num-1] }}</div>
+										{% if work_from[num] !='' and work_to[num] !='' %}
+											<div class="days-info__time">
+												<span class="days-info__from"
+													  data-js-daysInfo="from"
+												>{{ work_from[num] }}</span>
+												<span class="days-info__delimiter"> - </span>
+												<span class="days-info__to"
+													  data-js-daysInfo="to"
+												>{{ work_to[num] }}</span>
+											</div>
+										{% else %}
+											<div class="days-info__time">
+												{{ lang.round_the_clock_text }}
+											</div>
+										{% endif %}
+									</div>
+								{% endfor %}
+								{% if notes != '' %}
+									<span class="notes">
+										{{ notes }}
+									</span>
+								{% endif %}
+							{% endif %}
+						</div>
+						{% if page.acf.way.value !='' %}
+							<div class="one-department__actions">
+								<a class="btn has-border" target="_blank" href="{{ page.acf.way.value }}">
+									{{ lang.get_directions_text }}
+								</a>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+				{% if department_map %}
+					<div class="one-department__map">
+						{{ department_map }}
+						<a class="btn is-bg-transparent" target="_blank" href="{{ page.acf.way.value }}">
+							{{ lang.open_in_map_text }}
+						</a>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+	{% if receptions is not empty %}
+	<section class="receptions-section">
+		<div class="content-width">
+			<div data-title="h2" class="receptions-section__title">{{ lang.lombard_gets_text }}</div>
+			<ul class="receptions-section__list">
+				{% for reception in receptions %}
+					<li class="reception-item">
+						<a href="{{ reception.link }}">
+							<div class="reception-item__img-box">
+								<img src="{{ reception.image.url }}" alt="{{ reception.image.alt }}" title="{{ reception.image.title }}"/>
+							</div>
+							<div data-title="h3" class="reception-item__title">{{ reception.shown_name }}</div>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</section>
+	{% endif %}
+{% endblock %}

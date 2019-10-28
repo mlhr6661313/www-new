@@ -1,0 +1,23 @@
+{
+  "name": "akni",
+  "description": "default",
+  "main": "gulpfile.js",
+  "authors": [
+    "akni"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "akni"
+  ],
+  "homepage": "https://github.com/AkniSteven",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+  }
+}

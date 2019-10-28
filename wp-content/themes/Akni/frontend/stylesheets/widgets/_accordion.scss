@@ -1,0 +1,40 @@
+.accordion {
+  & + & {margin-top: 20px;}
+  &__link {
+    position: relative;
+    padding-right: 110px;
+    line-height: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      transform: rotate(-45deg);
+      border-width: 0  2px 2px 0;
+      border-color: transparent $clr-text $clr-text transparent;
+      border-style: solid;
+      @include anim;
+    }
+    &.is-active {
+      &:after {
+        border-width: 0 0 2px 2px;
+        border-color: transparent transparent $clr-text $clr-text;
+      }
+      & ~ .accordion__content {
+        max-height: 500px;
+        padding-top: 20px;
+      }
+    }
+  }
+  &__content {
+    overflow: hidden;
+    max-height: 0;
+    @include anim($dur: .3s);
+    line-height: 20px;
+    p + p {margin-top: 8px;}
+  }
+}

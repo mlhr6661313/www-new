@@ -1,0 +1,13 @@
+.brander-map {
+    &__container {
+        position: relative;
+        // overflow: hidden;
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+    &__map {
+        height: 700px;
+    }
+}

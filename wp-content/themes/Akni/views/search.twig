@@ -1,0 +1,72 @@
+{% extends "_layout.twig" %}
+
+{% block scripts %}
+
+{% endblock %}
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block advanced_meta %}{{ meta_tag }}{% endblock %}
+{% block body_attributes %}class="search-page"{% endblock %}
+
+{% block content %}
+	<div class="title">
+		{{ title }}
+	</div>
+	<div class="search-form">
+		<a class="icon-search" href="#">search</a>
+		<div class="search-field">
+			<form method="get" id="searchform" autocomplete="off" action="{{ form_url }}">
+				<input type="text" class="field" name="s" id="s" placeholder="{{ search_question }}" value="{{
+				search_question }}" />
+				<div class="search-right">
+					<div class="search-counter">{% if finded is not empty %} {{ finded_text }} {{ finded }} {% endif %}</div>
+					<input id="search_submit" type="submit" class="sim"   value="{{ lang.simple_search_text }}" />
+					<label for="search_submit"></label>
+				</div>
+			</form>
+			<div class="close-btn"></div>
+		</div>
+	</div>
+	<section class="search-result">
+	{% if search_results is not empty %}
+		{% if search_results  is iterable %}
+			{% for result in search_results  %}
+				<div class="search-result-item {% if result.post_content is empty %}p-empty{% endif %}">
+					<a class="search-link" href="{{ result.page_url }}">
+						<h3>{{ result.post_title }}</h3>
+						<p>{{ result.post_content }}</p>
+					</a>
+				</div>
+			{% endfor %}
+		{% endif %}
+	{% else %}
+		<div class="results-not-found">
+			{{ not_found }}
+		</div>
+	{% endif %}
+	</section>
+	<section class="page-navi">
+		<div class="pager">
+			{{ pager }}
+		</div>
+	</section>
+	<script>
+		(function(){
+			var pager=document.querySelector('.pager');
+			if(pager.querySelectorAll('.page-numbers').length>0){
+				if(!pager.querySelector('.prev')){
+					pager.innerHTML='<span class="prev page-numbers"></span>'+pager.innerHTML;
+				}
+				if(!pager.querySelector('.next')){
+					pager.innerHTML+='<span class="next page-numbers"></span>';
+				}
+			}
+		})();
+	</script>
+{% endblock %}

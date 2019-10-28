@@ -1,0 +1,34 @@
+{% if config_page.advantages_home.value is not empty %}
+<section id="benefits" class="benefits-section content-width">
+    <div data-title="h2" class="benefits-section__title">{{ config_page.advantages_home.label }}</div>
+        <div class="swiper-container-mob">
+            <div class="benefits-section__list swiper-wrapper">
+                {% for section in config_page.advantages_home.value %}
+                    {% if section.text !='' and section.image !=''%}
+                        {% if section.link %}
+                            <a href="{{ section.link }}" class="benefit-item swiper-slide">
+                                <div class="benefit-item__icon">
+                                    <img src="{{ section.image }}"
+                                         alt="benefit{{ loop.index }}"
+                                         title="benefit{{ loop.index }}"/>
+                                </div>
+                                <p class="benefit-item__text">{{ section.text }}</p>
+                            </a>
+                        {% else %}
+                            <div class="benefit-item swiper-slide">
+                                <div class="benefit-item__icon">
+                                    <img class="benefits__service-img"
+                                         src="{{ section.image }}"
+                                         alt="benefit{{ loop.index }}"
+                                         title="benefit{{ loop.index }}"/>
+                                </div>
+                                <p class="benefit-item__text">{{ section.text }}</p>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+</section>
+{% endif %}

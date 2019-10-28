@@ -1,0 +1,65 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+    <meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+    <section class="receptions-section">
+        <div class="content-width">
+            <h1 id="title" class="receptions-section__title"> {{ page.post_title }}</h1>
+            <div class="receptions-section__descr">
+                    {{ page.post_content }}
+            </div>
+            {% if config_page.tariff_info_file.value !='' %}
+                <a href="{{ config_page.tariff_info_file.value }}" target="_blank">{{ lang.tariff_information_text }}</a>
+            {% endif %}
+            {% if page.acf.page_text_content.value !='' %}
+                <div class="text-page">
+                    <div class="text-page__content">
+                        {{ page.acf.page_text_content.value }}
+                    </div>
+                </div>
+            {% endif %}
+            {% if page.acf.info.value is not empty %}
+                <section class="receptions-info-section">
+                    {% if page.acf.info_title.value !='' %}
+                        <div data-title="h2">{{ page.acf.info_title.value }}</div>
+                    {% endif %}
+                    {% for info in page.acf.info.value %}
+                        <div data-title="h3">{{ info.title }}</div>
+                        <div class="descr">{{ info.description }}</div>
+                    {% endfor %}
+                </section>
+            {% endif %}
+
+        </div>
+    </section>
+    <section class="calculate-credit-section">
+        {% include 'modules/_calculate_credits_block.twig' %}
+    </section>
+    {% if receptions is not empty %}
+        <div class="receptions-section">
+            <div class="content-width">
+                <div class="receptions-section__top-block">
+                    <div data-title="h2" class="receptions-section__title">{{ lang.other_pledge_variants_text }}</div>
+                    <a class="btn has-border" href="{{ allCredits_permalink }}">
+                        {{ lang.all_credits_text }}
+                    </a>
+                </div>
+                <ul class="receptions-section__list">
+                    {% for reception in receptions %}
+                        <li class="reception-item">
+                            <a href="{{ reception.link }}">
+                                <div class="reception-item__img-box">
+                                    <img src="{{ reception.image.url }}" alt="{{ reception.image.alt }}" title="{{ reception.image.title }}"/>
+                                </div>
+                                <div data-title="h3" class="reception-item__title">{{ reception.shown_name }}</div>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

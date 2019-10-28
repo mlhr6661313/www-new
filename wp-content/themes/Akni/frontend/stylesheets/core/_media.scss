@@ -1,0 +1,15 @@
+$mq-desktop-min: 981px;
+$mq-desktop-hd-min: 1280px;
+$mq-desktop-hd: 1366px;
+$mq-desktop-medium: 1680px;
+$mq-desktop-fullhd: 1920px;
+
+$mq-tablet: $mq-desktop-min - 1;
+$mq-tablet-medium: 1024px;
+$mq-tablet-small: 980px;
+$mq-tablet-min: 768px;
+
+$mq-mobile-medium: 640px;
+$mq-mobile: $mq-mobile-medium;
+$mq-mobile-small: 480px;
+$mq-mobile-min: 360px;

@@ -1,0 +1,70 @@
+$active-color: #fd0;
+
+.work-filter {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &__wrapper {
+        padding: .3em 0;
+    }
+    &__name {
+        position: relative;
+        padding-left: 2.2em;
+        color: #424242;
+        font-size: .85em;
+        display: block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            border: 2px solid #ccc;
+            width: 20px;
+            height: 20px;
+            border-radius: 2px;
+            z-index: 1;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 28px;
+            height: 28px;
+            top: 50%;
+            left: -.1em;
+            transform: translate(0, -50%);
+            background: url('~/wp-content/plugins/BranderMap/frontend/images/check-yellow.png') no-repeat center;
+            background-size: contain;
+            z-index: 2;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .1s ease-in-out;
+        }
+    }
+
+    &__input:checked + &__name {
+        &::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__wrapper.radio &__name {
+        &::before {
+            border-radius: 50%;
+        }
+        &::after {
+            background-color: #ffdd00;
+            background-image: none;
+            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            left: 3px;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        vertical-align: middle;
+        &__name {display: block;}
+    }
+}

@@ -1,0 +1,87 @@
+<div>
+    <div class="thank-you" style="display:none;" id="thank-you-callback">
+        <div class="popup_thanks">
+            <div class="popup_thanks_inner">
+                <span class="popup_thanks_close"></span>
+                <h4 class="thank_you_title">{{ lang.thank_you_for_callback_text_title }}</h4>
+                <p class="thank_you_text">{{ lang.thank_you_for_callback_text }}</p>
+            </div>
+        </div>
+        <div class="pre-game">
+            <div>{{ lang.lets_play_text }}</div>
+            <div class="buttons">
+                <span data-js="play" class="button">{{ lang.play_text }}</span>
+                <span data-js="not-play" class="button">{{ lang.not_play_text }}</span>
+            </div>
+        </div>
+    </div>
+    <div id="2048game" style="display: none;">
+        <div class="game2048">
+            <div class="container">
+                <div>
+                    <span class="game-title">{{ lang.game_title }}</span>
+                </div>
+                <div class="game-container">
+                    <div class="game-message">
+                        <p></p>
+                        <div class="lower">
+                            <a class="retry-button">{{ lang.try_again }}</a>
+                        </div>
+                    </div>
+                    <div class="grid-container">
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                        <div class="grid-row">
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                            <div class="grid-cell"></div>
+                        </div>
+                    </div>
+                    <div class="tile-container">
+                    </div>
+                </div>
+                <div>
+                    <span>{{ lang.game_description }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="#" method="post" name="callback-callback" id="callback-callback" data-url="{{ ajax_url }}" class="callback-form" onsubmit="return false;">
+        <input type="hidden" name="type" value="Callback">
+        <div class="form_field">
+            <input id="phone-callback" type="tel" name="phone" class="form-field tel" data-error="{{ lang.phone_error_text }}">
+            <span class="placeholder">{{ lang.phone_text }} *</span>
+        </div>
+
+        <div class="form_field">
+            <input id="name-callback" type="text" maxlength="100" name="name" class="form-field name need_validate" data-error="{{ lang.name_error_text }}">
+            <span class="placeholder">{{ lang.your_name_text }} *</span>
+        </div>
+
+        <div class="form_field">
+            <input id="comment-callback" type="text" maxlength="100" name="comment" class="form-field comment" >
+            <span class="placeholder">{{ lang.your_question_text }}</span>
+        </div>
+
+        <div class="actions yellow">
+            <input type="submit" id="submit-callback" class="button60" name="submit" value="{{ lang.send_text }}">
+        </div>
+    </form>
+</div>

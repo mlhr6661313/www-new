@@ -1,0 +1,540 @@
+.calculate-tabs {
+	margin-bottom: 5rem;
+	@include bp-max($mq-desktop-min) {
+		// padding-left: 32px;
+		// padding-right: 32px;
+	}
+}
+.calculator {
+	&__items {
+		margin-top: 100px;
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+		& + & {
+			margin-left: -.36em;
+			padding: 0 0 0 74px;
+			margin-top: 0;
+		}
+	}
+	&__input-box {
+		display: flex;
+		padding-right:0;
+		position: relative;
+		align-items: center;
+		margin-bottom: 1.5em;
+		&.disabled {
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-color: transparent;
+				z-index: 11;
+			}
+
+			.calculator__label-name {
+				color: lighten($clr-text, 20%);
+			}
+		}
+
+		//, .v-select input[type=search]:focus
+		// .v-select input[type=search]{
+		// 	font-family: $family2;
+
+		// 	&::-webkit-input-placeholder {
+		// 		font-family: $family;
+		// 	}
+		// 	&::-moz-placeholder{
+		// 		font-family: $family;
+		// 	}/* Firefox 19+ */
+		// 	&:-moz-placeholder{
+		// 		font-family: $family;
+		// 	}/* Firefox 18- */
+		// 	&:-ms-input-placeholder{
+		// 		font-family: $family;
+		// 	}
+		// }
+		&.checkbox-holder{
+
+			justify-content: flex-start;
+			align-items: center;
+			position: relative;
+			margin: -15px 0 28px;
+
+			@include bp($mobile) {
+				flex-direction: column;
+				align-items: flex-end;
+				// margin: -15px 0 76px;
+			}
+			@include bp($smallMobile) {
+				// margin: -7px 0 38px;
+			}
+
+			span{
+				width: 50%;
+				// flex-basis: 190px;
+				margin-left: auto;
+				color: transparent;
+				font-size: 13px;
+				user-select: none;
+				cursor: default;
+				display: inline-block;  // for IE
+
+				@include anim($param: color, $dur:.2s);
+				@include bp($mobile){
+					// font-size: 28px;
+					// line-height: 1.4;
+					// flex-basis: auto;
+					// letter-spacing: 0;
+					height: 0;
+					overflow: hidden;
+					width: 100%;
+					margin-top: 5px;
+					@include anim-param(color, height);
+				}
+				@include bp($smallMobile) {
+					font-size: 14px;
+				}
+
+				&:after{
+					content: '';
+					width: 54px;
+					height: 29px;
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translateY(-50%);
+					background: #e5e5e5;
+					border-radius: 30px;
+
+					@include anim($param: background, $dur:.2s);
+					@include bp($mobile){
+						top: 6px;
+						transform: translateY(0);
+						// width: 165px;
+						// height: 90px;
+						// border-radius: 45px;
+					}
+					@include bp($smallMobile) {
+						// width: 82px;
+						// height: 45px;
+					}
+				}
+			}
+
+			&:after{
+				content: 'нет';
+				position: absolute;
+				left: 7px;
+				top: 50%;
+				transform: translateY(-50%);
+				font-size: 11px;
+				color: #454545;
+				@include bp($mobile) {
+					top: 12px;
+					transform: translateY(0);
+					// left: 16px;
+					// top: 39px;
+					// font-size: 32px;
+				}
+				@include bp($smallMobile) {
+					// left: 8px;
+					// top: 26px;
+					// font-size: 16px;
+				}
+			}
+			&.ua{
+				&:after{
+					content: 'Нi';
+				}
+				[type="checkbox"]{
+					& + label{
+						&:after{
+							content: 'Так';
+						}
+					}
+				}
+			}
+			[type="checkbox"]{
+				font-size: 0;
+				position: absolute;
+				left: -9999px;
+
+				& + label{
+					font-weight: normal;
+					padding: 6px 0 7px 70px;
+					color: lighten($clr-text, 20%);
+
+					@include bp($mobile){
+						width: 50%;
+						padding-left: 0;
+						box-sizing: border-box;
+						// padding: 44px 0 35px 205px;
+					}
+					@include bp($smallMobile) {
+						// padding: 22px 0 17px 102px;
+					}
+					&:before{
+						content: '';
+						width: 23px;
+						height: 23px;
+						background: #fff;
+						border-radius: 50%;
+						position: absolute;
+						left: 0;
+						top: 50%;
+						transform: translate(28px, -50%);
+						z-index: 5;
+						cursor: pointer;
+						
+						@include anim($param: transform, $dur: .2s);
+						
+						@include bp($mobile) {
+							top: 20px;
+							transform: translateY(28px,0);
+							// width: 80px;
+							// height: 80px;
+							// left: 51px;
+							// top: 19px;
+						}
+						@include bp($smallMobile) {
+							// width: 40px;
+							// height: 40px;
+							// left: 25px;
+							// transform: translateX(14px);
+							// top: 16px;
+						}
+					}
+					&:after{
+						content: 'да';
+						position: absolute;
+						left: 32px;
+						top: 50%;
+						transform: translateY(-50%);
+						font-size: 11px;
+						color: #fff;
+						z-index: 2;
+						@include bp($mobile) {
+							top: 12px;
+							transform: translateY(0);
+							// left: 103px;
+							// top: 37px;
+							// font-size: 32px;
+						}
+						@include bp($smallMobile) {
+							// left: 54px;
+							// top: 26px;
+							// font-size: 16px;
+						}
+					}
+				}
+
+				&:checked{
+					& + label{
+						&:before{
+							transform: translate(3px,-50%);
+							@include bp($mobile) {
+								// transform: translateX(-46px);
+							}
+							@include bp($smallMobile) {
+								// transform: translateX(-22px);
+							}
+						}
+					}
+
+					& ~ span{
+						color: $colorLink;
+						user-select: text;
+						cursor: text;
+						display: inline-block;
+						@include bp($mobile){
+							height: 50px;
+						}
+						@include bp($smallMobile){
+							// height: 39px;
+						}
+						&:after{
+							background: #7f7f7f;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__select-wrapper, &__label {
+		width: 50%;
+	}
+	&__range-slider {
+		width: 50%;
+		padding: 0 90px 0 50px;
+		position: relative;
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			height: 1px;
+			background-color: $clr-input-border;
+			top: 50%;
+			transform: translate(0, -1px);
+			// width: 3em;
+			width: 50%;
+		}
+		&::before {
+			left: 0;
+		}
+		&::after {
+			right: 0;
+		}
+	}
+	&__label {
+	}
+	&__label-name {
+		color: #000;
+		font-size: 18px;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 7px;
+		color: #000;
+		font-size: 18px;
+		line-height: 1;
+		font-family: $family2;
+		border: none;
+		border-bottom: 1px solid $clr-input-border;
+		padding-left: 0;
+
+		&::-webkit-input-placeholder {
+			font-family: $family;
+		}
+		&::-moz-placeholder{
+			font-family: $family;
+		}/* Firefox 19+ */
+		&:-moz-placeholder{
+			font-family: $family;
+		}/* Firefox 18- */
+		&:-ms-input-placeholder{
+			font-family: $family;
+		}
+
+		@include bp-max($mq-mobile-small) {
+			font-family: $family;
+		}
+	}
+
+	&__calculate-btn {
+		// border: 2px solid $yellow;
+		// background-color: $clr-white;
+		// border-radius: 30px;
+		// padding: 22px 34px 20px;
+		margin-top: 2em;
+		// font-size: 18px;
+		// line-height: 18px;
+		// font-family: $family2;
+
+		&[disabled] {
+			// border-radius: 30px;
+			// border: none;
+			border-color: $clr-input-border;
+			background-color: $clr-input-border;
+			color: $clr-text;
+			cursor: default;
+
+			&:hover {
+				background-color: $clr-input-border !important;
+			}
+		}
+	}
+
+	// @override renge slider
+	.vue-slider-wrap {
+		padding: 1em 0 !important;
+	}
+	.vue-slider {
+		height: 1px !important;
+		background-color: transparent !important;
+
+	}
+	.vue-slider-process {
+		background-color: transparent;
+	}
+	.vue-slider-dot {
+		width: 145px !important;
+		height: 52px !important;
+		border-radius: 26px !important;
+		top: -1.5em !important;
+		left: -2.4em !important;
+		box-shadow: none;
+		// border: 1px solid $clr-input-border;
+		background-color: #e1e1e1;
+	}
+	.vue-slider-tooltip-wrap {
+		transform: translate(-50%, -50%) !important;
+		top: 50% !important;
+	}
+	.diy-tooltip {
+		position: relative;
+		border: none !important;
+		color: $clr-text !important;
+		background-color: transparent !important;
+		padding: 2px 34px 0;
+		white-space: nowrap;
+		font-size: 18px !important;
+		font-family: $family2;
+
+		@include bp-max($mq-mobile-small) {
+			font-family: $family;
+		}
+
+		#minus, #plus {
+			content: '';
+			position: absolute !important;
+			border: none !important;
+			width: 16px !important;
+			height: 16px !important;
+			background-size: contain !important;
+			background: url("../images/svg/plus.svg") no-repeat center !important;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		#minus {
+			left: 0 !important; ;
+			background: url("../images/svg/minus.svg") no-repeat center !important;
+		}
+		#plus {
+			right: 0;
+		}
+	}
+	// end
+
+	// @override v-select
+	.v-select.unsearchable input[type=search] {
+		max-width: none;
+	}
+	.dropdown-toggle {
+		border: none;
+		border-bottom: 1px solid $clr-input-border;
+		border-radius: 0;
+		position: relative;
+	}
+	.v-select{
+
+		.dropdown-toggle {
+			border-radius: 0;
+			border: none;
+			border-bottom: 1px solid $clr-input-border;
+		}
+
+		.selected-tag{
+			border: none;
+			background: none;
+			margin: 0;
+			padding: 0;
+			line-height: inherit;
+		}
+
+
+		.open {
+			.dropdown-toggle {
+				border: none;
+			}
+		}
+
+
+	}
+	.open-indicator {
+		&::before {
+			border-width: 2px 2px 0 0;
+		}
+	}
+
+	.selected-tag {
+		border: none;
+		background-color: transparent;
+		position: absolute;
+		padding: 0;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		padding-right: 2.1em;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		display: block;
+		width: 100%;
+		font-family: $family2;
+
+		@include bp-max($mq-mobile-small) {
+			font-family: $family;
+		}
+	}
+
+
+	.form-control {
+		padding: 0 2.1em 0 0 !important;
+		text-overflow: ellipsis;
+		@include placeholder() {
+			font-size: .9em;
+		}
+	}
+	.dropdown-menu {
+		overflow: hidden;
+		border-radius: 0;
+		padding: 0;
+		li {
+			a {
+				padding: 1em;
+				color: #000;
+				font-size: .9em;
+				line-height: 1;
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				&:hover {
+					background-color: $clr-input-border;
+					color: currentColor;
+				}
+				&:focus {
+					background-color: $clr-input-border;
+					color: currentColor;
+				}
+			}
+			&.highlight {
+				a {
+					color: $clr-text;
+					background-color: $clr-input-border;
+				}
+			}
+		}
+	}
+	// end
+
+	@include bp-max($mq-desktop-min) {
+		&__items {
+			width: 100%;
+
+			& + & {
+				margin: 0;
+				padding: 64px 0 0;
+			}
+		}
+
+		.dropdown-menu {
+			overflow: hidden;
+			border-radius: 0;
+			padding: 0;
+			width: 100%;
+			min-width: 0;
+			li {
+				a {
+
+				}
+			}
+		}
+	}
+}

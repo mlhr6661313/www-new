@@ -1,0 +1,6 @@
+CLIENT -> SERVER: EHLO pershii.web
+CLIENT -> SERVER: MAIL FROM:<dmitriusperviy@gmail.com>
+CLIENT -> SERVER: RCPT TO:<pavliuk.dmitriy@gmail.com>
+SMTP ERROR: RCPT TO command failed: 571 pavliuk.dmitriy@gmail.com prohibited. We do not relay
+CLIENT -> SERVER: QUIT
+SMTP Error: The following recipients failed: pavliuk.dmitriy@gmail.com: pavliuk.dmitriy@gmail.com prohibited. We do not relay

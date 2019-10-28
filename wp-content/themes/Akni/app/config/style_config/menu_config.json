@@ -1,0 +1,8 @@
+{
+  "primary_header_menu":{
+    "theme_location"  : "primary_header_menu",
+    "container"       : false,
+    "menu_id"         : "nav",
+    "echo"            : false
+  }
+}

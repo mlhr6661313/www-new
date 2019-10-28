@@ -1,0 +1,104 @@
+$family:    'Exo', sans-serif;
+
+@mixin bp-max($point){
+    @media screen and (max-width: #{$point}) {@content;}
+}
+
+.filters-button {
+    cursor: pointer;
+    white-space: nowrap;
+    background-color: rgba(#d8d8d8,0.2);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    min-width: 270px;
+    font-size: 16px;
+
+    @include bp-max(768px) {
+        width: 100%;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    &__burger {
+        position: relative;
+        padding-left: .4em;
+        display: inline-block;
+        vertical-align: middle;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: .8em;
+            height: .8em;
+            background-color: #b0ca1f;
+            border-radius: 50%;
+            top: -.4em;
+            left: 0;
+            visibility: hidden;
+        }
+        &.changed::before {
+            animation: filters-changed .1s;
+            visibility: visible;
+        }
+    }
+    &__burger-line {
+        height: 4px;
+        background-color: #121212;
+        width: 1.5em;
+        &:nth-last-child(n + 1) {
+            margin-bottom: 3px;
+        }
+        &:nth-child(2) {
+            width: 1.2em;
+        }
+        &:nth-child(3) {
+            width: .9em;
+        }
+    }
+
+    &__name {
+        display: inline-block;
+        font-size: 1em;
+        color: #000;
+        line-height: 1;
+        position: relative;
+        // padding-right: 1.1em;
+        padding-left: 10px;
+        font-family: 'FiraSans-Black', sans-serif;
+
+        &::after {
+            display: none;
+            content: '\203A';
+            font-size: 1.5em;
+            line-height: 1;
+            color: currentColor;
+            position: absolute;
+            font-family: $family;
+            top: -.2em;
+            right: 5px;
+            transform-origin: 35% 55%;
+            transform: rotate(90deg);
+            transition: transform .3s;
+        }
+    }
+
+    &.open &__name::after{
+        transform: rotate(-90deg) translateY(5px);
+    }
+}
+
+@keyframes filters-changed {
+    from {
+        transform: scale(.8);
+    }
+    90% {
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}

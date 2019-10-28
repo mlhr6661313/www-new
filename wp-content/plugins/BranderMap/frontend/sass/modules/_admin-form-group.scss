@@ -1,0 +1,35 @@
+.form-group {
+    padding: 2em 0;
+    &__timeline-wrapper {
+        padding-top: 1.2em;
+        width: 60%;
+        @include max-screen(1000px) {
+            width: 100%;
+        }
+    }
+
+    .time-filter {
+        &__wrapper  {
+            padding-bottom: 1.5em;
+        }
+        &__time-line {
+            color: #7c7c7c;
+        }
+    }
+
+    .vue-slider-tooltip-wrap {
+        top: 0 !important;
+    }
+}
+
+.work-days {
+    .form-group + .form-group {
+        border-top: 1px solid #ccc;
+    }
+}
+
+.map-coordinates {
+    .form-group {
+        padding: 0;
+    }
+}

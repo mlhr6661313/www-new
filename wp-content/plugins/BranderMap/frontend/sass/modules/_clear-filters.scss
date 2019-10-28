@@ -1,0 +1,77 @@
+// @font-face {
+// 	font-family: ft40-Roman;
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	// src: url(../../../../themes/Akni/public/fonts/ft40-Roman.ttf) format("truetype");
+// 	src: url("../../../../themes/Akni/public/fonts/ft40-Roman.ttf") format("truetype");
+// 	//src: url(../../public/css/123.ttf) format("truetype");
+// 	// url("../fonts/ft40-Roman.woff") format("woff");
+// 	// src: url("../fonts/ft40-Roman.woff") format("woff");
+// }
+
+$family2: 'FiraSans-Black', sans-serif;
+// $family2: sans-serif;
+
+$mq-mobile-small: 480px;
+
+
+@mixin bp-max($point){
+	@media screen and (max-width: #{$point}) {@content;}
+}
+
+$yellow: #f8e71c;
+
+.clear-filters {
+	// border: 2px solid #b0ca1f;
+	// background-color: #fff;
+	// border-radius: 30px;
+	// padding: .5em 1.5em;
+	// font-size: 1em;
+
+	// &[disabled] {
+	// 	border-radius: 30px;
+	// 	background-color: #ccc;
+	// 	border: 2px solid #ccc;
+	// 	color: #424242;
+	// 	cursor: default;
+	// }
+
+	display: inline-flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding:0 24px 0;
+	font-family: $family2;
+	color: #000;
+	text-transform: none;
+
+	font-size: 18px;
+	height: 60px;
+	line-height: 1;
+	border-radius: 30px;
+	transition: border-color 0.3s, background-color 0.3s;
+
+	@include bp-max($mq-mobile-small){
+		font-size: 16px;
+	}
+
+	border: 2px solid $yellow;
+	background-color: #fff;
+
+	&:hover{
+		background-color: $yellow;
+	}
+
+	&:active{
+		background-color: #FBF38B;
+		border-color: #FBF38B;
+	}
+
+	&.for-mobile {
+        display: none;
+
+	    @include bp-max(980px) {
+	    	display: inline-flex;
+	    }
+	}
+}

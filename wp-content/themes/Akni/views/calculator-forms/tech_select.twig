@@ -1,0 +1,22 @@
+    <div class="row" style="padding-top: 150px;">
+        <div class="col-sm-6" >
+            <div 
+            class="card" 
+            style="width: 25rem; float: left; padding-right: 5px;">
+                <h5 class="card-title" align="center" style= "padding-bottom: 10px;">{{ lang.mobile_tech_select }}</h5>
+                <img src="wp-content\themes\Akni\public\images\mobile.jpg" class="card-img-top" alt="..."
+                    @mouseover = "mouseover"
+                    @mouseleave = "mouseleave"
+                    @click = "choseClick('mobile')"
+                >
+            </div>
+            <div class="card" style="width: 25rem; float: left;">
+                <h5 class="card-title" align="center" style="padding-bottom: 10px;">{{ lang.other_tech_select }}</h5>
+                <img src="wp-content\themes\Akni\public\images\technika.jpg" class="card-img-top" alt="..."
+                    @mouseover = "mouseover"
+                    @mouseleave = "mouseleave"
+                    @click = "choseClick('tech')"
+                >
+            </div>
+        </div>
+    </div>

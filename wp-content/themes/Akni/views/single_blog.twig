@@ -1,0 +1,67 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+	<meta property="fb:app_id"       name="fb:app_id"           content="761960837344132" />
+	<meta property="og:url"          name="og:url"              content="{{ page.post_url }}"/>
+	<meta property="og:type"         name="og:type"             content="article" />
+	<meta property="og:title"        name="og:title"            content="{{ page.post_title }}" />
+	<meta property="og:description"  name="og:description"      content="{{ page.post_excerpt }}" />
+	{% if page.main_thumnail_url !='' %}
+		<meta property="og:image"        name="og:image"            content="{{ page.main_thumnail_url }}" />
+		<meta property="og:image:width"  name="og:image:width"      content="600" />
+		<meta property="og:image:height" name="og:image:height"     content="600" />
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<div class="single-article">
+		<div class="content-width">
+			<section class="single-article__top-block" data-css-container data-css="text-container">
+				<h1 id="title" class="single-article__title">{{ page.post_title }}</h1>
+				{% if page.date %}
+					<span class="single-article__date" data-css-container data-css="text-container">{{ page.date }}</span>
+				{% endif %}
+				{% if page.acf.page_image.value !='' %}
+					<div class="single-article__image-box" data-css-container>
+						<img src="{{ page.acf.page_image.value }}"
+							 alt="{{ page.post_name }}-image"
+							 title="{{ page.post_name }}-image"
+							 class="single-blog__img">
+					</div>
+				{% endif %}
+			</section>
+			{% if page.post_content %}
+				<section class="single-article__content" data-css-container data-css="text-container">
+					<div class="single-article__information">
+						{{ page.post_content }}
+					</div>
+					<div class="single-article__sharing">
+						<span>{{ lang.sharing_text }}</span>
+						<ul>
+							<li>
+								<a class="twitter sharing" href="{{ fb_sharing_url }}" target="_blank">
+									<svg viewBox="0 0 25 25" class="icon icon-fb">
+										<use xlink:href="#icon-fb"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="twitter sharing" href="{{ tw_sharing_url }}" target="_blank">
+									<svg viewBox="0 0 25 25" class="icon icon-twitter">
+										<use xlink:href="#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			{% endif %}
+		</div>
+		{% include 'modules/blog/_similar_posts.twig' %}
+		{% include 'modules/_page_blocks.twig' %}
+	</div>
+
+
+
+{% endblock %}

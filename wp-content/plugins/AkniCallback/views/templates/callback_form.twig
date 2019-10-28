@@ -1,0 +1,89 @@
+<div>
+	<div class="thank-you" style="display:none;" id="thank-you{{ form.content.formID }}">
+		<div class="popup_thanks">
+			<div class="popup_thanks_inner">
+				<span class="popup_thanks_close"></span>
+				<h4 class="thank_you_title">{{ form.content.thankYouTextTitle }}</h4>
+				<p class="thank_you_text">{{ form.content.thankYouText }}</p>
+			</div>
+		</div>
+	</div>
+	<form
+			action="#"
+			method="post"
+			name="callback{{ form.content.formID }}"
+			id="callback{{ form.content.formID }}"
+			data-url="{{ form.content.url }}"
+			class="callback-form"
+			onsubmit="return false;">
+		{% if form.content.formTitle !='' %}
+			<span class="form-title">
+				{{ form.content.formTitle }}
+			</span>
+		{% endif %}
+		{% if form.content.formDescription !='' %}
+			<div class="form-description">
+				{{ form.content.formDescription }}
+			</div>
+		{% endif %}
+		<input type="hidden" name="type" value="{{ form.content.type }}" />
+		{% for key, field in form %}
+
+			{% if key != 'content' %}
+				{% if field.show !='' %}
+					{% if field.type =='hidden' %}
+						<input id="{{ key }}{{ form.content.formID }}" type="{{ field.type }}"
+							   name="{{ key }}" class="{{ field.class }}" data-error="{{ field.error }}"/>
+					{% elseif field.type =='area' %}
+						<div class="form_field">
+							{% if field.description %}
+								<div class="tooltip">
+									<span class="tooltip_descr">
+										{{ field.description }}
+									</span>
+								</div>
+							{% endif %}
+							<textarea
+									id="{{ key }}{{ form.content.formID }}"
+									name="{{ key }}"
+									class="{{ field.class }}"
+									data-error="{{ field.error }}"
+									rows="10" cols="45"
+									maxlength="1000"
+							></textarea>
+							<span class="placeholder">{{ field.placeholder }}</span>
+						</div>
+					{% else %}
+						<div class="form_field">
+							{% if field.description %}
+								<div class="tooltip">
+									<span class="tooltip_descr">
+										{{ field.description }}
+									</span>
+								</div>
+							{% endif %}
+							<input
+									id="{{ key }}{{ form.content.formID }}"
+									{% if field.type !='' %}
+										type="{{ field.type }}"
+									{% endif %}
+                                    {% if field.type =='text' %}
+										maxlength="100"
+                                    {% elseif field.type =='email' %}
+										maxlength="100"
+                                    {% endif %}
+									name="{{ key }}"
+									class="{{ field.class }}"
+									data-error="{{ field.error }}"
+							/>
+							<span class="placeholder">{{ field.placeholder }} *</span>
+						</div>
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+		<div class="actions yellow">
+			<input type="submit" id="submit{{ form.content.formID }}" class="button60" name="submit" value="{{ form.content.submitText }}">
+		</div>
+	</form>
+</div>

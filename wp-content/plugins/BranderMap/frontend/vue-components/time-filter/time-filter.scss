@@ -1,0 +1,45 @@
+$active-color: #ffdd00;
+
+.time-filter {
+  &__wrapper {
+    position: relative;
+    padding-bottom: 2em;
+    margin: 0 10px;
+  }
+  &__time-line {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    display: flex;
+    justify-content: space-between;
+    font-size: .85em;
+    color: #424242;
+  }
+
+  .vue-slider {
+    height: 2px !important;
+  }
+  .vue-slider-wrap {
+    //padding: 5px !important;
+  }
+  .vue-slider-dot {
+    width: 19px !important;
+    height: 19px !important;
+    top: -9px !important;
+    box-shadow: none;
+    background-color: $active-color;
+    border-radius: 50%;
+    border: 2px solid $active-color;
+  }
+  .vue-slider-process {
+    background-color: $active-color;
+  }
+
+  .diy-tooltip {
+    color: #838383;
+    font-size: .8em;
+  }
+
+}
+

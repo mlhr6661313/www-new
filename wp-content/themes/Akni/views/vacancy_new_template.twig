@@ -1,0 +1,14 @@
+{% extends '_layout.twig' %}
+
+{% block content %}
+<section class="text-page content-width">
+	{% include 'modules/vacancy/slider.twig' %}
+	{% include 'modules/vacancy/benefits.twig' %}
+	{% include 'modules/vacancy/vacancy_select.twig' %}
+	{% include 'modules/vacancy/form.twig' %}
+	{% include 'modules/vacancy/blog.twig' %}
+	<section class="final-text">
+		{{ page.acf.text_footer.value }}
+	</section>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+<section id="vacancy-widget-wrapper" data-id="1295165" data-lang="{{ current_lang }}">
+	<a name="vacancy-list"></a>
+	<div class="text-before-vacancy">{{ page.acf.text_before_vacancy.value }}</div>
+	<div class="vacancy-select-block">
+		<div class="vacancy-select">
+			<h1>{{ lang.vacancy_text }}</h1>
+			{% if current_lang == 'ua' %}
+			<iframe id="RUAFRAME" onload="this.contentWindow.postMessage({lang:'ua'}, '*')" frameborder="0" scrolling="no" src="https://rabota.ua/export/context/company.aspx?ntid=6340853" style="width:100%;border:none;"></iframe>
+			<script type="text/javascript" src="https://rabota.ua/export/context/company.js"></script>
+			<div style="font-family: inherit; margin-top: 15px;">Розроблено компанією <a target="_blank" href="https://rabota.ua/">rabota.ua</a> спеціально для компанії <a target="_blank" href="https://rabota.ua/company6340853">Ломбард ПЕРШИЙ, ПТ</a></div>
+			{% else %}
+			<iframe id="RUAFRAME" onload="this.contentWindow.postMessage({lang:'ru'}, '*')" frameborder="0" scrolling="no" src="https://rabota.ua/export/context/company.aspx?ntid=6340853" style="width:100%;border:none;"></iframe>
+			<script type="text/javascript" src="https://rabota.ua/export/context/company.js"></script>
+			<div style="font-family: inherit; margin-top: 15px;">Разработано компанией <a target="_blank" href="https://rabota.ua/">rabota.ua</a> специально для компании <a target="_blank" href="https://rabota.ua/company6340853">Ломбард ПЕРШИЙ, ПТ</a></div>
+			{% endif %}
+		</div>
+		<div class="vacancy-info-wrap">
+			<div class="vacancy-info">
+				{{ page.acf.block_vacancy.value }}
+			</div>
+			<div class="button-wrap">
+				<a href="#resume_form" class="fancybox-calc button">{{ lang.send_resume_text }}</a>
+			</div>
+		</div>
+	</div>
+
+</section>

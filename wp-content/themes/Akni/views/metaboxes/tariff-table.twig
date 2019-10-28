@@ -1,0 +1,26 @@
+{% if call > 0 %}
+    <table>
+        <tr>
+            <th>{{ lang.from_text }}</th>
+            <th>{{ lang.to_text }}</th>
+            <th>{{ lang.coating_text }}</th>
+            <th>{{ lang.rate_text }}</th>
+        </tr>
+        {% for i in 1..call %}
+            <tr>
+                <td>
+                    <input  type="number" min="0" step="1" value="{{ from[i] }}" name="from[{{ i }}]"/>
+                </td>
+                <td>
+                    <input type="number" min="1" step="1" value="{{ to[i] }}" name="to[{{ i }}]"/>
+                </td>
+                <td>
+                    <input  type="number" min="0.01" max="1" step="0.01" value="{{ coating[i] }}" name="coating[{{ i }}]"/>
+                </td>
+                <td>
+                    <input  type="number" min="0.0001" max="1" step="0.0001" value="{{ rate[i] }}" name="rate[{{ i }}]"/>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}

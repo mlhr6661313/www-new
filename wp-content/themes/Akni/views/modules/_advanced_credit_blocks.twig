@@ -1,0 +1,61 @@
+{% if page.acf.block_one_title.value !='' or page.acf.block_one_description.value  %}
+    <div class="best-condition-item grid-item">
+        {% if page.acf.block_one_link.value %}
+            <a href="{{ page.acf.block_one_link.value }}">
+                {% if page.acf.block_one_title.value !=''%}
+                    <div data-title="h3" class="best-condition-item__title">{{ page.acf.block_one_title.value }}</div>
+                {% endif %}
+                {% if page.acf.block_one_image.value !=''%}
+                    <div class="best-condition-item__image-box">
+                        <img src="{{ page.acf.block_one_image.value.url }}" alt="{{ page.acf.block_one_image.value.alt }}" title="{{ page.acf.block_one_image.value.title }}"/>
+                    </div>
+                {% endif %}
+                {% if page.acf.block_one_description.value !=''%}
+                    <div class="best-condition-item__descr">
+                        {{ page.acf.block_one_description.value }}
+                    </div>
+                {% endif %}
+            </a>
+        {% else %}
+            {% if page.acf.block_one_title.value !=''%}
+                <div data-title="h3" class="best-condition-item__title">{{ page.acf.block_one_title.value }}</div>
+            {% endif %}
+            {% if page.acf.block_one_image.value !=''%}
+                <div class="best-condition-item__image-box">
+                    <img src="{{ page.acf.block_one_image.value.url }}" alt="{{ page.acf.block_one_image.value.alt }}" title="{{ page.acf.block_one_image.value.title }}"/>
+                </div>
+            {% endif %}
+            {% if page.acf.block_one_description.value !=''%}
+                <div class="best-condition-item__descr">
+                    {{ page.acf.block_one_description.value }}
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endif %}
+{% if page.acf.block_two_title.value !=''  or page.acf.block_two_description.value %}
+    <div class="best-condition-item is-advanced grid-item">
+        {% if page.acf.block_two_title.value !=''%}
+            <div data-title="h3" class="best-condition-item__title">{{ page.acf.block_two_title.value }}</div>
+        {% endif %}
+        {% if page.acf.block_two_image.value !=''%}
+            <div class="best-condition-item__image-box">
+                <img src="{{ page.acf.block_two_image.url }}" alt="{{ page.acf.block_two_image.alt }}" title="{{ page.acf.block_two_image.title }}"/>
+            </div>
+        {% endif %}
+        {% if page.acf.block_two_description.value !=''%}
+            <div class="best-condition-item__descr">
+                {{ page.acf.block_two_description.value }}
+            </div>
+        {% endif %}
+        {% if page.acf.block_two_link.value !=''%}
+            <div class="best-condition-item__action">
+                <a href="{{ page.acf.block_two_link.value }}">
+                    <svg viewBox="0 0 25 25" class="icon icon-more">
+                        <use xlink:href="#icon-more"></use>
+                    </svg>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+{% endif %}

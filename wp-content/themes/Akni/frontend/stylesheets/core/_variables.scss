@@ -1,0 +1,49 @@
+// Widths
+$minWidth: 320px;
+$siteWidth: 1180px;
+$ipad_p: 768px;
+
+$z-layers: (
+    'default': 1,
+    'below': -1,
+    'fixed': 2000,
+    'modal': 2050
+);
+
+$desktop: 1366;
+$smallDesktop: 1320;
+$tablet: 1024;
+$mobile: 768;
+$smallMobile: 639;
+$minMobile: 530;
+$colorText: #3d3d3d;
+$colorTextLight: rgba(61, 61, 61, .7);
+$colorLink: #e60000;
+$colorLinkActive: darken($colorLink, 6.6%);
+$colorPlaceholder: #fff;
+$colorFocus: #00326f;
+$bgBody: #fff;
+$bgFooter: #f6f6f6;
+$colorInput: #cccccc;
+
+// 2048
+
+$tile-border-radius: 3px;
+$text-color: #776E65;
+$bright-text-color: #f9f6f2;
+$tile-color: #eee4da;
+$tile-gold-color: #edc22e;
+$tile-gold-glow-color: lighten($tile-gold-color, 15%);
+$game-container-background: #bbada0;
+$transition-speed: 100ms;
+$grid-row-cells: 4;
+
+$field-width: 500px;
+$field-width2: 280px;
+
+$grid-spacing: 15px;
+$grid-spacing2: 10px;
+
+$tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
+$tile-size2: ($field-width2 - $grid-spacing2 * ($grid-row-cells + 1)) / $grid-row-cells;
+

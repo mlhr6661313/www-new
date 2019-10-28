@@ -1,0 +1,45 @@
+{% if blog_posts is not empty %}
+    <a name="about-work"></a>
+    <section id="blog" class="publications-section">
+        <div class="publications-section__holder content-width" data-css-container="offset">
+            <div class="publications-section__heading">
+                <div data-title="h2" class="publications-section__title">{{ lang.about_work_text }}</div>
+            </div>
+            <div class="swiper-container-mob">
+                <div class="publications-section__list swiper-wrapper">
+                    {% for post in blog_posts %}
+                        <div class="publication-item swiper-slide">
+                            <a href="{{ post.post_url }}">
+                                <div class="publication-item__img-box">
+                                    {% if post.main_thumnail_url is not empty %}
+                                        <img class="blog-link__img"
+                                             src="{{ post.main_thumnail_url }}"
+                                             alt="{{ post.post_title }}"
+                                             title="{{ post.post_title }}"/>
+                                    {% else %}
+                                        <img class="blog-link__img"
+                                             src="{{ post.default_thumnail_url }}"
+                                             alt="{{ post.post_title }}"
+                                             title="{{ post.post_title }}"/>
+                                    {% endif %}
+                                </div>
+                                <div class="publication-item__title-wrapper">
+                                    <div data-title="h3" class="publication-item__title">{{ post.post_title }}</div>
+                                    <div class="publication-item__date">{{ post.date }}</div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            {% if page.acf.blog_url.value %}
+                <div class="publications-section-footer">
+                    <a class="button60" href="{{ page.acf.blog_url.value }}">
+                        {{ lang.all_publications_text }}
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endif %}

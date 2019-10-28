@@ -1,0 +1,50 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+	<section class="departments-section">
+		<div class="departments-section__holder content-width">
+			<div class="departments-section__map">
+				<div data-title="{{ page.post_title }}" data-departments-title hidden></div>
+				{{ department_map }}
+			</div>
+			{#
+			#}
+			<div class="departments-seo_holder">
+				<div class="departments-section__content" data-link-more="{{ lang.more_text }}" data-link-hide="{{ lang.less_text }}">
+					{{ page.post_content }}
+				</div>
+				<div class="read-more">
+					<span class="btn-text" data-hide="{{ lang.less_text }}">{{ lang.more_text }}</span><span class="ic-arrow-down"></span>
+				</div>
+			</div>
+			
+		</div>
+		<script>
+		jQuery(function($) {
+			var seo=$('.departments-seo_holder'),
+			seotext=seo.find('.departments-section__content'),
+			readmore=seo.find('.read-more'),
+			btnText=readmore.find('.btn-text'),
+			text=btnText.html(),
+			hide=btnText.data('hide');
+			
+			seo.addClass('seo-block');
+			seotext.addClass('seo-text');
+
+			readmore.on('click',function(){
+				if(seo.is('.opened')){
+					seo.removeClass('opened');
+					btnText.html(text);
+				}else{
+					seo.addClass('opened');
+					btnText.html(hide);
+				}
+			});
+		});
+		</script>
+	</section>
+{% endblock %}
