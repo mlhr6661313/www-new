@@ -50,6 +50,10 @@ class Calculator
             'wp_ajax_nopriv_calcAction1',
             [&$this, 'calculate1']
         );
+        add_action(
+            'wp_ajax_calcAction2',
+            [&$this, 'takeTechnicsType']
+        );
 
     }   
     public function getTariffAjax()
@@ -267,9 +271,11 @@ class Calculator
         }
 
         if ($money && $cur_sum) {
+            
             $calculationsData = json_encode([
                 'sum' => $cur_sum,
-                'percent' => $money
+                'percent' => $money,
+                
             ]);
             echo $calculationsData;
             wp_die();
@@ -277,13 +283,14 @@ class Calculator
     }
     public function calculate1(){
         
-            $calculationsData = getClientHistory();
+            //$calculationsData = getClientHistory();
 
-            /*  $calculationsData = json_encode([
+            
+            $calculationsData = json_encode([
                 'sum' => 500,
                 'percent' => 60,
-                'fuck' => 60
-            ]); */
+                
+            ]);
             echo $calculationsData; 
             wp_die();
     }
@@ -339,5 +346,31 @@ class Calculator
             }
         }
         return $calcData;
+    }
+
+    private function takeTechnicsType()
+    {   
+        $lang_config = $config->getConfig('lang');
+        
+        /* customTranslate($lang_config['technic_type_mobile']),
+        customTranslate($lang_config['technic_type_tablet']),
+        customTranslate($lang_config['technic_type_tv']), */
+        /* $techData = [
+            "technic_type_mobile",
+            "technic_type_tablet"
+        ]; */
+       /*  $techData = json_encode([
+            {'name' => customTranslate($lang_config['technic_type_mobile'])},
+            {'name' => customTranslate($lang_config['technic_type_tablet'])},
+            {'name' => customTranslate($lang_config['technic_type_tv'])}
+        ]); */
+        
+        $techData = json_encode([
+            'sum' => 500,
+            'percent' => 60,
+            
+        ]);
+        echo $techData; 
+        wp_die();
     }
 }

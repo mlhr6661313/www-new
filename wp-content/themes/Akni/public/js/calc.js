@@ -179,7 +179,7 @@ function calcConstruct1(){
             selected: '',
             selected1: '',
             selected2: '',
-            typeOfEquipmentList:[
+            /* typeOfEquipmentList:[
               {
               name: 'lang.technic_type_mobile',
               icon: 'fa-database',
@@ -195,7 +195,8 @@ function calcConstruct1(){
               icon: 'fa-database',
               url: 'https://codeclimate.com/github/sagalbot/vue-select'
               },  
-            ],
+            ], */
+            typeOfEquipmentList: [],
             manufacturersList: [ 
             {
             name: 'bosh',
@@ -234,6 +235,7 @@ function calcConstruct1(){
         email: "mlhr"
       }, 
       methods: {
+        
         mouseover: function mouseover(event) {
           event.target.style.opacity = "0.6";
          },
@@ -250,6 +252,14 @@ function calcConstruct1(){
           }
           $('#backToStart').attr('Style', "display: block");
           $('#back').attr('Style', "display: none");
+          
+          console.log("calcAction2");
+          var formData = {
+            action: 'calcAction2',
+            data: ''
+          };
+          __WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["b" /* baseObj */].ajaxAction(formData, this.takeListSuccess);
+
         },
         backToStartStep: function backToStartStep(){
           $('.start-window').attr('Style', "display: block");
@@ -321,6 +331,15 @@ function calcConstruct1(){
           this.percent = 50;
           this.isCalculated = true; */
         },
+        takeListSuccess: function takeListSuccess(success) {
+          console.log(success);
+          if (success) {
+            var successData = getData(success);
+              this.typeOfEquipmentList = successData.list;
+          } else {
+            console.error('error');
+          }
+        },
         calculateMethod: function calculateMethod(data) {
           var formData = {
             action: 'calcAction1',
@@ -344,8 +363,14 @@ function calcConstruct1(){
           el.classList.remove('disabled');
           __WEBPACK_IMPORTED_MODULE_8_jquery___default()(".calc-section").animate({ scrollTop: __WEBPACK_IMPORTED_MODULE_8_jquery___default()('.calculator__calculate-btn').offset().top + __WEBPACK_IMPORTED_MODULE_8_jquery___default()(".calc-section").scrollTop() }, 800);
         },
-
-        
+        takeTechList: function takeTechList(){
+          console.log("beforeCreate");
+          var formData = {
+            action: 'calcAction2',
+            //data: data
+          };
+          __WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["b" /* baseObj */].ajaxAction(formData, this.takeListSuccess);
+        },
       },
       watch:{
         counter: function(){

@@ -1,9 +1,11 @@
-<div class="screen-reader-response"></div>
-    <!-- <form @submit.prevent="show" class="calculator-form" action="show" name="show" method="POST">  -->
-    <form @submit.prevent="calculateAction" class="wpcf7-form" action="#" name="calc" method="POST">
-    <div class="form-box" style="padding-top: 50px;">
+{# <div class="screen-reader-response"></div> style="width: 25rem; float: left; #}
+<!-- <form @submit.prevent="show" class="calculator-form" action="show" name="show" method="POST">  -->
+<div class="calculator1"> 
+<div class="calculator__items"> 
+<form @submit.prevent="calculateAction" class="wpcf7-form" action="#" name="calc" method="POST">
+    <div class="form-box1" >
 
-        <button type="submit" class="btn btn-primary" id="show_fuck" @click="calculateCredit">Show_fuck</button>
+        <button type="submit" class="btn btn-primary" id="show_fuck" @click="calculateCredit" style="display: none">Show_fuck</button>
 
         <button @click="backToStartStep()" type="button" class="btn btn-primary" id="backToStart">Назад</button>
         <button @click="backStep()" type="button" class="btn btn-primary" id="back">Назад</button>
@@ -11,17 +13,17 @@
             <div class="form-row">
                 <span>{{ lang.type_of_technic }}*</span>
                 <span class="wpcf7-form-control-wrap manufacturer">
-                    <v-select :options="typeOfEquipmentList" label="name" v-model="selected">
+                    <v-select :options={{tech_list}} label="name" v-model="selected">
                         <template slot="option" slot-scope="option">
                             <span class="fa"></span>
                         </template>
-                </span>
+                    </span>
                 </v-select>
             </div>
             <div class="form-row">
                 <span>{{ lang.manufacturer }}*</span>
                 <span class="wpcf7-form-control">
-                    <v-select :options="manufacturersList" label="name" v-model="selected1"  >
+                    <v-select :options="manufacturersList" label="name" v-model="selected1">
                         <template slot="option1" slot-scope="option1">
                             <span class="fa"></span>
                         </template>
@@ -32,7 +34,7 @@
                 <span>{{ lang.model }}*</span>
                 <span class="wpcf7-form-control">
                     <v-select :options="modelList" label="name" v-model="selected2">
-                        <template slot="option2" slot-scope="option2" >
+                        <template slot="option2" slot-scope="option2">
                             <span class="fa"></span>
                         </template>
                     </v-select>
@@ -43,17 +45,14 @@
             <div class="form-row">
                 <span>{{ lang.email_faq_text }}</span>
                 <span class="wpcf7-form-control-wrap your-email">
-                    <input type="email" name="your-email" value="" size="40" maxlength="200" autocomplete="email"
-                        class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form-input"
-                        aria-invalid="false" />
+                    <input type="email" name="your-email" value="" size="40" maxlength="200" autocomplete="email" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form-input" aria-invalid="false"/>
                 </span>
             </div>
 
             <div class="form-row">
                 <span>{{ lang.tech_name_text }}*</span>
                 <span class="wpcf7-form-control-wrap pledge">
-                    <input type="text" name="pledge" size="40" maxlength="200"
-                        class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false" value="" />
+                    <input type="text" name="pledge" size="40" maxlength="200" class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false" value=""/>
                 </span>
             </div>
         </div>
@@ -61,17 +60,31 @@
             <div class="form-row">
                 <span>тест*</span>
                 <span class="calc1">
-                    <input type="text" name="calc1" size="40" maxlength="200"
-                        class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false"
-                        v-bind:value="counter" />
+                    <input type="text" name="calc1" size="40" maxlength="200" class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false" v-bind:value="counter"/>
                     <h1>{{counter}}</h1>
                 </span>
             </div>
         </div>
         <button @click="nextStep()" type="button" class="btn btn-primary">дальше</button>
     </div>
-
-    <div class="calculator__items">
+    <div class="form-box is-dropzone" style="display: none">
+        <div id="js-dropzone" class="dropzone">
+            <div class="fallback">
+                <span class="wpcf7-form-control-wrap photo">
+                    <input type="file" name="photo" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false"/>
+                </span>
+            </div>
+            <p>
+                <a href="#" class="btn has-border">{{ lang.tech_photo_text }}</a>
+            </p>
+        </div>
+    </div>
+    {# не убирать класс wpcf7-checkbox #}
+   
+    <div class="wpcf7-response-output wpcf7-display-none"></div>
+</form>
+</div>
+<div class="calculator__items">
         <div class="graphics disabled" data-js-calculatorgraphics>
             <div class="graphics__container">
                 <div class="graphics__graph">
@@ -96,38 +109,9 @@
             <div class="graphics__notes">
                 {{ lang.calculator_info_text }}
             </div>
-            <button class="graphics__button button60" data-options='{"baseClass":"not100height"}' data-fancybox
-                data-src="#order-popup-3" :disabled="!chosenField.orderBtn"></button>
+            <button class="graphics__button button60" data-options='{"baseClass":"not100height"}' data-fancybox data-src="#order-popup-3" :disabled="!chosenField.orderBtn"></button>
         </div>
         {# ==========POPUP FORM============= #}
-
-    </div>
-
-    <div class="form-box is-dropzone" style="display: none">
-        <div id="js-dropzone" class="dropzone">
-            <div class="fallback">
-                <span class="wpcf7-form-control-wrap photo">
-                    <input type="file" name="photo" size="40" class="wpcf7-form-control wpcf7-file"
-                        aria-invalid="false" />
-                </span>
-            </div>
-            <p>
-                <a href="#" class="btn has-border">{{ lang.tech_photo_text }}</a>
-            </p>
-        </div>
-    </div>
-    {# не убирать класс wpcf7-checkbox #}
-    <div class="subscribe wpcf7-checkbox">
-        <label>
-            <input data-js="subscribe-checkbox" name="subscribe" type="checkbox"
-                title="{{ lang.subscribe_text }}"><b></b>
-            <span>{{ lang.subscribe_text }}</span>
-        </label>
-    </div>
-    <div class="form-actions">
-        <input type="submit" value="{{ lang.tech_send_text }}"
-            class="wpcf7-form-control wpcf7-submit btn js-send-form" />
-    </div>
-    <div class="wpcf7-response-output wpcf7-display-none"></div>
-</form>
+</div>
+</div>
 {# </div> #}
