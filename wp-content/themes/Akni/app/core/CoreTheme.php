@@ -393,11 +393,6 @@ class CoreTheme extends Timber
         $options = (array)get_option('akni-tech-settings');
         $context['tech_options'] = explode(',', $options['manufacturers']);
 
-        $context['tech_list'] = [
-            ['name' => customTranslate($lang_config['technic_type_mobile'])],
-            ['name' => customTranslate($lang_config['technic_type_tablet'])],
-            ['name' => customTranslate($lang_config['technic_type_tv'])]
-        ];
         /* $context['tech_array'] = [
             "",    
             "",    

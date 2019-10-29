@@ -44,16 +44,22 @@ class Calculator
         );
         add_action(
             'wp_ajax_calcAction1',
-            [&$this, 'calculate1']
+            [&$this, 'calculate3']
         );
         add_action(
             'wp_ajax_nopriv_calcAction1',
+            [&$this, 'calculate3']
+        );
+ 
+        add_action(
+            'wp_ajax_calcAction2',
             [&$this, 'calculate1']
         );
         add_action(
-            'wp_ajax_calcAction2',
-            [&$this, 'takeTechnicsType']
+            'wp_ajax_nopriv_calcAction2',
+            [&$this, 'calculate1']
         );
+ 
 
     }   
     public function getTariffAjax()
@@ -284,11 +290,24 @@ class Calculator
     public function calculate1(){
         
             //$calculationsData = getClientHistory();
-
+            
             
             $calculationsData = json_encode([
-                'sum' => 500,
-                'percent' => 60,
+                'sum' => 505,
+                'percent' => 61,
+                
+            ]);
+            echo $calculationsData; 
+            wp_die();
+    }
+    public function calculate3(){
+        
+            //$calculationsData = getClientHistory();
+            
+            
+            $calculationsData = json_encode([
+                'sum' => 600,
+                'percent' => 70,
                 
             ]);
             echo $calculationsData; 
@@ -347,30 +366,5 @@ class Calculator
         }
         return $calcData;
     }
-
-    private function takeTechnicsType()
-    {   
-        $lang_config = $config->getConfig('lang');
-        
-        /* customTranslate($lang_config['technic_type_mobile']),
-        customTranslate($lang_config['technic_type_tablet']),
-        customTranslate($lang_config['technic_type_tv']), */
-        /* $techData = [
-            "technic_type_mobile",
-            "technic_type_tablet"
-        ]; */
-       /*  $techData = json_encode([
-            {'name' => customTranslate($lang_config['technic_type_mobile'])},
-            {'name' => customTranslate($lang_config['technic_type_tablet'])},
-            {'name' => customTranslate($lang_config['technic_type_tv'])}
-        ]); */
-        
-        $techData = json_encode([
-            'sum' => 500,
-            'percent' => 60,
-            
-        ]);
-        echo $techData; 
-        wp_die();
-    }
+ 
 }

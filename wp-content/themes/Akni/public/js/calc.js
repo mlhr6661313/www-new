@@ -241,7 +241,32 @@ function calcConstruct1(){
         email: "mlhr"
       }, 
       methods: {
+        checkPhp: function checkPhp(){
+          /* $.ajax({
+            type: "POST",
+            url: 'calcAction2',
+            dataType: 'json',
+            data: {name: 'star'},
         
+            success: function (successData) {
+                          if( !('error' in successData) ) {
+                            this.sum = successData.sum;
+                            this.percent = successData.percent;  
+                            console.log(obj);
+                          }
+                          else {
+                              console.log('error');
+                          }
+                    }
+        }); */
+        var formData = {
+          action: 'calcAction2',
+          data:{name: 'calcAction2'}
+        };
+        __WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["b" /* baseObj */].ajaxAction(formData, this.calculateSuccess);
+        },
+        
+
         mouseover: function mouseover(event) {
           event.target.style.opacity = "0.6";
          },
@@ -307,9 +332,9 @@ function calcConstruct1(){
           });
         },
         calculateSuccess: function calculateSuccess(success) {
-          console.log(success);
           if (success) {
             var successData = getData(success);
+            console.log(successData);
             if (successData.sum && successData.percent) {
               this.sum = successData.sum;
               this.percent = successData.percent;
