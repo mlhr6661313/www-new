@@ -7006,10 +7006,7 @@ a.advantage-item:hover .advantage-item__text {
     width: 32px;
     margin-right: 15px; }
 
-#calculator1 .dropdown li {
-  /* border-bottom: 1px solid rgba(112, 128, 144, 0.1) */
-  border-bottom: 1px solid #ccc;
-}
+
 
 #calculator1 .dropdown li:last-child {
   border-bottom: none;
@@ -7019,12 +7016,14 @@ a.advantage-item:hover .advantage-item__text {
   font-size: 1.25em;
   line-height: normal;
   padding: 2px 0 0 0;
+  border: none;  
 }
 
 #calculator1 .selected-tag {
   font-size: 1.25em;
   line-height: normal;
   padding: 2px 0 0 0;
+  border: none;  
 }
 
 
@@ -7034,16 +7033,30 @@ a.advantage-item:hover .advantage-item__text {
   width: 100%;
   align-items: center;
   font-size: 1.25em;
+  border: none;  
 }
 
 #calculator1 .dropdown li a .fa {
   padding-right: 0.5em;
 }
 
-.dropdown-toggle{
-  border: none;  
-  border-bottom: 1px solid #ccc;
+#form-box1 .calculator__calculate-btn-mobile {
+  margin-top: 0%; }
+
+.calculator1 .dropdown-toggle {
+     border: none;
+     border-radius: 0;
+     position: relative; 
+     border-bottom: 1px solid #ccc;}
+    
+.calculator1 .v-select .dropdown-toggle {
+      border-radius: 0;
+      border-bottom: 1px solid #ccc;}
+#backToStart #back {margin-top: 1.5em;
 }
+.form-box1 {
+  width: 100%; }
+
 
 
 

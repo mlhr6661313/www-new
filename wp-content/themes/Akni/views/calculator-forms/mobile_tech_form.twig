@@ -1,90 +1,134 @@
 {# <div class="screen-reader-response"></div> style="width: 25rem; float: left; #}
 <!-- <form @submit.prevent="show" class="calculator-form" action="show" name="show" method="POST">  -->
-<div class="calculator1"> 
-<div class="calculator__items"> 
-<form @submit.prevent="calculateAction" class="wpcf7-form" action="#" name="calc" method="POST">
-    <div class="form-box1" >
+    <div class="calculator1">
+     <div class="calculator__items">
+        <form @submit.prevent="calculateAction" class="wpcf7-form" action="#" name="calc" method="POST">
+            <div class="form-box1">
 
-        <button type="submit" class="btn btn-primary" id="show_fuck" @click="calculateCredit" style="display: none">Show_fuck</button>
+                <button type="submit" class="btn btn-primary" id="show_fuck" @click="calculateCredit" style="display: none">Show_fuck</button>
 
-        <button @click="backToStartStep()" type="button" class="btn btn-primary" id="backToStart">Назад</button>
-        <button @click="backStep()" type="button" class="btn btn-primary" id="back">Назад</button>
-        <div class="first" style="padding: 50px 0 50px 0">
-            <div class="form-row">
-                <span>{{ lang.type_of_technic }}*</span>
-                <span class="wpcf7-form-control-wrap manufacturer">
-                    <v-select :options={{tech_list}} label="name" v-model="selected">
-                        <template slot="option" slot-scope="option">
-                            <span class="fa"></span>
-                        </template>
-                    </span>
-                </v-select>
+                <button @click="backToStartStep()" type="button" class="calculator__calculate-btn-mobile button60" id="backToStart">Назад</button>
+                <button @click="backStep()" type="button" class="calculator__calculate-btn-mobile button60" id="back">Назад</button>
+                <div class="first">
+                    <div class="form-row calculator__input-box ">
+                        <span>{{ lang.type_of_technic }}*</span>
+                        <span class="wpcf7-form-control-wrap manufacturer ">
+                            <v-select :options="typeOfEquipmentList" label="name" v-model="selected">
+                                <template slot="option" slot-scope="option">
+                                    <span class="fa"></span>
+                                </template>
+                            </span>
+                        </v-select>
+                    </div>
+                    <div class="form-row calculator__input-box ">
+                        <span>{{ lang.manufacturer }}*</span>
+                        <span class="wpcf7-form-control ">
+                            <v-select :options="manufacturersList" label="name" v-model="selected1">
+                                <template slot="option1" slot-scope="option1">
+                                    <span class="fa"></span>
+                                </template>
+                            </v-select>
+                        </span>
+                    </div>
+                    <div class="form-row calculator__input-box ">
+                        <span>{{ lang.model }}*</span>
+                        <span class="wpcf7-form-control ">
+                            <v-select :options="modelList" label="name" v-model="selected2">
+                                <template slot="option2" slot-scope="option2">
+                                    <span class="fa"></span>
+                                </template>
+                            </v-select>
+                        </span>
+                    </div>
+                </div>
+                <div class="second" style="display: none;">
+                    <span class = "calculator__input-box"><strong>{{ lang.assessment_of_appearance }}*</strong></span>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                        <label class="form-check-label" for="exampleRadios1">
+                            {{lang.ideal_condition}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                            {{lang.good_condition}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                        <label class="form-check-label" for="exampleRadios3">
+                            {{lang.normal_condition}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+                        <label class="form-check-label" for="exampleRadios4">
+                            {{lang.not_bad_condition}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
+                        <label class="form-check-label" for="exampleRadios5">
+                            {{lang.bad_condition}}
+                        </label>
+                    </div>
+                </div>
+                <div class="third" style="display: none; ">
+                    <span class = "calculator__input-box"><strong>{{ lang.grade_evaluation }}*</strong></span>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios11" value="option11">
+                        <label class="form-check-label" for="exampleRadios11">
+                            {{lang.perfect_set}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios12" value="option12">
+                        <label class="form-check-label" for="exampleRadios12">
+                            {{lang.full_set}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios13" value="option13">
+                        <label class="form-check-label" for="exampleRadios13">
+                            {{lang.unfull_set}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios14" value="option14">
+                        <label class="form-check-label" for="exampleRadios14">
+                            {{lang.charger_only}}
+                        </label>
+                    </div>
+                    <div class="form-check calculator__input-box">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios15" value="option15">
+                        <label class="form-check-label" for="exampleRadios15">
+                            {{lang.empty_set}}
+                        </label>
+                    </div>
+                </div>
+                <div class="final" style="display: none; ">
+                </div>
+                <button @click="nextStep()" id = "nextStep" type="button" class="calculator__calculate-btn-mobile button60">дальше</button>
             </div>
-            <div class="form-row">
-                <span>{{ lang.manufacturer }}*</span>
-                <span class="wpcf7-form-control">
-                    <v-select :options="manufacturersList" label="name" v-model="selected1">
-                        <template slot="option1" slot-scope="option1">
-                            <span class="fa"></span>
-                        </template>
-                    </v-select>
-                </span>
+            <div class="form-box is-dropzone" style="display: none">
+                <div id="js-dropzone" class="dropzone">
+                    <div class="fallback">
+                        <span class="wpcf7-form-control-wrap photo">
+                            <input type="file" name="photo" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false"/>
+                        </span>
+                    </div>
+                    <p>
+                        <a href="#" class="btn has-border">{{ lang.tech_photo_text }}</a>
+                    </p>
+                </div>
             </div>
-            <div class="form-row">
-                <span>{{ lang.model }}*</span>
-                <span class="wpcf7-form-control">
-                    <v-select :options="modelList" label="name" v-model="selected2">
-                        <template slot="option2" slot-scope="option2">
-                            <span class="fa"></span>
-                        </template>
-                    </v-select>
-                </span>
-            </div>
-        </div>
-        <div class="second" style="display: none; padding: 50px 0 50px 0">
-            <div class="form-row">
-                <span>{{ lang.email_faq_text }}</span>
-                <span class="wpcf7-form-control-wrap your-email">
-                    <input type="email" name="your-email" value="" size="40" maxlength="200" autocomplete="email" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email form-input" aria-invalid="false"/>
-                </span>
-            </div>
+            {# не убирать класс wpcf7-checkbox #}
 
-            <div class="form-row">
-                <span>{{ lang.tech_name_text }}*</span>
-                <span class="wpcf7-form-control-wrap pledge">
-                    <input type="text" name="pledge" size="40" maxlength="200" class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false" value=""/>
-                </span>
-            </div>
-        </div>
-        <div class="final" style="display: none; padding: 50px 0 50px 0 ">
-            <div class="form-row">
-                <span>тест*</span>
-                <span class="calc1">
-                    <input type="text" name="calc1" size="40" maxlength="200" class="wpcf7-form-control wpcf7-text form-input is-required" aria-invalid="false" v-bind:value="counter"/>
-                    <h1>{{counter}}</h1>
-                </span>
-            </div>
-        </div>
-        <button @click="nextStep()" type="button" class="btn btn-primary">дальше</button>
+            <div class="wpcf7-response-output wpcf7-display-none"></div>
+        </form>
     </div>
-    <div class="form-box is-dropzone" style="display: none">
-        <div id="js-dropzone" class="dropzone">
-            <div class="fallback">
-                <span class="wpcf7-form-control-wrap photo">
-                    <input type="file" name="photo" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false"/>
-                </span>
-            </div>
-            <p>
-                <a href="#" class="btn has-border">{{ lang.tech_photo_text }}</a>
-            </p>
-        </div>
-    </div>
-    {# не убирать класс wpcf7-checkbox #}
-   
-    <div class="wpcf7-response-output wpcf7-display-none"></div>
-</form>
-</div>
-<div class="calculator__items">
+    <div class="calculator__items">
         <div class="graphics disabled" data-js-calculatorgraphics>
             <div class="graphics__container">
                 <div class="graphics__graph">
@@ -96,7 +140,7 @@
                         <div class="graphics__value">${sum}</div>
                     </div>
                 </div>
-                <div class="graphics__graph">
+                {# <div class="graphics__graph">
                     <div class="graphics__column percent">
                         <div class="graphics__item percent" :style="{height: setPercent + '%'}"></div>
                     </div>
@@ -104,7 +148,7 @@
                         <div class="graphics__name">{{ lang.percent_credit_sum_text }}</div>
                         <div class="graphics__value">${percent}</div>
                     </div>
-                </div>
+                </div> #}
             </div>
             <div class="graphics__notes">
                 {{ lang.calculator_info_text }}
@@ -112,6 +156,6 @@
             <button class="graphics__button button60" data-options='{"baseClass":"not100height"}' data-fancybox data-src="#order-popup-3" :disabled="!chosenField.orderBtn"></button>
         </div>
         {# ==========POPUP FORM============= #}
-</div>
+    </div>
 </div>
 {# </div> #}
