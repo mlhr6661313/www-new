@@ -19,7 +19,7 @@ class Calculator
     /**
      * MainAjax constructor.
      * @param $core
-     */
+     */ 
     public function __construct($core)
     {
         $this->_core = $core;
@@ -52,12 +52,12 @@ class Calculator
         );
  
         add_action(
-            'wp_ajax_calcAction1',
-            [&$this, 'calculate1']
+            'wp_ajax_calcAction2',
+            [&$this, 'calculate2']
         );
         add_action(
-            'wp_ajax_nopriv_calcAction1',
-            [&$this, 'calculate1']
+            'wp_ajax_nopriv_calcAction2',
+            [&$this, 'calculate2']
         );
  
 
@@ -300,7 +300,7 @@ class Calculator
             echo $calculationsData; 
             wp_die();
     }
-    public function calculate3(){
+    public function calculate2(){
         
             //$calculationsData = getClientHistory();
             

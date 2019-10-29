@@ -241,6 +241,12 @@ function calcConstruct1(){
         email: "mlhr"
       }, 
       methods: {
+        test: function test(){
+        var value=$("input:radio[name='exampleRadios']:checked").val();
+        console.log(value);
+        /*  var bb  = $('.form-check-input').attr('value');
+          console.log(bb) */
+        },
         checkPhp: function checkPhp(){
         var formData = {
           action: 'calcAction2',

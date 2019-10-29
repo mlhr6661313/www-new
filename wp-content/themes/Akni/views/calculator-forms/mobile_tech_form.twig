@@ -5,11 +5,13 @@
         <form @submit.prevent="calculateAction" class="wpcf7-form" action="#" name="calc" method="POST">
             <div class="form-box1">
 
-                <button type="submit" class="btn btn-primary" id="show_fuck" @click="calculateCredit" style="display: none">Show_fuck</button>
-                <button  type="button" class="btn btn-primary" id="checkPhp" @click="checkPhp()">Show_fuck</button>
+                <button  type="submit" class="btn btn-primary" id="show_fuck" @click="calculateCredit" style="display: none">Show_fuck</button>
+                <button  type="button" class="btn btn-primary" id="checkPhp" @click="checkPhp" style="display: none">Show_fuck</button>
+                <button  type="button" class="btn btn-primary" id="checkPhp" @click="test" style="display: block">Show_fuck</button>
 
                 <button @click="backToStartStep()" type="button" class="calculator__calculate-btn-mobile button60" id="backToStart">Назад</button>
                 <button @click="backStep()" type="button" class="calculator__calculate-btn-mobile button60" id="back">Назад</button>
+                <div class="mobile_block">
                 <div class="first">
                     <div class="form-row calculator__input-box ">
                         <span>{{ lang.type_of_technic }}*</span>
@@ -45,14 +47,14 @@
                 <div class="second" style="display: none;">
                     <span class = "calculator__input-box"><strong>{{ lang.assessment_of_appearance }}*</strong></span>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                        <label class="form-check-label" for="exampleRadios1">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" checked>
+                        <label class="form-check-label" for="exampleRadios5">
                             {{lang.ideal_condition}}
                         </label>
                     </div>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                        <label class="form-check-label" for="exampleRadios2">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
+                        <label class="form-check-label" for="exampleRadios4">
                             {{lang.good_condition}}
                         </label>
                     </div>
@@ -63,14 +65,14 @@
                         </label>
                     </div>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                        <label class="form-check-label" for="exampleRadios4">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
                             {{lang.not_bad_condition}}
                         </label>
                     </div>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                        <label class="form-check-label" for="exampleRadios5">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+                        <label class="form-check-label" for="exampleRadios1">
                             {{lang.bad_condition}}
                         </label>
                     </div>
@@ -78,14 +80,14 @@
                 <div class="third" style="display: none; ">
                     <span class = "calculator__input-box"><strong>{{ lang.grade_evaluation }}*</strong></span>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios11" value="option11">
-                        <label class="form-check-label" for="exampleRadios11">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios15" value="option15" checked>
+                        <label class="form-check-label" for="exampleRadios15">
                             {{lang.perfect_set}}
                         </label>
                     </div>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios12" value="option12">
-                        <label class="form-check-label" for="exampleRadios12">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios14" value="option14">
+                        <label class="form-check-label" for="exampleRadios14">
                             {{lang.full_set}}
                         </label>
                     </div>
@@ -96,19 +98,20 @@
                         </label>
                     </div>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios14" value="option14">
-                        <label class="form-check-label" for="exampleRadios14">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios12" value="option12">
+                        <label class="form-check-label" for="exampleRadios12">
                             {{lang.charger_only}}
                         </label>
                     </div>
                     <div class="form-check calculator__input-box">
-                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios15" value="option15">
-                        <label class="form-check-label" for="exampleRadios15">
+                        <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios11" value="option11">
+                        <label class="form-check-label" for="exampleRadios11">
                             {{lang.empty_set}}
                         </label>
                     </div>
                 </div>
                 <div class="final" style="display: none; ">
+                </div>
                 </div>
                 <button @click="nextStep()" id = "nextStep" type="button" class="calculator__calculate-btn-mobile button60">дальше</button>
             </div>

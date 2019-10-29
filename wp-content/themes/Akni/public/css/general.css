@@ -7052,10 +7052,14 @@ a.advantage-item:hover .advantage-item__text {
 .calculator1 .v-select .dropdown-toggle {
       border-radius: 0;
       border-bottom: 1px solid #ccc;}
-#backToStart #back {margin-top: 1.5em;
-}
+
 .form-box1 {
-  width: 100%; }
+  width: 100%; 
+}
+
+.mobile_block{
+  margin-top: 20px;
+}
 
 
 
