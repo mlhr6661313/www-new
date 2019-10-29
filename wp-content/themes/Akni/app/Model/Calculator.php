@@ -44,19 +44,19 @@ class Calculator
         );
         add_action(
             'wp_ajax_calcAction1',
-            [&$this, 'calculate3']
-        );
-        add_action(
-            'wp_ajax_nopriv_calcAction1',
-            [&$this, 'calculate3']
-        );
- 
-        add_action(
-            'wp_ajax_calcAction2',
             [&$this, 'calculate1']
         );
         add_action(
-            'wp_ajax_nopriv_calcAction2',
+            'wp_ajax_nopriv_calcAction1',
+            [&$this, 'calculate1']
+        );
+ 
+        add_action(
+            'wp_ajax_calcAction1',
+            [&$this, 'calculate1']
+        );
+        add_action(
+            'wp_ajax_nopriv_calcAction1',
             [&$this, 'calculate1']
         );
  
