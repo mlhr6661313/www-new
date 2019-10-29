@@ -242,23 +242,6 @@ function calcConstruct1(){
       }, 
       methods: {
         checkPhp: function checkPhp(){
-          /* $.ajax({
-            type: "POST",
-            url: 'calcAction2',
-            dataType: 'json',
-            data: {name: 'star'},
-        
-            success: function (successData) {
-                          if( !('error' in successData) ) {
-                            this.sum = successData.sum;
-                            this.percent = successData.percent;  
-                            console.log(obj);
-                          }
-                          else {
-                              console.log('error');
-                          }
-                    }
-        }); */
         var formData = {
           action: 'calcAction2',
           data:{name: 'calcAction2'}
@@ -344,9 +327,6 @@ function calcConstruct1(){
           } else {
             console.error('error');
           }
-          /* this.sum = 5;
-          this.percent = 50;
-          this.isCalculated = true; */
         },
         calculateMethod: function calculateMethod(data) {
           var formData = {
