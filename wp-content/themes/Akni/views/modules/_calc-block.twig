@@ -101,7 +101,7 @@
                                                         <span>${ tooltip.value }
                                                             {{ lang.d_text }}</span>
                                                         <span id="plus{{ context_suffix }}" @click.stop="sliderOptionsValueUpdate(tooltip.value+1)
-                                                            "></span>
+                                                                                                                        "></span>
                                                     </div>
                                                 </template>
                                             </vue-slider>
@@ -164,6 +164,8 @@
                             <div class="mobile_form_window" style="display: none;">
                                 {{ mobile_form }}
                             </div>
+                        </div>
+                        <div id="calculatorOther">
                             <div class="other_form_window" style="display: none;">
                                 {{ other_form }}
                             </div>

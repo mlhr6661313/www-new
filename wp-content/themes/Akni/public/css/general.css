@@ -407,7 +407,7 @@ span[class*="error-msg-1"] {
 .form-box .dropzone {
   position: relative;
   border: 3px dashed #ccc;
-  min-height: 330px;
+  /* min-height: 330px; */
   padding: 0; }
   .form-box .dropzone:before {
     content: '';
@@ -418,8 +418,8 @@ span[class*="error-msg-1"] {
             transform: translateX(50%);
     height: 64px;
     width: 64px;
-    background-image: url("../images/svg/icon-photo.svg");
-    background-size: cover;
+    /* background-image: url("../images/svg/icon-photo.svg");
+    background-size: cover; */
     pointer-events: none;
     -webkit-transition: all 0.18s ease-out 0s;
     transition: all 0.18s ease-out 0s; }
@@ -452,7 +452,8 @@ span[class*="error-msg-1"] {
     transition: all .3s; }
   .form-box .dropzone .btn {
     position: absolute;
-    bottom: 100px;
+    bottom: 50px;
+    /* bottom: 100px; */
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -4610,7 +4611,7 @@ a.advantage-item:hover .advantage-item__text {
       margin-top: 100px;
       width: 50%; }
       .calc-section .wpcf7-form .form-box.is-dropzone {
-        padding-left: 75px;
+        /* padding-left: 75px; */
         margin-top: 0; }
     .calc-section .wpcf7-form .form-row .wpcf7-form-control-wrap {
       position: relative; }
@@ -7059,6 +7060,11 @@ a.advantage-item:hover .advantage-item__text {
 
 .mobile_block{
   margin-top: 20px;
+}
+
+.form-box-tech {
+  width: 100%; 
+  float: left;
 }
 
 

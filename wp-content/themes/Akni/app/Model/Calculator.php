@@ -289,22 +289,15 @@ class Calculator
     }
     public function calculate1(){
         
-            //$calculationsData = getClientHistory();
-            
             
             $calculationsData = json_encode([
-                'sum' => 505,
-                'percent' => 61,
-                
+                'price' => 10000,
             ]);
             echo $calculationsData; 
             wp_die();
     }
     public function calculate2(){
         
-            //$calculationsData = getClientHistory();
-            
-            
             $calculationsData = json_encode([
                 'sum' => 600,
                 'percent' => 70,

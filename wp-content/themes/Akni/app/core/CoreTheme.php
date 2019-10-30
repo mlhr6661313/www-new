@@ -398,7 +398,8 @@ class CoreTheme extends Timber
             "",    
         ]; */
 
-        $context['other_form'] = $this->renderWithoutOutput('calculator-forms/tech_form.twig', $context);
+        $context['send_form'] = $this->renderWithoutOutput('calculator-forms/send_form.twig', $context);
+        $context['other_form'] = $this->renderWithoutOutput('calculator-forms/other_tech_form.twig', $context);
         $context['mobile_form'] = $this->renderWithoutOutput('calculator-forms/mobile_tech_form.twig', $context);
         $context['tech_select'] = $this->renderWithoutOutput('calculator-forms/tech_select.twig', $context);
         $context['order_form'] =  $this->renderWithoutOutput('calculator-forms/order_form.twig', $context);

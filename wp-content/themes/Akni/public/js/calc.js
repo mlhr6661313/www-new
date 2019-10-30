@@ -157,6 +157,7 @@ function initCalc() {
   __WEBPACK_IMPORTED_MODULE_6__vendors_tabModule_min___default.a.init();
 
   calcConstruct1();
+  calcConstructOther();
 
   var calculators = document.querySelectorAll('.calculator');
   if (calculators.length > 0) {
@@ -179,6 +180,9 @@ function calcConstruct1(){
             selected: '',
             selected1: '',
             selected2: '',
+            pledge: '',
+            condition: '',
+            set: '',
             manufacturersList: [],
             typeOfEquipmentList: [
             {name: 'Телефон', list: [  
@@ -223,7 +227,6 @@ function calcConstruct1(){
           orderBtn: false
         },
         sum: '',
-        percent: '',
         //calc
         isVisible: true,
          navArray: [
@@ -238,24 +241,8 @@ function calcConstruct1(){
           "Page_Number": 0,
           "Number_Of_Result_Per_Page": 10
         },
-        email: "mlhr"
       }, 
       methods: {
-        test: function test(){
-        var value=$("input:radio[name='exampleRadios']:checked").val();
-        console.log(value);
-        /*  var bb  = $('.form-check-input').attr('value');
-          console.log(bb) */
-        },
-        checkPhp: function checkPhp(){
-        var formData = {
-          action: 'calcAction2',
-          data:{name: 'calcAction2'}
-        };
-        __WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["b" /* baseObj */].ajaxAction(formData, this.calculateSuccess);
-        },
-        
-
         mouseover: function mouseover(event) {
           event.target.style.opacity = "0.6";
          },
@@ -265,19 +252,16 @@ function calcConstruct1(){
         choseClick: function choseClick(par = "mobile") {
           $('.start-window').attr('Style', "display: none");
           if(par === "mobile"){ 
-            //$('.mobile_form_window').attr('Style', "display: block"); 
             $('.mobile_form_window').fadeIn("slow");
+            $("#nextStep").attr("disabled", 'disabled');
           } else {
-            //$('.other_form_window').attr('Style', "display: block"); 
             $('.other_form_window').fadeIn("slow");
           }
-          //$('#backToStart').attr('Style', "display: block");
           $('#backToStart').fadeIn("slow");
           $('#back').attr('Style', "display: none");
           
         },
         backToStartStep: function backToStartStep(){
-          //$('.start-window').attr('Style', "display: block");
           $('.start-window').fadeIn("slow");
           $('.mobile_form_window').attr('Style', "display: none");  
           $('.other_form_window').attr('Style', "display: none");
@@ -323,11 +307,8 @@ function calcConstruct1(){
         calculateSuccess: function calculateSuccess(success) {
           if (success) {
             var successData = getData(success);
-            console.log(successData);
-            if (successData.sum && successData.percent) {
-              this.sum = successData.sum;
-              this.percent = successData.percent;
-              this.fuck = successData.fuck;
+            if (successData.price) {
+              this.sum = ((successData.price * this.condition) + (successData.price * this.set))  * 1.2;
               this.isCalculated = true;
             }
           } else {
@@ -342,22 +323,33 @@ function calcConstruct1(){
           __WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["b" /* baseObj */].ajaxAction(formData, this.calculateSuccess);
         },
         calculateAction: function calculateAction(event) {
+          this.condition = $("input:radio[name='exampleRadios']:checked").val();
+          this.set = $("input:radio[name='exampleRadios1']:checked").val();
           var formElements = event.target.elements;
           var postData = {};
           for (var i = 0; i < formElements.length; i++) {
             postData[formElements[i].name] = formElements[i].value;
           }
           this.calculateMethod(postData);
+          this.nextStep();
+          
         },
         calculateCredit: function calculateCredit() {
           var el = this.$el.querySelector('[data-js-calculatorGraphics]');
           el.classList.remove('disabled');
           __WEBPACK_IMPORTED_MODULE_8_jquery___default()(".calc-section").animate({ scrollTop: __WEBPACK_IMPORTED_MODULE_8_jquery___default()('.calculator__calculate-btn').offset().top + __WEBPACK_IMPORTED_MODULE_8_jquery___default()(".calc-section").scrollTop() }, 800);
         },
+        checkRequiredInput: function checkRequiredInput(){
+          if(this.selected2 == null){
+            $("#errorMessage").fadeIn("slow");
+          }
+          else{
+            $('#errorMessage').attr('Style', "display: none ");
+          }  
+        },
       },
       watch:{
         counter: function(){
-          console.log(this.counter);
           if(this.counter == 0){
             $('#back').attr('Style', "display: none");
             $("#backToStart").fadeIn("slow"); 
@@ -365,23 +357,39 @@ function calcConstruct1(){
           else{
             $("#back").fadeIn("slow"); 
             $('#backToStart').attr('Style', "display: none ");
-            if(this.counter == 3){
-            $("#nextStep").fadeOut("slow");
+          if(this.counter == 3){
+             $('#calculate_summ').attr('Style', "display: none");
+            }
+          else if(this.counter == 2){
+            $('#nextStep').attr('Style', "display: none");
+            $("#calculate_summ").fadeIn("slow");
           }
-          else{
+            else{
             $("#nextStep").fadeIn("slow");
+            $('#calculate_summ').attr('Style', "display: none");
+            }
           }
-          }
+          $('.dropzoneSendForm').fadeIn("slow");
         },
         selected: function(event){
-          console.log("selected");
-          console.log(event);
           this.manufacturersList = event.list;
-        },
+          this.selected1 = "";
+          this.selected2 = "";
+          $("#nextStep").attr("disabled", 'disabled');
+         },
         selected1: function(event){
-          console.log("selected1");
-          console.log(event);
           this.modelList = event.models;
+          this.selected2 = "";
+        },
+        selected2: function(){
+          if(this.selected2 == null){
+            $("#nextStep").attr("disabled", 'disabled');
+          }
+          else{
+            $("#nextStep").removeAttr("disabled");
+          }
+          this.pledge = this.selected.name + " " + this.selected1.name + " " + this.selected2;
+          $("#pledge").attr("disabled", 'disabled');
         }
        },
         computed: {
@@ -396,6 +404,73 @@ function calcConstruct1(){
         },
         delimiters: ['${', '}'],
     });
+}
+function calcConstructOther(){
+  var calculator2 = new __WEBPACK_IMPORTED_MODULE_2_vue___default.a({
+    el: '#calculatorOther',
+    data: {
+          name: '',
+          pledge: '',
+          counter: 0,
+          isVisible: true,
+          navArray: [
+          '.first',
+          '.second',
+          '.final'
+      ], 
+      arr: {
+        "Client_ID": "ceaa304c-ef21-11e9-a2fa-0050569bbc88",
+        "SortOrder": "from_new_to_old",
+        "Page_Number": 0,
+        "Number_Of_Result_Per_Page": 10
+      },
+    }, 
+    methods: {
+      backToStartStep: function backToStartStep(){
+        $('.start-window').fadeIn("slow");
+        $('.mobile_form_window').attr('Style', "display: none");  
+        $('.other_form_window').attr('Style', "display: none");
+        this.counter = 0; 
+      },
+      backStep: function backStep(){
+        $(this.navArray[this.counter]).attr('Style', "display: none");
+        this.counter--;
+        $(this.navArray[this.counter]).fadeIn("slow");
+      },
+      nextStep: function nextStep(){
+        $(this.navArray[this.counter]).attr('Style', "display: none");
+        this.counter++;
+        $(this.navArray[this.counter]).fadeIn("slow");
+      },
+    },
+    mounted: function mounted(){
+      $('#backTeth').attr('Style', "display: none");
+      $('#backToStartTeth').fadeIn("slow"); 
+    },
+    watch:{
+      counter: function(){
+        if(this.counter == 0){
+          $('#backTeth').attr('Style', "display: none");
+          $("#backToStartTeth").fadeIn("slow"); 
+          $("#nextStepTech").fadeIn("slow");
+        }
+        else if(this.counter == 2){
+          $('#nextStepTech').attr('Style', "display: none");
+          $("#backTeth").fadeIn("slow"); 
+          $('#backToStartTeth').attr('Style', "display: none ");
+         }
+        else{
+          $("#backTeth").fadeIn("slow"); 
+          $('#backToStartTeth').attr('Style', "display: none ");
+          $("#nextStepTech").fadeIn("slow");
+        }
+      },
+     },
+      components: {
+        calculatorPopup: __WEBPACK_IMPORTED_MODULE_7_vueComponents_calculator_popup_calculator_popup_vue__["a" /* default */]
+      },
+      delimiters: ['${', '}'],
+  });
 }    
 function calcConstruct(root, samples, currentId) {
   var calcSamples = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["a" /* toArray */])(samples);
