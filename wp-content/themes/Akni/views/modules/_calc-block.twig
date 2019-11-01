@@ -101,7 +101,7 @@
                                                         <span>${ tooltip.value }
                                                             {{ lang.d_text }}</span>
                                                         <span id="plus{{ context_suffix }}" @click.stop="sliderOptionsValueUpdate(tooltip.value+1)
-                                                                                                                        "></span>
+                                                                                                                                                                                    "></span>
                                                     </div>
                                                 </template>
                                             </vue-slider>
@@ -145,7 +145,9 @@
                                     <div class="graphics__notes">
                                         {{ lang.calculator_info_text }}
                                     </div>
-                                    <button class="graphics__button button60" data-options='{"baseClass":"not100height"}' data-fancybox data-src="#order-popup-{{ index }}" @click.prevent="fillWithContent" :disabled="!chosenField.orderBtn"></button>
+                                    <button class="graphics__button button60" data-options='{"baseClass":"not100height"}' data-fancybox data-src="#order-popup-{{ index }}" @click.prevent="fillWithContent" :disabled="!chosenField.orderBtn">
+                                    {{ lang.checkout_text }}
+                                    </button>
                                 </div>
                                 {# ==========POPUP FORM============= #}
                                 <div id="order-popup-{{ index }}{{ context_suffix }}" class="hide">
@@ -157,17 +159,17 @@
                 {% endfor %}
                 <div class="smarty-content__item">
                     <div data-loan-id="other" data-file-size="{{ file_max_size }}" data-error-size="{{ lang.error_file_size }}" data-error-type="{{ lang.error_file_type }}" data-required-message="{{ lang.required_file_message }}" data-thanks-message="{{ lang.thanks_message }}" data-submit-message="{{ lang.error_submit_message }}">
+                        <div id="calculatorOther">
+                            <div class="other_form_window" style="display: none;">
+                                {{ send_form }}
+                            </div>
+                        </div>
                         <div id="calculator1">
                             <div class="start-window">
                                 {{ tech_select }}
                             </div>
                             <div class="mobile_form_window" style="display: none;">
                                 {{ mobile_form }}
-                            </div>
-                        </div>
-                        <div id="calculatorOther">
-                            <div class="other_form_window" style="display: none;">
-                                {{ other_form }}
                             </div>
                         </div>
                     </div>

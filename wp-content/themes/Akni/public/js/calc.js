@@ -183,6 +183,7 @@ function calcConstruct1(){
             pledge: '',
             condition: '',
             set: '',
+            isActiveError: false,
             manufacturersList: [],
             typeOfEquipmentList: [
             {name: 'Телефон', list: [  
@@ -253,7 +254,6 @@ function calcConstruct1(){
           $('.start-window').attr('Style', "display: none");
           if(par === "mobile"){ 
             $('.mobile_form_window').fadeIn("slow");
-            $("#nextStep").attr("disabled", 'disabled');
           } else {
             $('.other_form_window').fadeIn("slow");
           }
@@ -268,14 +268,20 @@ function calcConstruct1(){
           this.counter = 0; 
         },
         backStep: function backStep(){
-          $(this.navArray[this.counter]).attr('Style', "display: none");
-          this.counter--;
-          $(this.navArray[this.counter]).fadeIn("slow");
+              $(this.navArray[this.counter]).attr('Style', "display: none");
+              this.counter--;
+              $(this.navArray[this.counter]).fadeIn("slow");
         },
         nextStep: function nextStep(){
-          $(this.navArray[this.counter]).attr('Style', "display: none");
-          this.counter++;
-          $(this.navArray[this.counter]).fadeIn("slow");
+          if(this.selected2 == "" || this.selected2 == null){
+            this.isActiveError = true;
+          }
+          else{
+            $(this.navArray[this.counter]).attr('Style', "display: none");
+            this.counter++;
+            $(this.navArray[this.counter]).fadeIn("slow");
+          }    
+         
         },
         takeManu: function takeManu(){
         var settings = {
@@ -340,13 +346,21 @@ function calcConstruct1(){
           __WEBPACK_IMPORTED_MODULE_8_jquery___default()(".calc-section").animate({ scrollTop: __WEBPACK_IMPORTED_MODULE_8_jquery___default()('.calculator__calculate-btn').offset().top + __WEBPACK_IMPORTED_MODULE_8_jquery___default()(".calc-section").scrollTop() }, 800);
         },
         checkRequiredInput: function checkRequiredInput(){
-          if(this.selected2 == null){
-            $("#errorMessage").fadeIn("slow");
+          if(this.selected2 == "" || this.selected2 == null){
+            this.isActiveError = true;
           }
           else{
-            $('#errorMessage').attr('Style', "display: none ");
+            this.isActiveError = false;
           }  
         },
+        ActivateError: function ActivateError(){
+          console.log("ActivateError");
+          console.log(this.isActiveError);
+          return {
+          'show-error': this.isActiveError,
+          'hide-error': !this.isActiveError,
+          }
+        }  
       },
       watch:{
         counter: function(){
@@ -375,21 +389,16 @@ function calcConstruct1(){
           this.manufacturersList = event.list;
           this.selected1 = "";
           this.selected2 = "";
-          $("#nextStep").attr("disabled", 'disabled');
+          //$("#nextStep").attr("disabled", 'disabled');
          },
         selected1: function(event){
           this.modelList = event.models;
           this.selected2 = "";
         },
         selected2: function(){
-          if(this.selected2 == null){
-            $("#nextStep").attr("disabled", 'disabled');
-          }
-          else{
-            $("#nextStep").removeAttr("disabled");
-          }
           this.pledge = this.selected.name + " " + this.selected1.name + " " + this.selected2;
           $("#pledge").attr("disabled", 'disabled');
+          this.checkRequiredInput();
         }
        },
         computed: {
@@ -409,69 +418,23 @@ function calcConstructOther(){
   var calculator2 = new __WEBPACK_IMPORTED_MODULE_2_vue___default.a({
     el: '#calculatorOther',
     data: {
-          name: '',
-          pledge: '',
-          counter: 0,
-          isVisible: true,
-          navArray: [
-          '.first',
-          '.second',
-          '.final'
-      ], 
-      arr: {
-        "Client_ID": "ceaa304c-ef21-11e9-a2fa-0050569bbc88",
-        "SortOrder": "from_new_to_old",
-        "Page_Number": 0,
-        "Number_Of_Result_Per_Page": 10
-      },
     }, 
     methods: {
       backToStartStep: function backToStartStep(){
         $('.start-window').fadeIn("slow");
         $('.mobile_form_window').attr('Style', "display: none");  
         $('.other_form_window').attr('Style', "display: none");
-        this.counter = 0; 
-      },
-      backStep: function backStep(){
-        $(this.navArray[this.counter]).attr('Style', "display: none");
-        this.counter--;
-        $(this.navArray[this.counter]).fadeIn("slow");
-      },
-      nextStep: function nextStep(){
-        $(this.navArray[this.counter]).attr('Style', "display: none");
-        this.counter++;
-        $(this.navArray[this.counter]).fadeIn("slow");
       },
     },
     mounted: function mounted(){
-      $('#backTeth').attr('Style', "display: none");
       $('#backToStartTeth').fadeIn("slow"); 
     },
-    watch:{
-      counter: function(){
-        if(this.counter == 0){
-          $('#backTeth').attr('Style', "display: none");
-          $("#backToStartTeth").fadeIn("slow"); 
-          $("#nextStepTech").fadeIn("slow");
-        }
-        else if(this.counter == 2){
-          $('#nextStepTech').attr('Style', "display: none");
-          $("#backTeth").fadeIn("slow"); 
-          $('#backToStartTeth').attr('Style', "display: none ");
-         }
-        else{
-          $("#backTeth").fadeIn("slow"); 
-          $('#backToStartTeth').attr('Style', "display: none ");
-          $("#nextStepTech").fadeIn("slow");
-        }
-      },
-     },
-      components: {
+    components: {
         calculatorPopup: __WEBPACK_IMPORTED_MODULE_7_vueComponents_calculator_popup_calculator_popup_vue__["a" /* default */]
       },
       delimiters: ['${', '}'],
   });
-}    
+}  
 function calcConstruct(root, samples, currentId) {
   var calcSamples = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["a" /* toArray */])(samples);
   if (calcSamples.length > 0) {

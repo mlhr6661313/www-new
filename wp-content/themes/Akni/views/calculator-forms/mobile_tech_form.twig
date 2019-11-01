@@ -36,7 +36,7 @@
                                     </template>
                                 </v-select>
                             </span>
-                            <div id = "errorMessage" style="display:none;color:red;">
+                            <div id = "errorMessage" :class="ActivateError()">
                                 <span>{{ lang.error_submit_message }}</span>
                             </div>
                         </div>
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                     <div class="final" style="display: none; ">
-                        {{ send_form }}
+                        {{ send_form_to_1c }}
                     </div>
                 </div>
                 <button @mouseover = "checkRequiredInput" @click="nextStep()" id="nextStep" type="button" class="calculator__calculate-btn-mobile button60">{{lang.nextStep}}</button>
@@ -143,7 +143,7 @@
                                 </div> #}
             </div>
             <div class="graphics__notes">
-                {{ lang.calculator_info_text }}
+                {{ lang.calculator_info_text_mob }}
             </div>
         </div>
         {# ==========POPUP FORM============= #}
