@@ -77,7 +77,16 @@ class AdvancedNewMap extends MapAbstract
             $this->_postModel->setPostTaxIds('regions_cities');
             $this->_postModel->setPostsMeta('department_group', true);
             $mapData = $this->_postModel->getResult();
+            /* foreach($mapData as $key => $item){
+                //var_dump($key == 0);
+                //print_r($key == 0);
+                if ($key != 0 && $key != 1){
+                    //var_dump($key = 0);
+                    unset($mapData[$key]);
+                }
+            } */
             $this->_mapData = is_array($mapData) ? $mapData : [];
+            //var_dump($mapData);
         }
     }
 

@@ -1,49 +1,12 @@
 <div class="calculator1">
     <div class="calculator__items">
-        <form @submit.prevent="calculateAction" class="wpcf7-form" action="#" name="calc" method="POST">
+        <form class="wpcf7-form" action="#" name="calc" method="POST">
             <div class="form-box1">
 
-                <button @click="calculateAction1()" type="button" class="calculator__calculate-btn-mobile button60" >получить историю</button>
-
-                <button @click="backToStartStep()" type="button" class="calculator__calculate-btn-mobile button60" id="backToStart">Назад</button>
-                <button @click="backStep()" type="button" class="calculator__calculate-btn-mobile button60" id="back">Назад</button>
+                <button @click="backToStartStep()" type="button" class="calculator__calculate-btn-mobile button60" id="backToStartTeth">Назад</button>
+                <button @click="backStep()" type="button" class="calculator__calculate-btn-mobile button60" id="backTeth">Назад</button>
                 <div class="mobile_block">
                     <div class="first">
-                        <div class="form-row calculator__input-box ">
-                            <span>{{ lang.type_of_technic }}*</span>
-                            <span class="wpcf7-form-control-wrap manufacturer ">
-                                <v-select :options="typeOfEquipmentList" label="name" v-model="selected">
-                                    <template slot="option" slot-scope="option">
-                                        <span class="fa"></span>
-                                    </template>
-                                </span>
-                            </v-select>
-                        </div>
-                        <div class="form-row calculator__input-box " :disabled="true">
-                            <span>{{ lang.manufacturer }}*</span>
-                            <span class="wpcf7-form-control ">
-                                <v-select :options="manufacturersList" label="name" v-model="selected1">
-                                    <template slot="option1" slot-scope="option1">
-                                        <span class="fa"></span>
-                                    </template>
-                                </v-select>
-                            </span>
-                        </div>
-                        <div class="form-row calculator__input-box ">
-                            <span>{{ lang.model }}*</span>
-                            <span class="wpcf7-form-control" :disabled="selected1!== ''">
-                                <v-select :options="modelList" label="name" v-model="selected2">
-                                    <template slot="option2" slot-scope="option2">
-                                        <span class="fa is-required"></span>
-                                    </template>
-                                </v-select>
-                            </span>
-                            <div id = "errorMessage" :class="ActivateError()">
-                                <span>{{ lang.error_submit_message }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="second" style="display: none;">
                         <span class="calculator__input-box">
                             <strong>{{ lang.assessment_of_appearance }}*</strong>
                         </span>
@@ -78,7 +41,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="third" style="display: none; ">
+                    <div class="second" style="display: none; ">
                         <span class="calculator__input-box">
                             <strong>{{ lang.grade_evaluation }}*</strong>
                         </span>
@@ -114,41 +77,28 @@
                         </div>
                     </div>
                     <div class="final" style="display: none; ">
-                        {{ send_form_to_1c }}
+                        {{ send_form }}
                     </div>
                 </div>
-                <button @mouseover = "checkRequiredInput" @click="nextStep()" id="nextStep" type="button" class="calculator__calculate-btn-mobile button60">{{lang.nextStep}}</button>
-                <button type="submit" id="calculate_summ" class="calculator__calculate-btn button60" id="show_fuck" @click="calculateCredit" style="display: none">{{lang.calculate_summ}}</button>
+                <button @click="nextStep()" id="nextStepTech" type="button" class="calculator__calculate-btn-mobile button60">{{lang.nextStep}}</button>
             </div>
+
+            {# не убирать класс wpcf7-checkbox #}
         </form>
     </div>
     <div class="calculator__items">
-        <div class="graphics disabled" data-js-calculatorgraphics>
-            <div class="graphics__container">
-                <div class="graphics__graph">
-                    <div class="graphics__column">
-                        <div class="graphics__item sum"></div>
-                    </div>
-                    <div class="graphics__info">
-                        <div class="graphics__name">{{ lang.credit_sum }}</div>
-                        <div class="graphics__value">${sum}</div>
-                    </div>
+    {#     <div class="form-box is-dropzone">
+            <div id="js-dropzone" class="dropzone">
+                <div class="fallback">
+                    <span class="wpcf7-form-control-wrap photo">
+                        <input type="file" name="photo" size="40" class="wpcf7-form-control wpcf7-file" aria-invalid="false"/>
+                    </span>
                 </div>
-                {# <div class="graphics__graph">
-                                    <div class="graphics__column percent">
-                                        <div class="graphics__item percent" :style="{height: setPercent + '%'}"></div>
-                                    </div>
-                                    <div class="graphics__info">
-                                        <div class="graphics__name">{{ lang.percent_credit_sum_text }}</div>
-                                        <div class="graphics__value">${percent}</div>
-                                    </div>
-                                </div> #}
+                <p>
+                    <a href="#" class="btn has-border">{{ lang.tech_photo_text }}</a>
+                </p>
             </div>
-            <div class="graphics__notes">
-                {{ lang.calculator_info_text_mob }}
-            </div>
-        </div>
-        {# ==========POPUP FORM============= #}
+        </div> #}
     </div>
 </div>
 {# </div> #}

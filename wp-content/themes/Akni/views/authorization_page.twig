@@ -1,0 +1,28 @@
+<div id="authorizationForm">
+	<div id="registration">
+		<form>
+			<div class="form-group">
+				<div>
+					<div class="form-group">
+						<label for="exampleInputPhone1">{{ lang.phone_label }}</label>
+						<input type="tel" class="form-control" id="exampleInputPhone1" aria-describedby="phoneHelp">
+					</div>
+					<div class="form-group">
+						<button @click="sendSMSWithPass()" class="btn btn-outline-primary btn-sm">{{ lang.registration_get_pass_text }}</button>
+						<p style="color: red">{{ lang.registration_sms_was_sent_text }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">{{ lang.pass_label }}</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="{{ lang.inpet_pass_from_sms }}">
+			</div>
+			<div class="form-group form-check">
+				<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				<label class="form-check-label" for="exampleCheck1">{{ lang.remember_me }}</label>
+			</div>
+			<button type="submit" class="btn-100 btn btn-primary btn-sm">{{ lang.authorization_enter_text }}</button>
+		</form>
+
+	</div>
+</div>

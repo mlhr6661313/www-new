@@ -12,7 +12,7 @@ use Akni\app\Model\CalculatorForms\TechForms;
 use Akni\app\Model\Subscribe\Subscribe;
 use Akni\app\Model\Callback\Callback;
 
-class CoreTheme extends Timber
+class CoreTheme extends Timber 
 {
     /**
      * TODO::remove this hard solution
@@ -406,6 +406,7 @@ class CoreTheme extends Timber
         $context['order_form'] =  $this->renderWithoutOutput('calculator-forms/order_form.twig', $context);
         $context['file_max_size'] = (string)ini_get('upload_max_filesize');
         $context['calculator_form'] = $this->renderWithoutOutput('modules/_calc-block.twig', $context);
+        $context['authorization_page'] = $this->renderWithoutOutput('authorization_page.twig', $context);
 
         return $context;
     }

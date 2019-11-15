@@ -158,7 +158,7 @@ function initCalc() {
 
   calcConstruct1();
   calcConstructOther();
-
+  
   var calculators = document.querySelectorAll('.calculator');
   if (calculators.length > 0) {
     calculators.forEach(function (item) {
@@ -187,33 +187,49 @@ function calcConstruct1(){
             manufacturersList: [],
             typeOfEquipmentList: [
             {name: 'Телефон', list: [  
-              {
-              name: 'bosh',
-              models: ['mp12','mp11','mp11'],
-              },
-              {
-              name: 'siemens',
-              models: ['s12','sp85','r32'],
-              },],
+              {name: 'bosh',
+              models: [
+                { name: 'a12'},
+                {name: 'b11'},
+                {name:'c11'}
+              ],},
+              {name: 'siemens',
+              models: [
+              { name: 'dd12'},
+              {name: 'ee11'},
+              {name:'ff11'}
+              ],},
+            ],
             },
             {name: 'Планшет', list: [  
               {
               name: 'samsung',
-              models: ['s7','s8','s11'],
+              models: [
+              { name: 'gg12'},
+              {name: 'hh11'},
+              {name:'kk11'}],
               },
               {
               name: 'apple',
-              models: ['ipad4','ipad6','ipad8'],
+              models: [{ name: 'ipad1'},
+              {name: 'ipad2'},
+              {name:'ipad3'}],
               },],
             },
             {name: 'ТВ', list: [  
               {
               name: 'TLC',
-              models: ['ggs7','yys8','iis11'],
+              models: [{ name: '32'},
+              {name: '42'},
+              {name:'55'}],
               },
               {
               name: 'LG',
-              models: ['a7','w12','g556'],
+              models: [
+              { name: '37'},
+              {name: '49'},
+              {name:'65'}
+            ],
               },],
             },
             ],
@@ -338,7 +354,6 @@ function calcConstruct1(){
           }
           this.calculateMethod(postData);
           this.nextStep();
-          
         },
         calculateCredit: function calculateCredit() {
           var el = this.$el.querySelector('[data-js-calculatorGraphics]');
@@ -360,7 +375,36 @@ function calcConstruct1(){
           'show-error': this.isActiveError,
           'hide-error': !this.isActiveError,
           }
-        }  
+        },
+        calculateSuccess1: function calculateSuccess(success) {
+          if (success) {
+            var successData = getData(success);
+            if (successData.price) {
+              this.sum = ((successData.price * this.condition) + (successData.price * this.set))  * 1.2;
+              this.isCalculated = true;
+            }
+          } else {
+            console.error('error');
+          }
+        },
+        calculateMethod1: function calculateMethod(data) {
+          var formData = {
+            action: 'calcAction1',
+            data: data
+          };
+          __WEBPACK_IMPORTED_MODULE_1__modules_helper_function__["b" /* baseObj */].ajaxAction(formData, this.calculateSuccess);
+        },
+        calculateAction1: function calculateAction(event) {
+          this.condition = $("input:radio[name='exampleRadios']:checked").val();
+          this.set = $("input:radio[name='exampleRadios1']:checked").val();
+          var formElements = event.target.elements;
+          var postData = {};
+          for (var i = 0; i < formElements.length; i++) {
+            postData[formElements[i].name] = formElements[i].value;
+          }
+          this.calculateMethod(postData);
+          this.nextStep();
+        },  
       },
       watch:{
         counter: function(){
@@ -396,7 +440,7 @@ function calcConstruct1(){
           this.selected2 = "";
         },
         selected2: function(){
-          this.pledge = this.selected.name + " " + this.selected1.name + " " + this.selected2;
+          this.pledge = this.selected.name + " " + this.selected1.name + " " + this.selected2.name;
           $("#pledge").attr("disabled", 'disabled');
           this.checkRequiredInput();
         }

@@ -24,8 +24,7 @@ import 'parsleyjs/dist/i18n/ru';
       let isAddedFile = false;
       let urlActionForm = form.attr('action');
       const sendFormBtn = $('.js-send-form');
-      const sendFormBtn2 = $('.js-send-form2');
-
+      
       const parentContainer = document.querySelector('[data-loan-id="other"]');
       const maxFileSize = parentContainer.getAttribute('data-file-size');
       const sizeErrorMessage = parentContainer.getAttribute('data-error-size');

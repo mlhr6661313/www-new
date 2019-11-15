@@ -1,0 +1,16 @@
+{% extends '_layout.twig' %}
+
+{% block advanced_meta %}
+	<meta name="description" content="{{ meta_description }}"/>
+{% endblock %}
+
+{% block content %}
+	<section class="authorization-section">
+		<div class="authorization-section__holder content-width">
+			<div class="">
+				<div data-title="{{ page.post_title }}" data-departments-title hidden></div>
+				{{ authorization_page }}
+			</div>
+		</div>
+	</section>
+{% endblock %}

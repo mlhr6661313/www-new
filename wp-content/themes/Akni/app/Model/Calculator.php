@@ -297,12 +297,9 @@ class Calculator
             wp_die();
     }
     public function calculate2(){
-        
-            $calculationsData = json_encode([
-                'sum' => 600,
-                'percent' => 70,
-                
-            ]);
+
+            $history = getClientHistory();
+            $calculationsData = json_encode($history);
             echo $calculationsData; 
             wp_die();
     }
@@ -312,22 +309,18 @@ class Calculator
         $client = new http\Client;
         $request = new http\Client\Request;
 
-        $body = new http\Message\Body;
-        $body->append('{
-            "Client_ID": "25450e87-f283-11e9-a2fa-0050569bbc88",
-            "SortOrder": "from_new_to_old",
-            "Page_Number": 0,
-            "Number_Of_Result_Per_Page": 10
-        }');
-
-        $request->setRequestUrl('https://top.lombard1.com.ua/l1_TOP/hs/ocredit/clienthistory/getClientHistory');
-        $request->setRequestMethod('POST');
-        $request->setBody($body);
-
+        $request->setRequestUrl('http://localhost/L1_Test23/hs/ocredit/summary/getCreditSummary');
+        $request->setRequestMethod('GET');
         $request->setHeaders(array(
+        'cache-control' => 'no-cache',
+        'Connection' => 'keep-alive',
+        'Accept-Encoding' => 'gzip, deflate',
+        'Host' => 'localhost',
+        'Postman-Token' => 'eef92663-7504-484a-a18d-b48c6b29c545,917b42c8-77b5-4b6b-bb89-a54565cc61df',
+        'Cache-Control' => 'no-cache',
         'Accept' => '*/*',
-        'Authorization' => 'Basic aHR0cHNydnVzcjpMZGY7bHNMZGY0',
-        'Content-Type' => 'application/json'
+        'User-Agent' => 'PostmanRuntime/7.19.0',
+        'Authorization' => 'Basic aHR0cHNydnVzcjpMZGY7bHNMZGY0'
         ));
 
         $client->enqueue($request)->send();

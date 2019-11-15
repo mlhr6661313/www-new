@@ -7075,4 +7075,22 @@ a.advantage-item:hover .advantage-item__text {
   display: none;
 }
 
+/* #registrationForm {
+  width: 20%;
+} */
+#authorizationForm .form-group {
+  padding: 0 0;
+}
+.form-check-label {
+  margin-left: 1.25em;
+}
+.form-check .form-check-input {
+  margin-left: 0em;
+}
+.btn-100 {
+  width: 100%;
+}
+#authorizationForm {
+  max-width: 300px;
+}
 /*# sourceMappingURL=../home/alexander/work/pershii.web/www/wp-content/themes/Akni/general.css.map*/

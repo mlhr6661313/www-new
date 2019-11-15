@@ -64,19 +64,8 @@ class MainAjax
             'wp_ajax_nopriv_sendTechForm',
             [&$this, 'sendTechForm']
         );
-        add_action(
-            'wp_ajax_show',
-            [&$this, 'show']
-        );
     }
-    public function show(){
-        $return = "fuck massage";
-        $data = $this->_formateData($_POST['data']);
-        echo "<script> alert(" . $return . ")</script>";
-        echo json_encode($return);
-        wp_die();    
-    }
-    public function sendTechForm()
+      public function sendTechForm()
     {
         $data = $_POST;
         $return = [];
